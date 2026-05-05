@@ -1,0 +1,180 @@
+import { useState } from "react";
+import { Check, X, TrendingUp } from "lucide-react";
+import { candidates } from "../../data/candidatesData";
+
+export function ComparePage() {
+  const [selectedCandidates, setSelectedCandidates] = useState<string[]>([
+    candidates[0]?.id || "",
+    candidates[1]?.id || "",
+  ]);
+
+  const handleCandidateChange = (index: number, candidateId: string) => {
+    const newSelection = [...selectedCandidates];
+    newSelection[index] = candidateId;
+    setSelectedCandidates(newSelection);
+  };
+
+  const compareData = selectedCandidates.map(id => candidates.find(c => c.id === id)).filter(Boolean);
+
+  const allCategories = [...new Set(candidates.flatMap(c => c.projects.map(p => p.category)))];
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mb-12">
+        <h1 className="mb-4 text-[#001C54]">Adayları Karşılaştır</h1>
+        <p className="text-gray-600">
+          Başkanlık adaylarının yan yana karşılaştırması
+        </p>
+      </div>
+
+      <div className="bg-white rounded-xl p-6 shadow-lg mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[0, 1].map((index) => (
+            <div key={index}>
+              <label className="block text-sm mb-2 text-gray-700">
+                Aday {index + 1}
+              </label>
+              <select
+                value={selectedCandidates[index]}
+                onChange={(e) => handleCandidateChange(index, e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#001C54] focus:border-transparent"
+              >
+                {candidates.map((candidate) => (
+                  <option key={candidate.id} value={candidate.id}>
+                    {candidate.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="overflow-x-auto">
+        <div className="inline-block min-w-full align-middle">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-[#001C54]">
+                <tr>
+                  <th className="px-6 py-4 text-left text-white">Kriterler</th>
+                  {compareData.map((candidate) => (
+                    <th key={candidate?.id} className="px-6 py-4 text-center">
+                      <div className="flex flex-col items-center">
+                        <img
+                          src={candidate?.photo}
+                          alt={candidate?.name}
+                          className="w-16 h-16 rounded-full border-2 border-[#FFED00] mb-2 object-cover"
+                        />
+                        <span className="text-white">{candidate?.name}</span>
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 text-[#001C54]">Slogan</td>
+                  {compareData.map((candidate) => (
+                    <td key={candidate?.id} className="px-6 py-4 text-center text-gray-600 italic">
+                      "{candidate?.slogan}"
+                    </td>
+                  ))}
+                </tr>
+
+                <tr>
+                  <td className="px-6 py-4 text-[#001C54] flex items-center space-x-2">
+                    <TrendingUp className="w-5 h-5" />
+                    <span>Popülarite</span>
+                  </td>
+                  {compareData.map((candidate) => (
+                    <td key={candidate?.id} className="px-6 py-4">
+                      <div className="flex flex-col items-center">
+                        <span className="text-2xl text-[#001C54] mb-2">{candidate?.popularity}%</span>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div
+                            className="bg-gradient-to-r from-[#001C54] to-[#FFED00] h-full rounded-full"
+                            style={{ width: `${candidate?.popularity}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 text-[#001C54]">Toplam Projeler</td>
+                  {compareData.map((candidate) => (
+                    <td key={candidate?.id} className="px-6 py-4 text-center">
+                      <span className="inline-block px-4 py-2 bg-[#FFED00] text-[#001C54] rounded-full">
+                        {candidate?.projects.length}
+                      </span>
+                    </td>
+                  ))}
+                </tr>
+
+                <tr>
+                  <td className="px-6 py-4 text-[#001C54]">Deneyim</td>
+                  {compareData.map((candidate) => (
+                    <td key={candidate?.id} className="px-6 py-4">
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        {candidate?.experience.map((exp, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <Check className="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                            <span>{exp}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </td>
+                  ))}
+                </tr>
+
+                {allCategories.map((category) => (
+                  <tr key={category} className="bg-gray-50">
+                    <td className="px-6 py-4 text-[#001C54]">{category}</td>
+                    {compareData.map((candidate) => {
+                      const hasCategory = candidate?.projects.some(p => p.category === category);
+                      const categoryProjects = candidate?.projects.filter(p => p.category === category) || [];
+
+                      return (
+                        <td key={candidate?.id} className="px-6 py-4 text-center">
+                          {hasCategory ? (
+                            <div className="space-y-2">
+                              <Check className="w-6 h-6 text-green-600 mx-auto" />
+                              <div className="text-xs text-gray-600">
+                                {categoryProjects.map(p => p.title).join(", ")}
+                              </div>
+                            </div>
+                          ) : (
+                            <X className="w-6 h-6 text-gray-300 mx-auto" />
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 bg-gradient-to-r from-[#FFED00] to-[#FFC600] rounded-xl p-8">
+        <h3 className="text-[#001C54] mb-4">Karar vermeye hazır mısınız?</h3>
+        <p className="text-[#001C54] mb-6">
+          Her adayın tam profili için Fenerbahçe'nin vizyonu ve planları hakkında daha ayrıntılı bilgi alın.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          {compareData.map((candidate) => (
+            <a
+              key={candidate?.id}
+              href={`/adaylar/${candidate?.id}`}
+              className="bg-[#001C54] text-white px-6 py-3 rounded-lg hover:bg-[#003F7F] transition-colors"
+            >
+              {candidate?.name} Profilini Görüntüle
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
