@@ -47,6 +47,9 @@ export function CandidatesPage() {
         <p className="text-gray-600">
           Fenerbahçe Spor Kulübü başkanlığı için aday olan adaylarla tanışın
         </p>
+        <p className="text-gray-500 text-sm mt-4 p-4 bg-blue-50 rounded-lg border-l-4 border-[#0052A3]">
+          <strong>Popülerlik Skoru Hakkında:</strong> Popülerlik skoru, adayların güncel kamuoyu algısını yansıtan yaklaşık bir tahmindir. Bu skor; son dönem anketler, sosyal medya etkileşimleri, medya görünürlüğü ve genel taraftar tartışmalarına dayanılarak oluşturulmuştur. <strong>Önemli Not:</strong> Bu skorlar tamamen subjektif tahminlerden oluşmakta olup bilimsel bir anket sonucu değildir. Hiçbir adayı öne çıkarmak veya pozitif/negatif bir imaj çizmek amacıyla kullanılmamıştır. Sadece mevcut tartışma ve ilgi seviyesine göre genel bir fikir vermek için eklenmiştir ve güncellenecektir.
+        </p>
       </div>
 
       <div className="bg-white rounded-xl p-6 shadow-lg mb-8">
