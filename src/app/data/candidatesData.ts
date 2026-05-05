@@ -193,7 +193,7 @@ export const candidates: Candidate[] = [
     id: "1",
     name: "Barış Göktürk",
     slogan: "Kurumsal ve Sürdürülebilir Fenerbahçe",
-    photo: "/src/assets/barisgokturk.jpg",
+    photo: "/assets/barisgokturk.jpg",
     biography: "Göktürk Holding Yönetim Kurulu Başkanı. Saint Benoit Fransız Lisesi ve University of California (İşletme Ekonomisi) mezunu. Eski Fenerbahçe Futbol A.Ş. Yönetim Kurulu Üyesi ve Fenerbahçe Kalkınma Platformu Yürütme Kurulu Başkanı. Adaylığını ilk açıklayan isim.",
     vision: "Şahıslara bağlı yönetim yerine profesyonel futbol aklı ve güçlü ekonomik modelle kurumsal bir yapı oluşturmak. 10 yılda 5 şampiyonluk hedefiyle sürdürülebilir başarı.",
     experience: [
@@ -246,7 +246,7 @@ export const candidates: Candidate[] = [
     id: "2",
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",
-    photo: "/src/assets/hakansafi.jpg",
+    photo: "/assets/hakansafi.jpg",
     biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı.",
     vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek.",
     experience: [
@@ -299,7 +299,7 @@ export const candidates: Candidate[] = [
     id: "3",
     name: "Aziz Yıldırım",
     slogan: "Tecrübe ve Zafer",
-    photo: "/src/assets/azizyildirim.jpg",
+    photo: "/assets/azizyildirim.jpg",
     biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. Henüz resmen adaylığını açıklamadı ancak kulislerde ve taraftar baskısıyla güçlü bir aday.",
     vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. Disiplinli yönetim ve taraftar birliği.",
     experience: [

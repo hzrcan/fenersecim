@@ -1,5 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router";
 import { Home, Users, FolderKanban, GitCompare, Newspaper } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 export function Layout() {
   const location = useLocation();
@@ -63,6 +64,8 @@ export function Layout() {
           </div>
         </div>
       </footer>
+
+      <Analytics />
     </div>
   );
 }
