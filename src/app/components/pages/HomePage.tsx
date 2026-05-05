@@ -95,7 +95,7 @@ export function HomePage() {
             </div>
           </div>
           <h3 className="text-gray-600 mb-1">Misyonumuz</h3>
-          <p className="text-sm text-gray-500">Daha güçlü bir gelecek inşa edin</p>
+          <p className="text-sm text-gray-500">Kulüp için en iyi kararı vermek</p>
         </div>
       </div>
 
