@@ -1,13 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Filter, TrendingUp, Users as UsersIcon } from "lucide-react";
 import { candidates } from "../../data/candidatesData";
+import { updatePageMeta, addStructuredData, createBreadcrumbSchema } from "../../../utils/seo";
 
 export function CandidatesPage() {
   const [sortBy, setSortBy] = useState<"name" | "popularity">("popularity");
   const [filterCategory, setFilterCategory] = useState<string>("all");
 
   const categories = ["all", "Altyapı", "Finansal", "Spor", "Teknoloji", "Tesisleşme"];
+
+  useEffect(() => {
+    // Sayfanın meta bilgilerini güncelle
+    updatePageMeta({
+      title: "Başkanlık Adayları | Fenerbahçe Seçimleri 2026",
+      description: `Fenerbahçe Spor Kulübü 2026 başkanlık seçimleri için ${candidates.length} aday hakkında bilgi alın. Her adayın vizyonunu, projelerini ve popülaritesini karşılaştırın.`,
+      keywords: "Fenerbahçe adayları, başkanlık adayları, 2026 seçimi, aday profilleri, seçim",
+      image: candidates[0]?.photo || "https://fenersecim.com/og-image.png",
+      url: "https://fenersecim.com/adaylar",
+      type: "website",
+    });
+
+    // Breadcrumb yapılandırılmış verisi
+    addStructuredData(
+      createBreadcrumbSchema([
+        { name: "Anasayfa", url: "https://fenersecim.com/" },
+        { name: "Adaylar", url: "https://fenersecim.com/adaylar" },
+      ])
+    );
+  }, []);
 
   const filteredCandidates = candidates
     .filter(candidate => {

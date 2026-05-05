@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { Calendar, User, Tag } from "lucide-react";
+import { updatePageMeta, addStructuredData, createBreadcrumbSchema, createArticleSchema } from "../../../utils/seo";
 
 const newsArticles = [
   {
@@ -58,6 +60,39 @@ const newsArticles = [
 ];
 
 export function NewsPage() {
+  useEffect(() => {
+    // Sayfanın meta bilgilerini güncelle
+    updatePageMeta({
+      title: "Seçim Haberleri & Güncellemeler | Fenerbahçe Başkanlık Seçimleri 2026",
+      description: "Fenerbahçe 2026 başkanlık seçimi haberleri ve güncellemeleri takip edin. Adaylar, projeler, tartışmalar ve en son gelişmeler hakkında bilgi alın.",
+      keywords: "Fenerbahçe haberler, başkanlık seçimi haberleri, 2026, seçim güncellemeleri, spor haberleri",
+      image: newsArticles[0]?.image || "https://fenersecim.com/og-image.png",
+      url: "https://fenersecim.com/haberler",
+      type: "website",
+    });
+
+    // Breadcrumb yapılandırılmış verisi
+    addStructuredData(
+      createBreadcrumbSchema([
+        { name: "Anasayfa", url: "https://fenersecim.com/" },
+        { name: "Haberler", url: "https://fenersecim.com/haberler" },
+      ])
+    );
+
+    // İlk makale için yapılandırılmış veri
+    if (newsArticles[0]) {
+      addStructuredData(
+        createArticleSchema({
+          title: newsArticles[0].title,
+          description: newsArticles[0].excerpt,
+          image: newsArticles[0].image,
+          author: newsArticles[0].author,
+          publishedDate: new Date(newsArticles[0].date).toISOString(),
+          url: "https://fenersecim.com/haberler",
+        })
+      );
+    }
+  }, []);
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12">

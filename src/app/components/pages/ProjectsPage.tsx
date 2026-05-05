@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Building, Users, TrendingUp, Smartphone, Trophy, Globe, Heart, BarChart, Gamepad2 } from "lucide-react";
 import { allProjects } from "../../data/candidatesData";
+import { updatePageMeta, addStructuredData, createBreadcrumbSchema } from "../../../utils/seo";
 
 const iconMap: Record<string, any> = {
   building: Building,
@@ -19,6 +20,26 @@ export function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const categories = ["all", ...new Set(allProjects.map(p => p.category))];
+
+  useEffect(() => {
+    // Sayfanın meta bilgilerini güncelle
+    updatePageMeta({
+      title: "Önerilen Projeler | Fenerbahçe Başkanlık Seçimleri 2026",
+      description: `Fenerbahçe Spor Kulübü başkanlık adayları tarafından önerilen ${allProjects.length} proje ve girişim. Altyapı, finansal, spor, teknoloji ve tesisleşme projelerini keşfedin.`,
+      keywords: "Fenerbahçe projeler, başkanlık projeleri, 2026, adaylar, girişimler, geliştirme planları",
+      image: "https://fenersecim.com/og-image.png",
+      url: "https://fenersecim.com/projeler",
+      type: "website",
+    });
+
+    // Breadcrumb yapılandırılmış verisi
+    addStructuredData(
+      createBreadcrumbSchema([
+        { name: "Anasayfa", url: "https://fenersecim.com/" },
+        { name: "Projeler", url: "https://fenersecim.com/projeler" },
+      ])
+    );
+  }, []);
 
   const filteredProjects = selectedCategory === "all"
     ? allProjects

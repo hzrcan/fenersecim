@@ -1,3 +1,25 @@
+# Fenerbahçe Başkanlık Seçimleri Web Sitesi - Robots.txt
+# https://fenersecim.com
+
+# Tüm arama motorlarına erişim izni
 User-agent: *
-Disallow: /haberler
 Allow: /
+
+# Sitemap konumu
+Sitemap: https://fenersecim.com/sitemap.xml
+
+# Crawl süresi
+Crawl-delay: 1
+
+# Belirli arama motorları için ayarlar
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandexbot
+Allow: /
+Crawl-delay: 1

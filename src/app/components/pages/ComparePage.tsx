@@ -1,12 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check, X, TrendingUp } from "lucide-react";
 import { candidates } from "../../data/candidatesData";
+import { updatePageMeta, addStructuredData, createBreadcrumbSchema } from "../../../utils/seo";
 
 export function ComparePage() {
   const [selectedCandidates, setSelectedCandidates] = useState<string[]>([
     candidates[0]?.id || "",
     candidates[1]?.id || "",
   ]);
+
+  useEffect(() => {
+    // Sayfanın meta bilgilerini güncelle
+    updatePageMeta({
+      title: "Adayları Karşılaştır | Fenerbahçe Başkanlık Seçimleri 2026",
+      description: "Fenerbahçe Spor Kulübü 2026 başkanlık adaylarını yan yana karşılaştırın. Vizyonlarını, projelerini ve popülaritesini karşılaştıran interaktif araç.",
+      keywords: "aday karşılaştırma, Fenerbahçe başkanlık, 2026 seçimi, adaylar, karşılaştırma aracı",
+      image: "https://fenersecim.com/og-image.png",
+      url: "https://fenersecim.com/karsilastir",
+      type: "website",
+    });
+
+    // Breadcrumb yapılandırılmış verisi
+    addStructuredData(
+      createBreadcrumbSchema([
+        { name: "Anasayfa", url: "https://fenersecim.com/" },
+        { name: "Karşılaştır", url: "https://fenersecim.com/karsilastir" },
+      ])
+    );
+  }, []);
 
   const handleCandidateChange = (index: number, candidateId: string) => {
     const newSelection = [...selectedCandidates];

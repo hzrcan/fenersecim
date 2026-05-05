@@ -1,10 +1,44 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router";
 import { ArrowLeft, TrendingUp, Users, Briefcase, Target, Clock } from "lucide-react";
 import { candidates } from "../../data/candidatesData";
+import { updatePageMeta, addStructuredData, createCandidateSchema, createBreadcrumbSchema } from "../../../utils/seo";
 
 export function CandidateDetailPage() {
   const { id } = useParams();
   const candidate = candidates.find(c => c.id === id);
+
+  useEffect(() => {
+    if (candidate) {
+      // Sayfanın meta bilgilerini güncelle
+      updatePageMeta({
+        title: `${candidate.name} - Başkanlık Adayı | Fenerbahçe Seçimleri 2026`,
+        description: `${candidate.name} hakkında bilgi alın. Vizyonu: "${candidate.slogan}". Popülarite: ${candidate.popularity}%. Fenerbahçe 2026 başkanlık seçimleri.`,
+        keywords: `${candidate.name}, başkanlık adayı, Fenerbahçe, ${candidate.slogan}, 2026`,
+        image: candidate.photo,
+        url: `https://fenersecim.com/adaylar/${candidate.id}`,
+        type: "profile",
+      });
+
+      // Aday profil yapılandırılmış verisi
+      addStructuredData(createCandidateSchema({
+        id: candidate.id,
+        name: candidate.name,
+        slogan: candidate.slogan,
+        photo: candidate.photo,
+        popularity: candidate.popularity,
+      }));
+
+      // Breadcrumb yapılandırılmış verisi
+      addStructuredData(
+        createBreadcrumbSchema([
+          { name: "Anasayfa", url: "https://fenersecim.com/" },
+          { name: "Adaylar", url: "https://fenersecim.com/adaylar" },
+          { name: candidate.name, url: `https://fenersecim.com/adaylar/${candidate.id}` },
+        ])
+      );
+    }
+  }, [candidate]);
 
   if (!candidate) {
     return (

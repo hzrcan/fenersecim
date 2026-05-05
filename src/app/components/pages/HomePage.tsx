@@ -1,11 +1,39 @@
+import { useEffect } from "react";
 import { Link } from "react-router";
 import { Users, Calendar, TrendingUp, Award } from "lucide-react";
 import { candidates } from "../../data/candidatesData";
+import { updatePageMeta, addStructuredData, createOrganizationSchema, createEventSchema } from "../../../utils/seo";
 
 export function HomePage() {
   const totalCandidates = candidates.length;
   const totalProjects = candidates.reduce((sum, c) => sum + c.projects.length, 0);
   const featuredCandidate = candidates[Math.floor(Math.random() * candidates.length)];
+
+  useEffect(() => {
+    // Sayfanın meta bilgilerini güncelle
+    updatePageMeta({
+      title: "Fenerbahçe Başkanlık Seçimleri 2026 | Anasayfa",
+      description: "Fenerbahçe Spor Kulübü 2026 başkanlık seçimleri hakkında kapsamlı bilgi. Adayları tanıyın, vizyonlarını karşılaştırın ve şeffaf seçim süreci hakkında bilgi alın.",
+      keywords: "Fenerbahçe, başkanlık seçimleri, 2026, seçim, spor kulübü, başkan adayları",
+      image: "https://fenersecim.com/og-image.png",
+      url: "https://fenersecim.com/",
+      type: "website",
+    });
+
+    // Yapılandırılmış veri ekle
+    addStructuredData(createOrganizationSchema());
+
+    // Etkinlik yapılandırılmış verisi
+    addStructuredData(
+      createEventSchema({
+        name: "Fenerbahçe Başkanlık Seçimleri 2026",
+        description: "Fenerbahçe Spor Kulübü başkanlığı seçimi",
+        startDate: "2026-06-06T09:00:00+03:00",
+        endDate: "2026-06-07T20:00:00+03:00",
+        url: "https://fenersecim.com/",
+      })
+    );
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
