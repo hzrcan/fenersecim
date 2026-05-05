@@ -168,8 +168,8 @@ export function HomePage() {
         </p>
         <p className="text-gray-600 text-sm">
           <strong>Bilgi Düzeltme:</strong> Eğer aday bilgilerinde herhangi bir yanlışlık veya eksiklik tespit ederseniz, lütfen{' '}
-          <a href="mailto:hizircan@fenerbahce.org.tr" className="text-[#0052A3] hover:underline font-semibold">
-            hizircan@fenerbahce.org.tr
+          <a href="mailto:fenersecim@gmail.com" className="text-[#0052A3] hover:underline font-semibold">
+            fenersecim@gmail.com
           </a>
           {' '}adresine yazınız. Adaylar ve temsilcileri de bilgileri doğru tutmak için bize bilgi gönderebilirler. Tüm düzeltmeler en kısa sürede uygulanacaktır.
         </p>
