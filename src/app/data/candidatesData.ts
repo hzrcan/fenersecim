@@ -190,59 +190,6 @@ export interface TimelineEvent {
 
 export const candidates: Candidate[] = [
   {
-    id: "1",
-    name: "Barış Göktürk",
-    slogan: "Kurumsal ve Sürdürülebilir Fenerbahçe",
-    photo: "/assets/barisgokturk.jpg",
-    biography: "Göktürk Holding Yönetim Kurulu Başkanı. Saint Benoit Fransız Lisesi ve University of California (İşletme Ekonomisi) mezunu. Eski Fenerbahçe Futbol A.Ş. Yönetim Kurulu Üyesi ve Fenerbahçe Kalkınma Platformu Yürütme Kurulu Başkanı. Adaylığını ilk açıklayan isim.",
-    vision: "Şahıslara bağlı yönetim yerine profesyonel futbol aklı ve güçlü ekonomik modelle kurumsal bir yapı oluşturmak. 10 yılda 5 şampiyonluk hedefiyle sürdürülebilir başarı.",
-    experience: [
-      "Göktürk Holding Yönetim Kurulu Başkanı",
-      "Eski Fenerbahçe Futbol A.Ş. Yönetim Kurulu Üyesi",
-      "İstanbul Ticaret Odası Meclis Üyesi",
-      "University of California - İşletme Ekonomisi mezunu"
-    ],
-    projects: [
-      {
-        id: "p1",
-        title: "Kurumsal Yapı Dönüşümü",
-        description: "Profesyonel yönetim ve sürdürülebilir ekonomik model",
-        category: "Yönetim",
-        icon: "building",
-        priority: "high"
-      },
-      {
-        id: "p2",
-        title: "Sporif Başarı Planı",
-        description: "Yerli hoca tercihi ve 10 yılda 5 şampiyonluk",
-        category: "Spor",
-        icon: "trophy",
-        priority: "high"
-      },
-      {
-        id: "p3",
-        title: "Ekonomik Sürdürülebilirlik",
-        description: "Borç yönetimi ve gelir çeşitlendirmesi",
-        category: "Finansal",
-        icon: "trending-up",
-        priority: "high"
-      },
-      {
-        id: "p4",
-        title: "Altyapı ve Gençlik",
-        description: "Modern tesisler ve akademi yatırımları",
-        category: "Altyapı",
-        icon: "users",
-        priority: "medium"
-      }
-    ],
-    pastInvolvement: [
-      { year: "2024-2025", title: "Fenerbahçe Futbol A.Ş. YK Üyesi", description: "Yönetimde görev aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "İlk resmi adaylığını açıkladı" }
-    ],
-    popularity: 72
-  },
-  {
     id: "2",
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",
