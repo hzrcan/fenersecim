@@ -190,12 +190,12 @@ export interface TimelineEvent {
 
 export const candidates: Candidate[] = [
   {
-    id: "2",
+    id: "1",
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
-    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı.",
-    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek.",
+    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı.",
+    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Aziz Yıldırım'ın birleşme teklifini reddederek tek başına seçime gireceğini açıkladı.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
       "Eski Fenerbahçe Yönetim Kurulu Üyesi",
@@ -237,18 +237,18 @@ export const candidates: Candidate[] = [
       }
     ],
     pastInvolvement: [
-      { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı (Kerem Aktürkoğlu transferi vb.)" },
-      { year: "2026", title: "Başkan Adaylığı", description: "Resmi adaylığını açıkladı" }
+      { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı" }
     ],
-    popularity: 68
+    popularity: 70
   },
   {
-    id: "3",
+    id: "2",
     name: "Aziz Yıldırım",
     slogan: "Tecrübe ve Zafer",
     photo: "/assets/azizyildirim.jpg",
-    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. Henüz resmen adaylığını açıklamadı ancak kulislerde ve taraftar baskısıyla güçlü bir aday.",
-    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. Disiplinli yönetim ve taraftar birliği.",
+    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı ve diğer adaylara birleşme çağrısı yaptı.",
+    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı.",
     experience: [
       "Fenerbahçe Başkanı (1998-2018)",
       "Çok sayıda lig ve kupa şampiyonluğu",
@@ -282,9 +282,9 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl boyunca kulübe liderlik etti" },
-      { year: "2026", title: "Potansiyel Adaylık", description: "Kararını yakında açıklayabilir" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta resmen açıkladı" }
     ],
-    popularity: 82
+    popularity: 88
   }
 ];
 
