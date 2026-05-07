@@ -24,7 +24,7 @@ export interface Project {
   description: string;
   category: string;
   icon: string;
-  priority: "high" | "medium" | "low";
+  priority: "acil" | "önemli" | "ikincil";
 }
 
 export interface TimelineEvent {
@@ -80,7 +80,7 @@ export const candidates: Candidate[] = [
         description: "Güçlü yabancı hoca ve kaliteli kadro oluşturma (baba transferler vurgusu)",
         category: "Spor",
         icon: "trophy",
-        priority: "high"
+        priority: "acil"
       },
       {
         id: "p6",
@@ -88,7 +88,7 @@ export const candidates: Candidate[] = [
         description: "Holding tecrübesiyle finansal disiplin",
         category: "Finansal",
         icon: "trending-up",
-        priority: "high"
+        priority: "acil"
       },
       {
         id: "p7",
@@ -96,7 +96,7 @@ export const candidates: Candidate[] = [
         description: "Camia bütünlüğünü sağlama",
         category: "Topluluk",
         icon: "heart",
-        priority: "medium"
+        priority: "önemli"
       },
       {
         id: "p8",
@@ -104,7 +104,7 @@ export const candidates: Candidate[] = [
         description: "Sürdürülebilir gençlik gelişimi",
         category: "Altyapı",
         icon: "users",
-        priority: "medium"
+        priority: "önemli"
       }
     ],
     pastInvolvement: [
@@ -135,7 +135,7 @@ export const candidates: Candidate[] = [
         description: "Kısa vadede zirve hedefi",
         category: "Spor",
         icon: "trophy",
-        priority: "high"
+        priority: "acil"
       },
       {
         id: "p10",
@@ -143,7 +143,7 @@ export const candidates: Candidate[] = [
         description: "Şampiyonlar Ligi'nde düzenli başarı",
         category: "Spor",
         icon: "globe",
-        priority: "high"
+        priority: "acil"
       },
       {
         id: "p11",
@@ -151,7 +151,7 @@ export const candidates: Candidate[] = [
         description: "Camia içi dayanışmayı artırma",
         category: "Topluluk",
         icon: "heart",
-        priority: "high"
+        priority: "acil"
       }
     ],
     pastInvolvement: [

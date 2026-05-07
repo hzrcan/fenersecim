@@ -103,13 +103,13 @@ export function ProjectsPage() {
                   <Icon className="w-6 h-6 text-[#FFED00]" />
                 </div>
                 <span className={`px-3 py-1 text-xs rounded-full ${
-                  project.priority === "high"
+                  project.priority === "acil"
                     ? "bg-red-100 text-red-700"
-                    : project.priority === "medium"
+                    : project.priority === "önemli"
                     ? "bg-yellow-100 text-yellow-700"
                     : "bg-green-100 text-green-700"
                 }`}>
-                  {project.priority.toUpperCase()}
+                  {project.priority.charAt(0).toUpperCase() + project.priority.slice(1)}
                 </span>
               </div>
 

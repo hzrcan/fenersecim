@@ -67,9 +67,9 @@ export function CandidateDetailPage() {
   }
 
   const priorityColors = {
-    high: "bg-red-100 text-red-700 border-red-300",
-    medium: "bg-yellow-100 text-yellow-700 border-yellow-300",
-    low: "bg-green-100 text-green-700 border-green-300",
+    acil: "bg-red-100 text-red-700 border-red-300",
+    önemli: "bg-yellow-100 text-yellow-700 border-yellow-300",
+    ikincil: "bg-green-100 text-green-700 border-green-300",
   };
 
   return (
