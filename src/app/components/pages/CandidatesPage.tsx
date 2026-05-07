@@ -121,12 +121,12 @@ export function CandidatesPage() {
                   <span className="text-sm text-gray-700">Temel Odak Alanları:</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {candidate.projects.slice(0, 3).map((project) => (
+                  {[...new Set(candidate.projects.slice(0, 3).map(p => p.category))].map((category) => (
                     <span
-                      key={project.id}
+                      key={category}
                       className="px-3 py-1 bg-gradient-to-r from-[#001C54] to-[#0052A3] text-white text-xs rounded-full"
                     >
-                      {project.category}
+                      {category}
                     </span>
                   ))}
                 </div>

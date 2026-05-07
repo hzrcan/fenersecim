@@ -109,9 +109,9 @@ export function HomePage() {
             <p className="text-[#FFED00] mb-6 italic">"{featuredCandidate.slogan}"</p>
             <p className="text-gray-200 mb-6 line-clamp-3">{featuredCandidate.biography}</p>
             <div className="flex flex-wrap gap-2 mb-6">
-              {featuredCandidate.projects.slice(0, 3).map(project => (
-                <div key={project.id} className="px-3 py-1 bg-white/10 rounded-full text-sm backdrop-blur-sm">
-                  {project.category}
+              {[...new Set(featuredCandidate.projects.slice(0, 3).map(p => p.category))].map(category => (
+                <div key={category} className="px-3 py-1 bg-white/10 rounded-full text-sm backdrop-blur-sm">
+                  {category}
                 </div>
               ))}
             </div>
