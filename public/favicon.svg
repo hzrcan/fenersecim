@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#001C54"/>
+  
+  <!-- Yellow accent circle -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#FFED00" stroke-width="8"/>
+  
+  <!-- Center circle with FB initials -->
+  <circle cx="100" cy="100" r="60" fill="#FFED00"/>
+  
+  <!-- FB letters in dark blue -->
+  <text x="100" y="125" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="#001C54" text-anchor="middle">FB</text>
+</svg>
