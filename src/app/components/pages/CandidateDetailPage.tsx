@@ -196,6 +196,29 @@ export function CandidateDetailPage() {
           </div>
         </div>
       </div>
+
+      {candidate.boardMembers && candidate.boardMembers.length > 0 && (
+        <div className="bg-white rounded-xl p-8 shadow-lg mt-12">
+          <div className="flex items-center space-x-2 mb-8">
+            <Users className="w-6 h-6 text-[#001C54]" />
+            <h2 className="text-[#001C54]">Yönetim Kurulu Üyeleri</h2>
+          </div>
+          <p className="text-sm text-gray-600 mb-6 p-4 bg-amber-50 rounded-lg border-l-4 border-amber-400">
+            <strong>Not:</strong> Bu liste henüz resmi olarak onaylanmamıştır ve söylentiler temelinde derlenmiştir. Aday tarafından kesinleştirilmiş nihai liste değildir.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {candidate.boardMembers.map((member) => (
+              <div
+                key={member.id}
+                className="bg-gradient-to-br from-[#001C54] to-[#003F7F] rounded-lg p-6 text-white hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-lg font-semibold mb-2">{member.name}</h3>
+                <p className="text-[#FFED00] text-sm">{member.position}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -9,6 +9,13 @@ export interface Candidate {
   projects: Project[];
   pastInvolvement: TimelineEvent[];
   popularity: number;
+  boardMembers?: BoardMember[];
+}
+
+export interface BoardMember {
+  id: string;
+  name: string;
+  position: string;
 }
 
 export interface Project {
@@ -104,7 +111,10 @@ export const candidates: Candidate[] = [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
       { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor" }
     ],
-    popularity: 72
+    popularity: 72,
+    boardMembers: [
+      { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
+    ]
   },
   {
     id: "2",
@@ -148,7 +158,14 @@ export const candidates: Candidate[] = [
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl boyunca kulübe liderlik etti" },
       { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta resmen açıkladı, birlik çağrısı yaptı" }
     ],
-    popularity: 85
+    popularity: 85,
+    boardMembers: [
+      { id: "b6", name: "Barış Göktürk", position: "Başkan Vekili" },
+      { id: "b7", name: "Mahmut Uslu (Nedim Uslu)", position: "Yönetim Kurulu Üyesi" },
+      { id: "b8", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
+      { id: "b9", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
+      { id: "b10", name: "Önder Fırat (Ahmet Önder Fırat)", position: "Yönetim Kurulu Üyesi" }
+    ]
   }
 ];
 
