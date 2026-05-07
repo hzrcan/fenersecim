@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Building, Users, TrendingUp, Smartphone, Trophy, Globe, Heart, BarChart, Gamepad2 } from "lucide-react";
-import { allProjects } from "../../data/candidatesData";
+import { allProjects, generateSlug } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createBreadcrumbSchema } from "../../../utils/seo";
 
 const iconMap: Record<string, any> = {
@@ -125,7 +125,7 @@ export function ProjectsPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">Tarafından önerildi</span>
                   <Link
-                    to={`/adaylar/${project.candidateId}`}
+                    to={`/adaylar/${generateSlug(project.candidateName)}`}
                     className="text-sm text-[#0052A3] hover:underline"
                   >
                     {project.candidateName}

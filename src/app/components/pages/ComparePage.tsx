@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Check, X, TrendingUp } from "lucide-react";
-import { candidates } from "../../data/candidatesData";
+import { candidates, generateSlug } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createBreadcrumbSchema } from "../../../utils/seo";
 
 export function ComparePage() {
@@ -149,6 +149,26 @@ export function ComparePage() {
                   ))}
                 </tr>
 
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 text-[#001C54]">Yönetim Kurulu Üyeleri</td>
+                  {compareData.map((candidate) => (
+                    <td key={candidate?.id} className="px-6 py-4">
+                      {candidate?.boardMembers && candidate.boardMembers.length > 0 ? (
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          {candidate.boardMembers.map((member) => (
+                            <li key={member.id} className="flex flex-col">
+                              <span className="font-medium text-[#001C54]">{member.name}</span>
+                              <span className="text-xs text-gray-500">{member.position}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <X className="w-6 h-6 text-gray-300 mx-auto" />
+                      )}
+                    </td>
+                  ))}
+                </tr>
+
                 {allCategories.map((category) => (
                   <tr key={category} className="bg-gray-50">
                     <td className="px-6 py-4 text-[#001C54]">{category}</td>
@@ -188,7 +208,7 @@ export function ComparePage() {
           {compareData.map((candidate) => (
             <a
               key={candidate?.id}
-              href={`/adaylar/${candidate?.id}`}
+              href={`/adaylar/${generateSlug(candidate?.name || "")}`}
               className="bg-[#001C54] text-white px-6 py-3 rounded-lg hover:bg-[#003F7F] transition-colors"
             >
               {candidate?.name} Profilini Görüntüle
