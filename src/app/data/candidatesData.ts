@@ -26,6 +26,32 @@ export interface TimelineEvent {
   description: string;
 }
 
+// Utility function to generate slug from candidate name
+export function generateSlug(name: string): string {
+  // Turkish character mapping
+  const turkishMap: { [key: string]: string } = {
+    'ç': 'c', 'Ç': 'c',
+    'ğ': 'g', 'Ğ': 'g',
+    'ı': 'i', 'I': 'i',
+    'İ': 'i',
+    'ö': 'o', 'Ö': 'o',
+    'ş': 's', 'Ş': 's',
+    'ü': 'u', 'Ü': 'u',
+  };
+
+  return name
+    .toLowerCase()
+    // Replace Turkish characters with their ASCII equivalents
+    .replace(/[çğıİöşü]/g, char => turkishMap[char] || char)
+    // Replace spaces and ampersands with hyphens
+    .replace(/[\s&]+/g, '-')
+    // Remove any remaining non-word characters except hyphens
+    .replace(/[^\w-]/g, '')
+    // Replace multiple hyphens with single hyphen
+    .replace(/-+/g, '-')
+    .trim();
+}
+
 export const candidates: Candidate[] = [
   {
     id: "1",
@@ -129,3 +155,30 @@ export const candidates: Candidate[] = [
 export const allProjects = candidates.flatMap(c =>
   c.projects.map(p => ({ ...p, candidateId: c.id, candidateName: c.name }))
 );
+
+// Helper functions for slug-based lookups
+export function getCandidateBySlug(slug: string) {
+  return candidates.find(c => generateSlug(c.name) === slug);
+}
+
+export function getCandidateSlug(candidate: Candidate | undefined): string | undefined {
+  return candidate ? generateSlug(candidate.name) : undefined;
+}
+
+export function getSlugFromIdOrSlug(param: string): { slug: string; candidateId: string } | null {
+  // Check if param is numeric (old-style ID)
+  if (/^\d+$/.test(param)) {
+    const candidate = candidates.find(c => c.id === param);
+    if (candidate) {
+      return { slug: generateSlug(candidate.name), candidateId: candidate.id };
+    }
+  }
+  
+  // Otherwise treat as slug
+  const candidate = getCandidateBySlug(param);
+  if (candidate) {
+    return { slug: param, candidateId: candidate.id };
+  }
+  
+  return null;
+}

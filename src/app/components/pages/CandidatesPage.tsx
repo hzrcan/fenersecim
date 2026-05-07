@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Filter, TrendingUp, Users as UsersIcon } from "lucide-react";
-import { candidates } from "../../data/candidatesData";
+import { candidates, generateSlug } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createBreadcrumbSchema } from "../../../utils/seo";
 
 export function CandidatesPage() {
@@ -146,7 +146,7 @@ export function CandidatesPage() {
               </div>
 
               <Link
-                to={`/adaylar/${candidate.id}`}
+                to={`/adaylar/${generateSlug(candidate.name)}`}
                 className="block w-full bg-[#FFED00] text-[#001C54] py-3 rounded-lg text-center hover:bg-[#FFC600] transition-colors"
               >
                 Tam Profili Görüntüle

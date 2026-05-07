@@ -14,7 +14,8 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: HomePage },
       { path: "adaylar", Component: CandidatesPage },
-      { path: "adaylar/:id", Component: CandidateDetailPage },
+      // Supports both numeric ID (redirects to slug) and slug-based routes
+      { path: "adaylar/:slug", Component: CandidateDetailPage },
       { path: "projeler", Component: ProjectsPage },
       { path: "karsilastir", Component: ComparePage },
       { path: "haberler", Component: NewsPage },

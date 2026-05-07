@@ -1,12 +1,25 @@
 import { useEffect } from "react";
-import { useParams, Link } from "react-router";
+import { useParams, Link, useNavigate } from "react-router";
 import { ArrowLeft, TrendingUp, Users, Briefcase, Target, Clock } from "lucide-react";
-import { candidates } from "../../data/candidatesData";
+import { getCandidateBySlug, generateSlug, getSlugFromIdOrSlug } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createCandidateSchema, createBreadcrumbSchema } from "../../../utils/seo";
 
 export function CandidateDetailPage() {
-  const { id } = useParams();
-  const candidate = candidates.find(c => c.id === id);
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  
+  // Handle old numeric ID format and redirect to slug-based URL
+  useEffect(() => {
+    if (slug && /^\d+$/.test(slug)) {
+      const result = getSlugFromIdOrSlug(slug);
+      if (result && result.slug !== slug) {
+        navigate(`/adaylar/${result.slug}`, { replace: true });
+        return;
+      }
+    }
+  }, [slug, navigate]);
+
+  const candidate = slug ? getCandidateBySlug(slug) : undefined;
 
   useEffect(() => {
     if (candidate) {
@@ -16,7 +29,7 @@ export function CandidateDetailPage() {
         description: `${candidate.name} hakkında bilgi alın. Vizyonu: "${candidate.slogan}". Popülarite: ${candidate.popularity}%. Fenerbahçe 2026 başkanlık seçimleri.`,
         keywords: `${candidate.name}, başkanlık adayı, Fenerbahçe, ${candidate.slogan}, 2026`,
         image: candidate.photo,
-        url: `https://fenersecim.com/adaylar/${candidate.id}`,
+        url: `https://fenersecim.com/adaylar/${generateSlug(candidate.name)}`,
         type: "profile",
       });
 
@@ -34,7 +47,7 @@ export function CandidateDetailPage() {
         createBreadcrumbSchema([
           { name: "Anasayfa", url: "https://fenersecim.com/" },
           { name: "Adaylar", url: "https://fenersecim.com/adaylar" },
-          { name: candidate.name, url: `https://fenersecim.com/adaylar/${candidate.id}` },
+          { name: candidate.name, url: `https://fenersecim.com/adaylar/${generateSlug(candidate.name)}` },
         ])
       );
     }
