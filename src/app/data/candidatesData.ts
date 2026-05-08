@@ -156,6 +156,7 @@ export const candidates: Candidate[] = [
       }
     ],
     pastInvolvement: [
+      { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Fenerbahçe'de yönetim kurulunda ve futbol şubesinde aktif görev aldı" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl boyunca kulübe liderlik etti" },
       { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta resmen açıkladı, birlik çağrısı yaptı" }
     ],
