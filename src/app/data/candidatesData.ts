@@ -114,6 +114,7 @@ export const candidates: Candidate[] = [
     popularity: 72,
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
+      { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" }
     ]
   },
   {
@@ -165,6 +166,7 @@ export const candidates: Candidate[] = [
       { id: "b8", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
       { id: "b9", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
       { id: "b10", name: "Önder Fırat (Ahmet Önder Fırat)", position: "Yönetim Kurulu Üyesi" }
+      // Selahattin Baki ve Ozan Balaban gibi isimler de kulislerde güçlü şekilde geçiyor.
     ]
   }
 ];
