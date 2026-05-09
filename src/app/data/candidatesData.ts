@@ -66,7 +66,7 @@ export const candidates: Candidate[] = [
     slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
     biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı.",
-    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Aziz Yıldırım'ın birleşme teklifini reddederek tek başına seçime gireceğini açıkladı. İlk sezonda şampiyonluk vaadiyle güçlü transferler hedefliyor.",
+    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Aziz Yıldırım'ın birleşme teklifini reddederek tek başına seçime gireceğini açıkladı. İlk sezonda şampiyonluk vaadiyle güçlü (baba) transferler hedefliyor.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
       "Eski Fenerbahçe Yönetim Kurulu Üyesi",
@@ -111,7 +111,7 @@ export const candidates: Candidate[] = [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
       { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor" }
     ],
-    popularity: 72,
+    popularity: 70,
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
       { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" }
@@ -160,14 +160,17 @@ export const candidates: Candidate[] = [
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl boyunca kulübe liderlik etti" },
       { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta resmen açıkladı, birlik çağrısı yaptı" }
     ],
-    popularity: 85,
+    popularity: 87,
     boardMembers: [
       { id: "b6", name: "Barış Göktürk", position: "Başkan Vekili" },
       { id: "b7", name: "Mahmut Uslu (Nedim Uslu)", position: "Yönetim Kurulu Üyesi" },
       { id: "b8", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
       { id: "b9", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
-      { id: "b10", name: "Önder Fırat (Ahmet Önder Fırat)", position: "Yönetim Kurulu Üyesi" }
-      // Selahattin Baki ve Ozan Balaban gibi isimler de kulislerde güçlü şekilde geçiyor.
+      { id: "b10", name: "Önder Fırat (Ahmet Önder Fırat)", position: "Yönetim Kurulu Üyesi" },
+      { id: "b11", name: "Selahattin Baki", position: "Yönetim Kurulu Üyesi" },
+      { id: "b12", name: "Ozan Balaban", position: "Yönetim Kurulu Üyesi" },
+      { id: "b13", name: "Mithat Yenigün", position: "Yönetim Kurulu Üyesi" }
+      // Bu isimler kulislerde güçlü şekilde geçiyor. Resmi liste henüz tam açıklanmadı.
     ]
   }
 ];
