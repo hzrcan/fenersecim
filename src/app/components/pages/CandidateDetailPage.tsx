@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router";
-import { ArrowLeft, TrendingUp, Users, Briefcase, Target, Clock } from "lucide-react";
+import { ArrowLeft, TrendingUp, Users, Briefcase, Target, Clock, Trophy } from "lucide-react";
 import { getCandidateBySlug, generateSlug, getSlugFromIdOrSlug } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createCandidateSchema, createBreadcrumbSchema } from "../../../utils/seo";
 
@@ -214,6 +214,28 @@ export function CandidateDetailPage() {
               >
                 <h3 className="text-lg font-semibold mb-2">{member.name}</h3>
                 <p className="text-[#FFED00] text-sm">{member.position}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {candidate.coachCandidates && candidate.coachCandidates.length > 0 && (
+        <div className="bg-white rounded-xl p-8 shadow-lg mt-12">
+          <div className="flex items-center space-x-2 mb-8">
+            <Trophy className="w-6 h-6 text-[#001C54]" />
+            <h2 className="text-[#001C54]">Antrenör Adayları</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {candidate.coachCandidates.map((coach) => (
+              <div
+                key={coach.id}
+                className="bg-gradient-to-br from-[#0052A3] to-[#001C54] rounded-lg p-6 text-white hover:shadow-lg transition-shadow border-l-4 border-[#FFED00]"
+              >
+                <h3 className="text-lg font-semibold mb-2">{coach.name}</h3>
+                <span className="inline-block px-3 py-1 bg-[#FFED00] text-[#001C54] text-xs rounded-full">
+                  {coach.status}
+                </span>
               </div>
             ))}
           </div>

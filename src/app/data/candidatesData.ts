@@ -10,12 +10,19 @@ export interface Candidate {
   pastInvolvement: TimelineEvent[];
   popularity: number;
   boardMembers?: BoardMember[];
+  coachCandidates?: CoachCandidate[];
 }
 
 export interface BoardMember {
   id: string;
   name: string;
   position: string;
+}
+
+export interface CoachCandidate {
+  id: string;
+  name: string;
+  status: string;
 }
 
 export interface Project {
@@ -115,6 +122,13 @@ export const candidates: Candidate[] = [
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
       { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" }
+    ],
+    coachCandidates: [
+      { id: "c1", name: "Filipe Luis", status: "Güçlü aday" },
+      { id: "c2", name: "Oliver Glasner", status: "Kulislerde geçen" },
+      { id: "c3", name: "Sebastian Hoeness", status: "Kulislerde geçen" },
+      { id: "c4", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
+      { id: "c5", name: "İsmail Kartal", status: "Yerli alternatif" }
     ]
   },
   {
@@ -170,7 +184,11 @@ export const candidates: Candidate[] = [
       { id: "b11", name: "Selahattin Baki", position: "Yönetim Kurulu Üyesi" },
       { id: "b12", name: "Ozan Balaban", position: "Yönetim Kurulu Üyesi" },
       { id: "b13", name: "Mithat Yenigün", position: "Yönetim Kurulu Üyesi" }
-      // Bu isimler kulislerde güçlü şekilde geçiyor. Resmi liste henüz tam açıklanmadı.
+    ],
+    coachCandidates: [
+      { id: "c6", name: "Aykut Kocaman", status: "Bir numaralı aday" },
+      { id: "c7", name: "Filipe Luis", status: "Teklif götürüldü" },
+      { id: "c8", name: "Vitor Bruno", status: "Kulislerde geçen" }
     ]
   }
 ];

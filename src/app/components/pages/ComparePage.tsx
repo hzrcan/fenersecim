@@ -169,6 +169,26 @@ export function ComparePage() {
                   ))}
                 </tr>
 
+                <tr>
+                  <td className="px-6 py-4 text-[#001C54]">Antrenör Adayları</td>
+                  {compareData.map((candidate) => (
+                    <td key={candidate?.id} className="px-6 py-4">
+                      {candidate?.coachCandidates && candidate.coachCandidates.length > 0 ? (
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          {candidate.coachCandidates.map((coach) => (
+                            <li key={coach.id} className="flex flex-col">
+                              <span className="font-medium text-[#001C54]">{coach.name}</span>
+                              <span className="text-xs text-gray-500">{coach.status}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <X className="w-6 h-6 text-gray-300 mx-auto" />
+                      )}
+                    </td>
+                  ))}
+                </tr>
+
                 {allCategories.map((category) => (
                   <tr key={category} className="bg-gray-50">
                     <td className="px-6 py-4 text-[#001C54]">{category}</td>
