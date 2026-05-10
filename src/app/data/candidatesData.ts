@@ -82,7 +82,7 @@ export const candidates: Candidate[] = [
     ],
     projects: [
       {
-        id: "p5",
+        id: "p1",
         title: "Transfer ve Teknik Ekip",
         description: "Güçlü yabancı hoca ve kaliteli kadro oluşturma (baba transferler vurgusu; agresif strateji)",
         category: "Spor",
@@ -90,7 +90,7 @@ export const candidates: Candidate[] = [
         priority: "acil"
       },
       {
-        id: "p6",
+        id: "p2",
         title: "Mali Yapı Güçlendirme",
         description: "Holding tecrübesiyle finansal disiplin",
         category: "Finansal",
@@ -98,7 +98,7 @@ export const candidates: Candidate[] = [
         priority: "acil"
       },
       {
-        id: "p7",
+        id: "p3",
         title: "Taraftar ve Birlik",
         description: "Camia bütünlüğünü sağlama",
         category: "Topluluk",
@@ -106,7 +106,7 @@ export const candidates: Candidate[] = [
         priority: "önemli"
       },
       {
-        id: "p8",
+        id: "p4",
         title: "Altyapı Yatırımları",
         description: "Sürdürülebilir gençlik gelişimi",
         category: "Altyapı",
@@ -148,7 +148,7 @@ export const candidates: Candidate[] = [
     ],
     projects: [
       {
-        id: "p9",
+        id: "p5",
         title: "Hemen Şampiyonluk",
         description: "Kısa vadede zirve hedefi",
         category: "Spor",
@@ -156,15 +156,7 @@ export const candidates: Candidate[] = [
         priority: "acil"
       },
       {
-        id: "p10",
-        title: "Avrupa'da Kalıcılık",
-        description: "Şampiyonlar Ligi'nde düzenli başarı",
-        category: "Spor",
-        icon: "globe",
-        priority: "acil"
-      },
-      {
-        id: "p11",
+        id: "p6",
         title: "Taraftar Birliği",
         description: "Camia içi dayanışmayı artırma",
         category: "Topluluk",
