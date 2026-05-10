@@ -72,8 +72,8 @@ export const candidates: Candidate[] = [
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
-    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı.",
-    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Aziz Yıldırım'ın birleşme teklifini reddederek tek başına seçime gireceğini açıkladı. İlk sezonda şampiyonluk vaadiyle güçlü (baba) transferler hedefliyor.",
+    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor.",
+    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Aziz Yıldırım'ın birleşme teklifini reddederek tek başına seçime gireceğini açıkladı. İlk sezonda şampiyonluk vaadiyle güçlü (baba) transferler hedefliyor. Seçim tarihinin erkene alınmasını savundu.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
       "Eski Fenerbahçe Yönetim Kurulu Üyesi",
@@ -84,7 +84,7 @@ export const candidates: Candidate[] = [
       {
         id: "p5",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro oluşturma (baba transferler vurgusu)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro oluşturma (baba transferler vurgusu; agresif strateji)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -116,19 +116,22 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; birleşme teklifini reddetti" }
     ],
     popularity: 70,
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
-      { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" }
+      { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" },
+      { id: "b3", name: "Ruşen Çetin", position: "Yönetim Kurulu Üyesi" }
+      // Additional members will be announced in the coming weeks
     ],
     coachCandidates: [
-      { id: "c1", name: "Filipe Luis", status: "Güçlü aday" },
-      { id: "c2", name: "Oliver Glasner", status: "Kulislerde geçen" },
-      { id: "c3", name: "Sebastian Hoeness", status: "Kulislerde geçen" },
-      { id: "c4", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
-      { id: "c5", name: "İsmail Kartal", status: "Yerli alternatif" }
+      { id: "c1", name: "Filipe Luis", status: "Güçlü aday (Flamengo'dan temas)" },
+      { id: "c2", name: "Xabi Alonso", status: "Listede öne çıkan (temas kuruldu)" },
+      { id: "c3", name: "Oliver Glasner", status: "Kulislerde geçen" },
+      { id: "c4", name: "Sebastian Hoeness", status: "Kulislerde geçen" },
+      { id: "c5", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
+      { id: "c_new", name: "Enzo Maresca", status: "Görüşme yapıldı (yabancı hoca tercihi)" }
     ]
   },
   {
@@ -136,8 +139,8 @@ export const candidates: Candidate[] = [
     name: "Aziz Yıldırım",
     slogan: "Tecrübe ve Zafer",
     photo: "/assets/azizyildirim.jpg",
-    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı ve diğer adaylara birleşme çağrısı yaptı.",
-    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. Barış Göktürk'ün desteğini aldı.",
+    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı ve diğer adaylara birleşme çağrısı yaptı. Barış Göktürk'ün desteğini aldı.",
+    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. Seçim tarihine ilişkin açıklamalarda bulundu.",
     experience: [
       "Fenerbahçe Başkanı (1998-2018)",
       "Çok sayıda lig ve kupa şampiyonluğu",
@@ -172,21 +175,20 @@ export const candidates: Candidate[] = [
     pastInvolvement: [
       { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Fenerbahçe'de yönetim kurulunda ve futbol şubesinde aktif görev aldı" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl boyunca kulübe liderlik etti" },
-      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta resmen açıkladı, birlik çağrısı yaptı" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta resmen açıkladı, birlik çağrısı yaptı; Barış Göktürk desteğiyle güçlendi" }
     ],
     popularity: 87,
     boardMembers: [
-      { id: "b6", name: "Barış Göktürk", position: "Başkan Vekili" },
+      { id: "b6", name: "Barış Göktürk", position: "Başkan Vekili / Destekleyici" },
       { id: "b7", name: "Mahmut Uslu (Nedim Uslu)", position: "Yönetim Kurulu Üyesi" },
       { id: "b8", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
       { id: "b9", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
       { id: "b10", name: "Önder Fırat (Ahmet Önder Fırat)", position: "Yönetim Kurulu Üyesi" },
-      { id: "b11", name: "Selahattin Baki", position: "Yönetim Kurulu Üyesi" },
-      { id: "b12", name: "Ozan Balaban", position: "Yönetim Kurulu Üyesi" },
-      { id: "b13", name: "Mithat Yenigün", position: "Yönetim Kurulu Üyesi" }
+      { id: "b11", name: "Ozan Balaban", position: "Yönetim Kurulu Üyesi" },
+      { id: "b12", name: "Mithat Yenigün", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
-      { id: "c6", name: "Aykut Kocaman", status: "Bir numaralı aday" },
+      { id: "c6", name: "Aykut Kocaman", status: "Bir numaralı aday (görüşme yapıldı, güçlü anlaşma iddiası)" },
       { id: "c7", name: "Filipe Luis", status: "Teklif götürüldü" },
       { id: "c8", name: "Vitor Bruno", status: "Kulislerde geçen" }
     ]
