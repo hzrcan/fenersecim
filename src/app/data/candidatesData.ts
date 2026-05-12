@@ -72,8 +72,8 @@ export const candidates: Candidate[] = [
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
-    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor.",
-    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Aziz Yıldırım'ın birleşme teklifini reddederek tek başına seçime gireceğini açıkladı. İlk sezonda şampiyonluk vaadiyle güçlü (baba) transferler hedefliyor. Seçim tarihinin erkene alınmasını savundu.",
+    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya'da (Milan odaklı) transfer görüşmeleri yapıyor.",
+    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Aziz Yıldırım'ın birleşme teklifini reddederek tek başına seçime gireceğini açıkladı. İlk sezonda şampiyonluk vaadiyle güçlü (baba) transferler hedefliyor. Seçim tarihinin erkene alınmasını savundu. 6-7 Haziran seçim tarihi kesinleşti; İtalya'daki görüşmelerle kongreye somut isimler sunma hazırlığında.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
       "Eski Fenerbahçe Yönetim Kurulu Üyesi",
@@ -84,7 +84,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro oluşturma (baba transferler vurgusu; agresif strateji)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro oluşturma (baba transferler vurgusu; agresif strateji, İtalya görüşmeleri devam ediyor)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -116,14 +116,14 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; birleşme teklifini reddetti" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; birleşme teklifini reddetti; İtalya transfer turu başlattı" }
     ],
     popularity: 70,
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
       { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" },
       { id: "b3", name: "Ruşen Çetin", position: "Yönetim Kurulu Üyesi" }
-      // Additional members will be announced in the coming weeks
+      // Additional members (bazı mevcut Saran yönetiminden isimler) görüşmelerde; tam liste kongreye yakın açıklanacak
     ],
     coachCandidates: [
       { id: "c1", name: "Filipe Luis", status: "Güçlü aday (Flamengo'dan temas)" },
@@ -140,7 +140,7 @@ export const candidates: Candidate[] = [
     slogan: "Tecrübe ve Zafer",
     photo: "/assets/azizyildirim.jpg",
     biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı ve diğer adaylara birleşme çağrısı yaptı. Barış Göktürk'ün desteğini aldı.",
-    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. Seçim tarihine ilişkin açıklamalarda bulundu.",
+    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. Seçim tarihine ilişkin açıklamalarda bulundu (6-7 Haziran kesin). Medyadaki bazı transfer/TD isimlerini yalanladı; somut planlarını kongre sürecinde açıklayacak.",
     experience: [
       "Fenerbahçe Başkanı (1998-2018)",
       "Çok sayıda lig ve kupa şampiyonluğu",
@@ -167,7 +167,7 @@ export const candidates: Candidate[] = [
     pastInvolvement: [
       { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Fenerbahçe'de yönetim kurulunda ve futbol şubesinde aktif görev aldı" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl boyunca kulübe liderlik etti" },
-      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta resmen açıkladı, birlik çağrısı yaptı; Barış Göktürk desteğiyle güçlendi" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta resmen açıkladı, birlik çağrısı yaptı; Barış Göktürk desteğiyle güçlendi; dernek/kongre buluşmaları devam ediyor" }
     ],
     popularity: 87,
     boardMembers: [
@@ -180,7 +180,7 @@ export const candidates: Candidate[] = [
       { id: "b12", name: "Mithat Yenigün", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
-      { id: "c6", name: "Aykut Kocaman", status: "Bir numaralı aday (görüşme yapıldı, güçlü anlaşma iddiası)" },
+      { id: "c6", name: "Aykut Kocaman", status: "Bir numaralı aday (görüşme yapıldı, güçlü anlaşma iddiası; bazı tepkiler sonrası flaş karar gündemde)" },
       { id: "c7", name: "Filipe Luis", status: "Teklif götürüldü" },
       { id: "c8", name: "Vitor Bruno", status: "Kulislerde geçen" }
     ]
