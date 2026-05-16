@@ -190,7 +190,7 @@ export const candidates: Candidate[] = [
       { id: "c9", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (Lizbon görüşmeleri gündemde)" },
       { id: "c10", name: "Aykut Kocaman", status: "Güçlü yerli alternatif (yönetim/TD rolü mümkün)" },
       { id: "c11", name: "Roberto Mancini", status: "Listede" },
-      { id: "c12", name: "Nuri Şahin veya diğer yabancı seçenekler", status: "Alternatifler" },
+      { id: "c12", name: "Nuri Şahin", status: "Alternatifler" },
       { id: "c13", name: "Vitor Bruno", status: "Kulislerde" }
     ]
   }
