@@ -131,7 +131,7 @@ export const candidates: Candidate[] = [
       { id: "c4", name: "Oliver Glasner", status: "Kulislerde" },
       { id: "c5", name: "Sebastian Hoeness", status: "Kulislerde" },
       { id: "c6", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
-      { id: "c7", name: "Ruben Amorim / Enzo Maresca", status: "Eklenen isimler (yabancı hoca tercihi)" },
+      { id: "c7", name: "Ruben Amorim", status: "Alternatif" },
       { id: "c8", name: "İsmail Kartal", status: "Yerli alternatif" }
     ]
   },
