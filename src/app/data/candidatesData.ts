@@ -72,8 +72,8 @@ export const candidates: Candidate[] = [
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",  // Unchanged; focus remains on business experience + bold moves
     photo: "/assets/hakansafi.jpg",
-    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya'da (özellikle AC Milan odaklı) transfer ve teknik direktör görüşmeleri yapıyor.",
-    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya'daki görüşmelerle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu yapıyor.",
+    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya'da (özellikle AC Milan odaklı) yoğun transfer ve teknik direktör görüşmeleri yapıyor; Rafael Leão, Fikayo Tomori, Mike Maignan, Dusan Vlahovic gibi isimlerle bağlantılar gündemde.",
+    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya'daki görüşmelerle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu yapıyor. Seçim sürecinde tereddüt etmeden harekete geçtiğini, Fenerbahçe'ye maddi/manevi her türlü katkıyı sunmaya hazır olduğunu belirtiyor.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
       "Eski Fenerbahçe Yönetim Kurulu Üyesi",
@@ -84,7 +84,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro (baba transferler; agresif strateji, İtalya-AC Milan görüşmeleri devam ediyor: Rafael Leão, Tomori, Fofana, Jimenez gibi isimler gündemde; Antonio Conte öncelikli hoca adayı)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro (baba transferler; agresif strateji, İtalya-AC Milan görüşmeleri devam ediyor: Rafael Leão, Tomori, Maignan, Vlahovic, Nkunku gibi isimler gündemde; Antonio Conte öncelikli hoca adayı)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -116,16 +116,16 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan görüşmeleri, Leão ve Milan bağlantıları dahil); kongreye somut isimler hazırlığında; birleşme çağrılarını reddetti" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan görüşmeleri, Leão, Tomori, Maignan vb. bağlantıları dahil); kongreye somut isimler hazırlığında; birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz' vurgusu" }
     ],
-    popularity: 40,  // Updated: Recent polls show him trailing significantly
+    popularity: 35,  // Trailing in recent sentiment/polls; Aziz leads significantly
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
       { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" },
       { id: "b3", name: "Ruşen Çetin", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
-      { id: "c1", name: "Antonio Conte", status: "Liste başı / İlk tercih (Napoli bağlantıları ve kupa başarısı vurgusu)" },
+      { id: "c1", name: "Antonio Conte", status: "Liste başı / İlk tercih (Napoli bağlantıları ve kupa başarısı vurgusu; 7 lig şampiyonluğu)" },
       { id: "c2", name: "Filipe Luis", status: "Güçlü aday" },
       { id: "c3", name: "Xabi Alonso", status: "Listede" },
       { id: "c4", name: "Oliver Glasner", status: "Kulislerde" },
@@ -140,8 +140,8 @@ export const candidates: Candidate[] = [
     name: "Aziz Yıldırım",
     slogan: "Tecrübe ve Zafer",
     photo: "/assets/azizyildirim.jpg",
-    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı. Barış Göktürk'ün desteğini aldı ve derneklerle buluşmalar yapıyor.",
-    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. 2026-27 sezonu için 'şampiyonluk mecburiyeti' vurgusu. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. Birleşme çağrıları yaptı (kısmen başarılı).",
+    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı. Barış Göktürk'ün desteğini aldı ve derneklerle buluşmalar yapıyor (Bursa, İzmir vb.).",
+    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. 2026-27 sezonu için 'şampiyonluk mecburiyeti' vurgusu ('Olamazsa çok büyük tehlikeler bekliyor'). Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. Birleşme çağrıları yaptı (kısmen başarılı; Barış Göktürk katıldı).",
     experience: [
       "Fenerbahçe Başkanı (1998-2018)",
       "Çok sayıda lig ve kupa şampiyonluğu",
@@ -159,7 +159,7 @@ export const candidates: Candidate[] = [
       {
         id: "p6",
         title: "Taraftar Birliği",
-        description: "Camia içi dayanışmayı artırma",
+        description: "Camia içi dayanışmayı artırma; dernek buluşmaları",
         category: "Topluluk",
         icon: "heart",
         priority: "acil"
@@ -178,7 +178,7 @@ export const candidates: Candidate[] = [
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl liderlik" },
       { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk desteği; birlik çağrısı; dernek/kongre buluşmaları; seçim tarihinin erkene çekilmesi talebi" }
     ],
-    popularity: 60,  // Updated: Leading in recent polls (~60% range)
+    popularity: 60,  // Leading in recent sentiment (~60% range in discussions/polls)
     boardMembers: [
       { id: "b4", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
       { id: "b5", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
@@ -187,14 +187,15 @@ export const candidates: Candidate[] = [
       { id: "b8", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
-      { id: "c9", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (Lizbon görüşmeleri gündemde)" },
-      { id: "c10", name: "Aykut Kocaman", status: "Güçlü yerli alternatif (yönetim/TD rolü mümkün)" },
+      { id: "c9", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (Lizbon görüşmeleri gündemde; yüksek maliyet tartışmalı)" },
+      { id: "c10", name: "Aykut Kocaman", status: "Güçlü yerli alternatif (yönetim/TD rolü veya futbol şubesi sorumlusu mümkün)" },
       { id: "c11", name: "Roberto Mancini", status: "Listede" },
       { id: "c12", name: "Nuri Şahin", status: "Alternatifler" },
       { id: "c13", name: "Vitor Bruno", status: "Kulislerde" }
     ]
   }
 ];
+
 export const allProjects = candidates.flatMap(c =>
   c.projects.map(p => ({ ...p, candidateId: c.id, candidateName: c.name }))
 );
