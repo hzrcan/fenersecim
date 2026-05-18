@@ -127,12 +127,11 @@ export const candidates: Candidate[] = [
     coachCandidates: [
       { id: "c1", name: "Antonio Conte", status: "Liste başı / İlk tercih (Napoli bağlantıları ve kupa başarısı vurgusu; 7 lig şampiyonluğu)" },
       { id: "c2", name: "Filipe Luis", status: "Güçlü aday" },
-      { id: "c3", name: "Xabi Alonso", status: "Listede" },
-      { id: "c4", name: "Oliver Glasner", status: "Kulislerde" },
-      { id: "c5", name: "Sebastian Hoeness", status: "Kulislerde" },
-      { id: "c6", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
-      { id: "c7", name: "Ruben Amorim", status: "Alternatif" },
-      { id: "c8", name: "İsmail Kartal", status: "Yerli alternatif" }
+      { id: "c3", name: "Oliver Glasner", status: "Kulislerde" },
+      { id: "c4", name: "Sebastian Hoeness", status: "Kulislerde" },
+      { id: "c5", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
+      { id: "c6", name: "Ruben Amorim", status: "Alternatif" },
+      { id: "c7", name: "İsmail Kartal", status: "Yerli alternatif" }
     ]
   },
   {
