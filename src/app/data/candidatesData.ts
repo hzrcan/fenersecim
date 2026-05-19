@@ -70,9 +70,9 @@ export const candidates: Candidate[] = [
   {
     id: "1",
     name: "Hakan Safi",
-    slogan: "Deneyim ve Yenilik",  // Unchanged; focus remains on business experience + bold moves
+    slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
-    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya'da (özellikle AC Milan odaklı) yoğun transfer ve teknik direktör görüşmeleri yapıyor; Rafael Leão, Fikayo Tomori, Mike Maignan, Dusan Vlahovic gibi isimlerle bağlantılar gündemde.",
+    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya'da (özellikle AC Milan odaklı) yoğun transfer ve teknik direktör görüşmeleri yapıyor; Paolo Maldini ile futbol yapılanması için anlaşma sağladı.",
     vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya'daki görüşmelerle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu yapıyor. Seçim sürecinde tereddüt etmeden harekete geçtiğini, Fenerbahçe'ye maddi/manevi her türlü katkıyı sunmaya hazır olduğunu belirtiyor.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
@@ -84,7 +84,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro (baba transferler; agresif strateji, İtalya-AC Milan görüşmeleri devam ediyor: Rafael Leão, Tomori, Maignan, Vlahovic, Nkunku gibi isimler gündemde; Antonio Conte öncelikli hoca adayı)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması anlaşması; Antonio Conte öncelikli hoca adayı, Stefano Pioli alternatifi; agresif strateji, İtalya-AC Milan görüşmeleri: Rafael Leão, Fikayo Tomori, Mike Maignan, Dusan Vlahovic, Nkunku gibi isimler gündemde)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -116,7 +116,7 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan görüşmeleri, Leão, Tomori, Maignan vb. bağlantıları dahil); kongreye somut isimler hazırlığında; birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz' vurgusu" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan görüşmeleri, Leão, Tomori, Maignan vb. bağlantıları dahil; Paolo Maldini anlaşması); kongreye somut isimler hazırlığında; birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz' vurgusu" }
     ],
     popularity: 35,  // Trailing in recent sentiment/polls; Aziz leads significantly
     boardMembers: [
@@ -125,13 +125,14 @@ export const candidates: Candidate[] = [
       { id: "b3", name: "Ruşen Çetin", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
-      { id: "c1", name: "Antonio Conte", status: "Liste başı / İlk tercih (Napoli bağlantıları ve kupa başarısı vurgusu; 7 lig şampiyonluğu)" },
-      { id: "c2", name: "Filipe Luis", status: "Güçlü aday" },
-      { id: "c3", name: "Oliver Glasner", status: "Kulislerde" },
-      { id: "c4", name: "Sebastian Hoeness", status: "Kulislerde" },
-      { id: "c5", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
-      { id: "c6", name: "Ruben Amorim", status: "Alternatif" },
-      { id: "c7", name: "İsmail Kartal", status: "Yerli alternatif" }
+      { id: "c1", name: "Antonio Conte", status: "Liste başı / İlk tercih (Maldini önerisi; Napoli bağlantıları ve kupa başarısı vurgusu; 7 lig şampiyonluğu)" },
+      { id: "c2", name: "Stefano Pioli", status: "Güçlü alternatif (Maldini önerisi)" },
+      { id: "c3", name: "Filipe Luis", status: "Güçlü aday" },
+      { id: "c4", name: "Oliver Glasner", status: "Kulislerde" },
+      { id: "c5", name: "Sebastian Hoeness", status: "Kulislerde" },
+      { id: "c6", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
+      { id: "c7", name: "Ruben Amorim", status: "Alternatif" },
+      { id: "c8", name: "İsmail Kartal", status: "Yerli alternatif" }
     ]
   },
   {
@@ -186,7 +187,7 @@ export const candidates: Candidate[] = [
       { id: "b8", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
-      { id: "c9", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (Lizbon görüşmeleri gündemde; yüksek maliyet tartışmalı)" },
+      { id: "c9", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (yüksek maliyet tartışmalı)" },
       { id: "c10", name: "Aykut Kocaman", status: "Güçlü yerli alternatif (yönetim/TD rolü veya futbol şubesi sorumlusu mümkün)" },
       { id: "c11", name: "Roberto Mancini", status: "Listede" },
       { id: "c12", name: "Nuri Şahin", status: "Alternatifler" },
