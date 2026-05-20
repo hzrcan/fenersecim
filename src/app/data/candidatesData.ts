@@ -168,6 +168,14 @@ export const candidates: Candidate[] = [
         category: "Yönetim",
         icon: "shield",
         priority: "önemli"
+      },
+      {
+        id: "p8",
+        title: "Futbol Aklı ve Yapısal Dönüşüm",
+        description: "Eski Fenerbahçe efsanelerinden (Oğuz Çetin - futbol aklı, Aykut Kocaman - teknik/TD rolü, Rıdvan Dilmen ve diğer veterenler) oluşan danışma/transfer/izleme komitesi kurma; tecrübelerinden faydalanarak karar mekanizmasını güçlendirme (son haftalarda bir araya gelip plan yapıldı)",
+        category: "Yönetim",
+        icon: "shield",
+        priority: "acil"
       }
     ],
     pastInvolvement: [
