@@ -73,7 +73,7 @@ export const candidates: Candidate[] = [
     slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
     biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya'da (özellikle AC Milan odaklı) yoğun transfer ve teknik direktör görüşmeleri yapıyor; Paolo Maldini ile futbol yapılanması için anlaşma sağladı.",
-    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya'daki görüşmelerle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu yapıyor. Seçim sürecinde tereddüt etmeden harekete geçtiğini, Fenerbahçe'ye maddi/manevi her türlü katkıyı sunmaya hazır olduğunu belirtiyor.",
+    vision: "Uzun vadeli planlarla (1+3 yıl) kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya'daki görüşmelerle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu yapıyor. Seçim sürecinde tereddüt etmeden harekete geçtiğini, Fenerbahçe'ye maddi/manevi her türlü katkıyı sunmaya hazır olduğunu belirtiyor. **'Türkiye'yi bilen, işi ehli hoca getireceğiz'** mesajı veriyor (Sportif direktör olmayacak, hoca doğrudan yönetim kurulu ve başkana bağlı çalışacak).",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
       "Eski Fenerbahçe Yönetim Kurulu Üyesi",
@@ -84,7 +84,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması anlaşması; Antonio Conte öncelikli hoca adayı, Stefano Pioli alternatifi; agresif strateji, İtalya-AC Milan görüşmeleri: Rafael Leão, Fikayo Tomori, Mike Maignan, Dusan Vlahovic, Nkunku gibi isimler gündemde)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması anlaşması - futbol elçisi/akıl rolü; 'Türkiye'yi bilen hoca' öncelikli vurgusu - tecrübeli ve ligi tanıyan profil hedefleniyor; Jorge Jesus (eski Fenerbahçe deneyimiyle güçlü aday), Stefano Pioli (Maldini önerisi), Filipe Luis vb.; yerli: İsmail Kartal öncelikli; agresif strateji, İtalya-AC Milan görüşmeleri: Rafael Leão, Fikayo Tomori, Mike Maignan, Dusan Vlahovic, Nkunku gibi isimler gündemde)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -116,23 +116,20 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan görüşmeleri, Leão, Tomori, Maignan vb. bağlantıları dahil; Paolo Maldini anlaşması); kongreye somut isimler hazırlığında; birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz' vurgusu" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan görüşmeleri, Leão, Tomori, Maignan vb. bağlantıları dahil; Paolo Maldini anlaşması - futbol aklı rolü); 20 Mayıs'ta 'Türkiye'yi bilen hoca' vurgusu (Conte denklem dışı bırakıldı); Jorge Jesus ve İsmail Kartal gibi isimler ön planda; kongreye somut isimler hazırlığında; birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz' vurgusu" }
     ],
-    popularity: 35,  // Trailing in recent sentiment/polls; Aziz leads significantly
+    popularity: 38,  // Trailing but active campaigning and transfer buzz providing slight momentum (~35-40% range)
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
       { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" },
       { id: "b3", name: "Ruşen Çetin", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
-      { id: "c1", name: "Antonio Conte", status: "Liste başı / İlk tercih (Maldini önerisi; Napoli bağlantıları ve kupa başarısı vurgusu; 7 lig şampiyonluğu)" },
-      { id: "c2", name: "Stefano Pioli", status: "Güçlü alternatif (Maldini önerisi)" },
-      { id: "c3", name: "Filipe Luis", status: "Güçlü aday" },
-      { id: "c4", name: "Oliver Glasner", status: "Kulislerde" },
-      { id: "c5", name: "Sebastian Hoeness", status: "Kulislerde" },
-      { id: "c6", name: "Andoni Iraola", status: "Görüşme yapılabilir" },
-      { id: "c7", name: "Ruben Amorim", status: "Alternatif" },
-      { id: "c8", name: "İsmail Kartal", status: "Yerli alternatif" }
+      { id: "c1", name: "Jorge Jesus", status: "Güçlü aday (eski Fenerbahçe deneyimiyle 'Türkiye'yi bilen' kriterine uyumlu; her iki adayda da kulislerde)" },
+      { id: "c2", name: "Stefano Pioli", status: "Maldini önerisi (İtalya deneyimi var ama Türkiye bilgisi sınırlı)" },
+      { id: "c3", name: "Filipe Luis", status: "Liste adayı (yeni nesil; Türkiye deneyimi yok)" },
+      { id: "c4", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi çok iyi bilen profil" }
+      // Conte fully removed per latest statements and "Türkiye'yi bilen" criterion
     ]
   },
   {
@@ -176,9 +173,9 @@ export const candidates: Candidate[] = [
     pastInvolvement: [
       { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Aktif görev" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl liderlik" },
-      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk desteği; birlik çağrısı; dernek/kongre buluşmaları; seçim tarihinin erkene çekilmesi talebi" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk desteği; birlik çağrısı; dernek/kongre buluşmaları; seçim tarihinin erkene çekilmesi talebi; Oğuz Çetin, Aykut Kocaman, Rıdvan Dilmen gibi eski futbolcularla futbol kontrolü planı; Jorge Jesus öncelikli" }
     ],
-    popularity: 60,  // Leading in recent sentiment (~60% range in discussions/polls)
+    popularity: 62,  // Strong lead in recent sentiment and member discussions (~60-65%)
     boardMembers: [
       { id: "b4", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
       { id: "b5", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
@@ -187,11 +184,11 @@ export const candidates: Candidate[] = [
       { id: "b8", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
-      { id: "c9", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (yüksek maliyet tartışmalı)" },
-      { id: "c10", name: "Aykut Kocaman", status: "Güçlü yerli alternatif (yönetim/TD rolü veya futbol şubesi sorumlusu mümkün)" },
-      { id: "c11", name: "Roberto Mancini", status: "Listede" },
-      { id: "c12", name: "Nuri Şahin", status: "Alternatifler" },
-      { id: "c13", name: "Vitor Bruno", status: "Kulislerde" }
+      { id: "c5", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (eski Fenerbahçe deneyimi, yüksek maliyet tartışmalı; Türkiye'yi iyi biliyor)" },
+      { id: "c6", name: "Aykut Kocaman", status: "Güçlü yerli alternatif (futbol aklı / TD rolü vurgusu; Oğuz Çetin ve Rıdvan Dilmen ile birlikte futbol kontrolü)" },
+      { id: "c7", name: "Roberto Mancini", status: "Listede" },
+      { id: "c8", name: "Nuri Şahin", status: "Alternatifler" },
+      { id: "c9", name: "Vitor Bruno", status: "Kulislerde" }
     ]
   }
 ];
