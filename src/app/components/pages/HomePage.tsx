@@ -22,7 +22,7 @@ function getCountdownParts(targetDate: Date) {
 export function HomePage() {
   const totalCandidates = candidates.length;
   const totalProjects = candidates.reduce((sum, c) => sum + c.projects.length, 0);
-  const featuredCandidate = candidates[Math.floor(Math.random() * candidates.length)];
+  const [featuredCandidate] = useState(() => candidates[Math.floor(Math.random() * candidates.length)]);
   const [countdown, setCountdown] = useState(() => getCountdownParts(ELECTION_DATE));
   const countdownItems = useMemo(
     () => [
