@@ -122,7 +122,8 @@ export const candidates: Candidate[] = [
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
       { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" },
-      { id: "b3", name: "Ruşen Çetin", position: "Yönetim Kurulu Üyesi" }
+      { id: "b3", name: "Ruşen Çetin", position: "Yönetim Kurulu Üyesi" },
+      { id: "b4", name: "Ömer Topbaş", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
       { id: "c1", name: "Jorge Jesus", status: "Güçlü aday (eski Fenerbahçe deneyimiyle 'Türkiye'yi bilen' kriterine uyumlu; her iki adayda da kulislerde)" },
