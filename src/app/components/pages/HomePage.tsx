@@ -73,9 +73,9 @@ export function HomePage() {
       <div className="mb-8 bg-gradient-to-r from-[#001C54] via-[#0052A3] to-[#001C54] rounded-2xl p-4 sm:p-6 shadow-xl text-white">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-xs sm:text-sm tracking-wide text-[#FFED00]">Canli Geri Sayim</p>
+            <p className="text-xs sm:text-sm tracking-wide text-[#FFED00]">CANLI GERİ SAYIM</p>
             <p className="text-lg sm:text-xl font-semibold">
-              {countdown.isFinished ? "Secim tamamlandi" : "Fenerbahce 2026 secimine kalan sure"}
+              {countdown.isFinished ? "Secim tamamlandi" : "Fenerbahçe 2026 seçimine kalan sure"}
             </p>
           </div>
           <div className="grid grid-cols-4 gap-2 sm:gap-3 w-full sm:w-auto">
