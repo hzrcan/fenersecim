@@ -190,7 +190,8 @@ export const candidates: Candidate[] = [
       { id: "b5", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
       { id: "b6", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
       { id: "b7", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
-      { id: "b8", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" }
+      { id: "b8", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
+      { id: "b9", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
     ],
     coachCandidates: [
       { id: "c5", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (eski Fenerbahçe deneyimi, yüksek maliyet tartışmalı; Türkiye'yi iyi biliyor)" },
