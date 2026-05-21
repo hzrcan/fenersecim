@@ -182,7 +182,7 @@ export const candidates: Candidate[] = [
       {
         id: "p8",
         title: "Futbol Aklı ve Yapısal Dönüşüm",
-        description: "Eski Fenerbahçe efsanelerinden (Oğuz Çetin - futbol aklı, Aykut Kocaman - teknik/TD rolü, Rıdvan Dilmen ve diğer veterenler) oluşan danışma/transfer/izleme komitesi kurma; tecrübelerinden faydalanarak karar mekanizmasını güçlendirme (son haftalarda bir araya gelip plan yapıldı)",
+        description: "Eski Fenerbahçe efsanelerinden (Oğuz Çetin - futbol aklı, Aykut Kocaman - teknik/TD rolü ve diğer veterenler) oluşan danışma/transfer/izleme komitesi kurma; tecrübelerinden faydalanarak karar mekanizmasını güçlendirme (son haftalarda bir araya gelip plan yapıldı)",
         category: "Yönetim",
         icon: "shield",
         priority: "acil"
@@ -191,7 +191,7 @@ export const candidates: Candidate[] = [
     pastInvolvement: [
       { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Aktif görev" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl liderlik" },
-      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk desteği; birlik çağrısı; dernek/kongre buluşmaları; seçim tarihinin erkene çekilmesi talebi; Oğuz Çetin, Aykut Kocaman, Rıdvan Dilmen gibi eski futbolcularla futbol kontrolü planı; Jorge Jesus öncelikli" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk desteği; birlik çağrısı; dernek/kongre buluşmaları; seçim tarihinin erkene çekilmesi talebi; Oğuz Çetin, Aykut Kocaman, Volkan Demirel gibi eski futbolcularla futbol kontrolü planı; Jorge Jesus öncelikli" }
     ],
     popularity: 62,  // Strong lead in recent sentiment and member discussions (~60-65%)
     boardMembers: [
