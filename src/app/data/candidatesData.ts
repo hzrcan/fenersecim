@@ -123,7 +123,8 @@ export const candidates: Candidate[] = [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi" },
       { id: "b2", name: "Metin Sipahioğlu", position: "İletişimden Sorumlu Yönetim Kurulu Üyesi" },
       { id: "b3", name: "Ruşen Çetin", position: "Yönetim Kurulu Üyesi" },
-      { id: "b4", name: "Ömer Topbaş", position: "Yönetim Kurulu Üyesi" }
+      { id: "b4", name: "Ömer Topbaş", position: "Yönetim Kurulu Üyesi" },
+      { id: "b5", name: "Ahmet Bulut", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
       { id: "c1", name: "Jorge Jesus", status: "Güçlü aday (eski Fenerbahçe deneyimiyle 'Türkiye'yi bilen' kriterine uyumlu; her iki adayda da kulislerde)" },
@@ -186,12 +187,12 @@ export const candidates: Candidate[] = [
     ],
     popularity: 62,  // Strong lead in recent sentiment and member discussions (~60-65%)
     boardMembers: [
-      { id: "b4", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
-      { id: "b5", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
-      { id: "b6", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
-      { id: "b7", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
-      { id: "b8", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
-      { id: "b9", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
+      { id: "b6", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
+      { id: "b7", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
+      { id: "b8", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
+      { id: "b9", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
+      { id: "b10", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
+      { id: "b11", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
     ],
     coachCandidates: [
       { id: "c5", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (eski Fenerbahçe deneyimi, yüksek maliyet tartışmalı; Türkiye'yi iyi biliyor)" },
