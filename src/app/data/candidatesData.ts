@@ -194,7 +194,8 @@ export const candidates: Candidate[] = [
       { id: "b10", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
       { id: "b11", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
       { id: "b12", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi" },
-      { id: "b13", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
+      { id: "b13", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi" },
+      { id: "b14", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
     ],
     coachCandidates: [
       { id: "c5", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (eski Fenerbahçe deneyimi, yüksek maliyet tartışmalı; Türkiye'yi iyi biliyor)" },
