@@ -11,6 +11,7 @@ export interface Candidate {
   popularity: number;
   boardMembers?: BoardMember[];
   coachCandidates?: CoachCandidate[];
+  campaignContacts?: CampaignContact[];
 }
 
 export interface BoardMember {
@@ -23,6 +24,11 @@ export interface CoachCandidate {
   id: string;
   name: string;
   status: string;
+}
+
+export interface CampaignContact {
+  id: string;
+  name: string;
 }
 
 export interface Project {
@@ -133,6 +139,9 @@ export const candidates: Candidate[] = [
       { id: "b11", name: "Ozan Vural", position: "Yönetim Kurulu Üyesi" },
       { id: "b12", name: "Şanser Özyıldırım", position: "Yönetim Kurulu Üyesi" }
     ],
+    campaignContacts: [
+      { id: "cc1", name: "Yusuf Kenan Çalık" }
+    ],
     coachCandidates: [
       { id: "c1", name: "Jorge Jesus", status: "Güçlü aday (eski Fenerbahçe deneyimiyle 'Türkiye'yi bilen' kriterine uyumlu; her iki adayda da kulislerde)" },
       { id: "c2", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi çok iyi bilen profil" },
@@ -205,6 +214,9 @@ export const candidates: Candidate[] = [
       { id: "b21", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
       { id: "b22", name: "Mehmet İman", position: "Yönetim Kurulu Üyesi" },
       { id: "b23", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi" }
+    ],
+    campaignContacts: [
+      { id: "cc2", name: "Yusuf Mertol" }
     ],
     coachCandidates: [
       { id: "c5", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (eski Fenerbahçe deneyimi, yüksek maliyet tartışmalı; Türkiye'yi iyi biliyor)" },

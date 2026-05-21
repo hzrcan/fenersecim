@@ -220,6 +220,26 @@ export function CandidateDetailPage() {
         </div>
       )}
 
+      {candidate.campaignContacts && candidate.campaignContacts.length > 0 && (
+        <div className="bg-white rounded-xl p-8 shadow-lg mt-12">
+          <div className="flex items-center space-x-2 mb-8">
+            <Users className="w-6 h-6 text-[#001C54]" />
+            <h2 className="text-[#001C54]">Seçim Kampanyası İletişim Sorumluları</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {candidate.campaignContacts.map((contact) => (
+              <div
+                key={contact.id}
+                className="bg-gradient-to-br from-[#001C54] to-[#003F7F] rounded-lg p-6 text-white hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-lg font-semibold mb-2">{contact.name}</h3>
+                <p className="text-[#FFED00] text-sm">Kampanya İletişim Sorumlusu</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {candidate.coachCandidates && candidate.coachCandidates.length > 0 && (
         <div className="bg-white rounded-xl p-8 shadow-lg mt-12">
           <div className="flex items-center space-x-2 mb-8">
