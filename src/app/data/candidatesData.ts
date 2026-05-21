@@ -136,9 +136,9 @@ export const candidates: Candidate[] = [
     ],
     coachCandidates: [
       { id: "c1", name: "Jorge Jesus", status: "Güçlü aday (eski Fenerbahçe deneyimiyle 'Türkiye'yi bilen' kriterine uyumlu; her iki adayda da kulislerde)" },
-      { id: "c2", name: "Stefano Pioli", status: "Maldini önerisi (İtalya deneyimi var ama Türkiye bilgisi sınırlı)" },
-      { id: "c3", name: "Filipe Luis", status: "Liste adayı (yeni nesil; Türkiye deneyimi yok)" },
-      { id: "c4", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi çok iyi bilen profil" }
+      { id: "c2", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi çok iyi bilen profil" },
+      { id: "c3", name: "Stefano Pioli", status: "Maldini önerisi (İtalya deneyimi var ama Türkiye bilgisi sınırlı)" },
+      { id: "c4", name: "Filipe Luis", status: "Liste adayı (yeni nesil; Türkiye deneyimi yok)" }
       // Conte fully removed per latest statements and "Türkiye'yi bilen" criterion
     ]
   },
