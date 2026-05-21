@@ -205,14 +205,13 @@ export const candidates: Candidate[] = [
       { id: "b21", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi" },
       { id: "b22", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
       { id: "b23", name: "Mehmet İman", position: "Yönetim Kurulu Üyesi" },
-      { id: "b23", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi" }
+      { id: "b24", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
       { id: "c5", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (eski Fenerbahçe deneyimi, yüksek maliyet tartışmalı; Türkiye'yi iyi biliyor)" },
       { id: "c6", name: "Aykut Kocaman", status: "Güçlü yerli alternatif (futbol aklı / TD rolü vurgusu; Oğuz Çetin ve Rıdvan Dilmen ile birlikte futbol kontrolü)" },
       { id: "c7", name: "Roberto Mancini", status: "Listede" },
-      { id: "c8", name: "Nuri Şahin", status: "Alternatifler" },
-      { id: "c9", name: "Vitor Bruno", status: "Kulislerde" }
+      { id: "c8", name: "Nuri Şahin", status: "Alternatifler" }
     ]
   }
 ];
