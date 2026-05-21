@@ -127,12 +127,11 @@ export const candidates: Candidate[] = [
       { id: "b5", name: "Ahmet Bulut", position: "Yönetim Kurulu Üyesi" },
       { id: "b6", name: "Selahattin Süleymanoğlu", position: "Yönetim Kurulu Üyesi" },
       { id: "b7", name: "Metin Doğan", position: "Yönetim Kurulu Üyesi" },
-      { id: "b8", name: "Ahmet Ketenci", position: "Yönetim Kurulu Üyesi" },
-      { id: "b9", name: "Cem Ciritçi", position: "Yönetim Kurulu Üyesi" },
-      { id: "b10", name: "Özgür Özaktaç", position: "Yönetim Kurulu Üyesi" },
-      { id: "b11", name: "Enes Yıldırım", position: "Yönetim Kurulu Üyesi" },
-      { id: "b12", name: "Ozan Vural", position: "Yönetim Kurulu Üyesi" },
-      { id: "b13", name: "Şanser Özyıldırım", position: "Yönetim Kurulu Üyesi" }
+      { id: "b8", name: "Cem Ciritçi", position: "Yönetim Kurulu Üyesi" },
+      { id: "b9", name: "Özgür Özaktaç", position: "Yönetim Kurulu Üyesi" },
+      { id: "b10", name: "Enes Yıldırım", position: "Yönetim Kurulu Üyesi" },
+      { id: "b11", name: "Ozan Vural", position: "Yönetim Kurulu Üyesi" },
+      { id: "b12", name: "Şanser Özyıldırım", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
       { id: "c1", name: "Jorge Jesus", status: "Güçlü aday (eski Fenerbahçe deneyimiyle 'Türkiye'yi bilen' kriterine uyumlu; her iki adayda da kulislerde)" },
@@ -195,17 +194,17 @@ export const candidates: Candidate[] = [
     ],
     popularity: 62,  // Strong lead in recent sentiment and member discussions (~60-65%)
     boardMembers: [
-      { id: "b14", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
-      { id: "b15", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
-      { id: "b16", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
-      { id: "b17", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
-      { id: "b18", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
-      { id: "b19", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
-      { id: "b20", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi" },
-      { id: "b21", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi" },
-      { id: "b22", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
-      { id: "b23", name: "Mehmet İman", position: "Yönetim Kurulu Üyesi" },
-      { id: "b24", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi" }
+      { id: "b13", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
+      { id: "b14", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
+      { id: "b15", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
+      { id: "b16", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
+      { id: "b17", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
+      { id: "b18", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
+      { id: "b19", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi" },
+      { id: "b20", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi" },
+      { id: "b21", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
+      { id: "b22", name: "Mehmet İman", position: "Yönetim Kurulu Üyesi" },
+      { id: "b23", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi" }
     ],
     coachCandidates: [
       { id: "c5", name: "Jorge Jesus", status: "Öncelikli / Bomba isim (eski Fenerbahçe deneyimi, yüksek maliyet tartışmalı; Türkiye'yi iyi biliyor)" },
