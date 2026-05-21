@@ -1,13 +1,38 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { Users, Calendar, TrendingUp, Award } from "lucide-react";
 import { candidates } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createOrganizationSchema, createEventSchema } from "../../../utils/seo";
 
+const ELECTION_DATE = new Date(2026, 5, 7, 20, 0, 0);
+
+function getCountdownParts(targetDate: Date) {
+  const diff = targetDate.getTime() - new Date().getTime();
+  const safeDiff = Math.max(0, diff);
+
+  return {
+    days: Math.floor(safeDiff / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((safeDiff / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((safeDiff / (1000 * 60)) % 60),
+    seconds: Math.floor((safeDiff / 1000) % 60),
+    isFinished: safeDiff === 0,
+  };
+}
+
 export function HomePage() {
   const totalCandidates = candidates.length;
   const totalProjects = candidates.reduce((sum, c) => sum + c.projects.length, 0);
   const featuredCandidate = candidates[Math.floor(Math.random() * candidates.length)];
+  const [countdown, setCountdown] = useState(() => getCountdownParts(ELECTION_DATE));
+  const countdownItems = useMemo(
+    () => [
+      { label: "Gün", value: countdown.days },
+      { label: "Saat", value: countdown.hours },
+      { label: "Dakika", value: countdown.minutes },
+      { label: "Saniye", value: countdown.seconds },
+    ],
+    [countdown]
+  );
 
   useEffect(() => {
     // Sayfanın meta bilgilerini güncelle
@@ -35,8 +60,35 @@ export function HomePage() {
     );
   }, []);
 
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setCountdown(getCountdownParts(ELECTION_DATE));
+    }, 1000);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mb-8 bg-gradient-to-r from-[#001C54] via-[#0052A3] to-[#001C54] rounded-2xl p-4 sm:p-6 shadow-xl text-white">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-xs sm:text-sm tracking-wide text-[#FFED00]">Canli Geri Sayim</p>
+            <p className="text-lg sm:text-xl font-semibold">
+              {countdown.isFinished ? "Secim tamamlandi" : "Fenerbahce 2026 secimine kalan sure"}
+            </p>
+          </div>
+          <div className="grid grid-cols-4 gap-2 sm:gap-3 w-full sm:w-auto">
+            {countdownItems.map(item => (
+              <div key={item.label} className="bg-white/10 backdrop-blur-sm rounded-xl px-3 py-2 text-center min-w-[72px]">
+                <p className="text-2xl sm:text-3xl font-bold leading-none">{String(item.value).padStart(2, "0")}</p>
+                <p className="text-[11px] sm:text-xs uppercase tracking-wide text-[#FFED00] mt-1">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="text-center mb-16">
         <h1 className="mb-4 bg-gradient-to-r from-[#001C54] via-[#0052A3] to-[#001C54] bg-clip-text text-transparent">
           Fenerbahçe Başkanlık Seçimleri 2026
@@ -142,7 +194,7 @@ export function HomePage() {
           
           <div className="mb-6 p-4 bg-gradient-to-br from-[#001C54] to-[#0052A3] rounded-lg text-white">
             <p className="text-sm opacity-90 mb-1">Seçime Kalan Gün</p>
-            <p className="text-4xl font-bold">{Math.max(0, Math.ceil((new Date(2026, 5, 7).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)))}</p>
+            <p className="text-4xl font-bold">{countdown.days}</p>
           </div>
 
           <div className="space-y-4">
