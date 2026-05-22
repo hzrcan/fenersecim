@@ -217,7 +217,7 @@ export function CandidateDetailPage() {
                       className="bg-gradient-to-br from-[#001C54] to-[#003F7F] rounded-lg p-6 text-white hover:shadow-lg transition-shadow"
                     >
                       <h4 className="text-lg font-semibold mb-2">{member.name}</h4>
-                      <p className="text-[#FFED00] text-sm">{member.position} (Asil Üye)</p>
+                      <p className="text-[#FFED00] text-sm">{member.position}</p>
                     </div>
                   ))}
                 </div>
