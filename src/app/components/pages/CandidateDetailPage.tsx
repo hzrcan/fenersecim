@@ -203,9 +203,6 @@ export function CandidateDetailPage() {
             <Users className="w-6 h-6 text-[#001C54]" />
             <h2 className="text-[#001C54]">Yönetim Kurulu Üyeleri</h2>
           </div>
-          <p className="text-sm text-gray-600 mb-6 p-4 bg-amber-50 rounded-lg border-l-4 border-amber-400">
-            <strong>Not:</strong> Bu liste henüz resmi olarak onaylanmamıştır ve söylentiler temelinde derlenmiştir. Aday tarafından kesinleştirilmiş nihai liste değildir.
-          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {candidate.boardMembers.map((member) => (
               <div
