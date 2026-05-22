@@ -154,14 +154,40 @@ export function ComparePage() {
                   {compareData.map((candidate) => (
                     <td key={candidate?.id} className="px-6 py-4">
                       {candidate?.boardMembers && candidate.boardMembers.length > 0 ? (
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          {candidate.boardMembers.map((member) => (
-                            <li key={member.id} className="flex flex-col">
-                              <span className="font-medium text-[#001C54]">{member.name}</span>
-                              <span className="text-xs text-gray-500">{member.position}</span>
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="space-y-4">
+                          <div>
+                            <p className="text-xs font-semibold uppercase tracking-wide text-[#001C54] mb-2">Asil Üyeler</p>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              {candidate.boardMembers
+                                .filter((member) => member.type === "asil")
+                                .map((member) => (
+                                  <li key={member.id} className="flex flex-col">
+                                    <span className="font-medium text-[#001C54]">{member.name}</span>
+                                    <span className="text-xs text-gray-500">{member.position}</span>
+                                  </li>
+                                ))}
+                            </ul>
+                          </div>
+
+                          {candidate.boardMembers.some((member) => member.type === "asil") &&
+                            candidate.boardMembers.some((member) => member.type === "yedek") && (
+                              <div className="border-t border-gray-200"></div>
+                            )}
+
+                          <div>
+                            <p className="text-xs font-semibold uppercase tracking-wide text-[#001C54] mb-2">Yedek Üyeler</p>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              {candidate.boardMembers
+                                .filter((member) => member.type === "yedek")
+                                .map((member) => (
+                                  <li key={member.id} className="flex flex-col">
+                                    <span className="font-medium text-[#001C54]">{member.name}</span>
+                                    <span className="text-xs text-gray-500">{member.position}</span>
+                                  </li>
+                                ))}
+                            </ul>
+                          </div>
+                        </div>
                       ) : (
                         <X className="w-6 h-6 text-gray-300 mx-auto" />
                       )}
