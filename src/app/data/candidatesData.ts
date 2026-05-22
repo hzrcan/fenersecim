@@ -137,7 +137,8 @@ export const candidates: Candidate[] = [
       { id: "b9", name: "Özgür Özaktaç", position: "Yönetim Kurulu Üyesi" },
       { id: "b10", name: "Enes Yıldırım", position: "Yönetim Kurulu Üyesi" },
       { id: "b11", name: "Ozan Vural", position: "Yönetim Kurulu Üyesi" },
-      { id: "b12", name: "Şanser Özyıldırım", position: "Yönetim Kurulu Üyesi" }
+      { id: "b12", name: "Şanser Özyıldırım", position: "Yönetim Kurulu Üyesi" },
+      { id: "b13", name: "Ogün Doğan", position: "Yönetim Kurulu Üyesi" }
     ],
     campaignContacts: [
       { id: "cc1", name: "Yusuf Kenan Çalık" }
@@ -203,17 +204,17 @@ export const candidates: Candidate[] = [
     ],
     popularity: 62,  // Strong lead in recent sentiment and member discussions (~60-65%)
     boardMembers: [
-      { id: "b13", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
-      { id: "b14", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
-      { id: "b15", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
-      { id: "b16", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
-      { id: "b17", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
-      { id: "b18", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
-      { id: "b19", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi" },
-      { id: "b20", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi" },
-      { id: "b21", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
-      { id: "b22", name: "Mehmet İman", position: "Yönetim Kurulu Üyesi" },
-      { id: "b23", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi" }
+      { id: "b14", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
+      { id: "b15", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
+      { id: "b16", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
+      { id: "b17", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
+      { id: "b18", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
+      { id: "b19", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
+      { id: "b20", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi" },
+      { id: "b21", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi" },
+      { id: "b22", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
+      { id: "b23", name: "Mehmet İman", position: "Yönetim Kurulu Üyesi" },
+      { id: "b24", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi" }
     ],
     campaignContacts: [
       { id: "cc2", name: "Yusuf Mertol" }
