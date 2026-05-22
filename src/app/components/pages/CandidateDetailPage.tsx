@@ -72,6 +72,9 @@ export function CandidateDetailPage() {
     ikincil: "bg-green-100 text-green-700 border-green-300",
   };
 
+  const asilBoardMembers = candidate.boardMembers?.filter(member => member.type === "asil") ?? [];
+  const yedekBoardMembers = candidate.boardMembers?.filter(member => member.type === "yedek") ?? [];
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <Link
@@ -203,16 +206,44 @@ export function CandidateDetailPage() {
             <Users className="w-6 h-6 text-[#001C54]" />
             <h2 className="text-[#001C54]">Yönetim Kurulu Üyeleri</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {candidate.boardMembers.map((member) => (
-              <div
-                key={member.id}
-                className="bg-gradient-to-br from-[#001C54] to-[#003F7F] rounded-lg p-6 text-white hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-lg font-semibold mb-2">{member.name}</h3>
-                <p className="text-[#FFED00] text-sm">{member.position}</p>
+          <div className="space-y-8">
+            {asilBoardMembers.length > 0 && (
+              <div>
+                <h3 className="text-[#001C54] mb-4">Asil Üyeler</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {asilBoardMembers.map((member) => (
+                    <div
+                      key={member.id}
+                      className="bg-gradient-to-br from-[#001C54] to-[#003F7F] rounded-lg p-6 text-white hover:shadow-lg transition-shadow"
+                    >
+                      <h4 className="text-lg font-semibold mb-2">{member.name}</h4>
+                      <p className="text-[#FFED00] text-sm">{member.position} (Asil Üye)</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
+            )}
+
+            {asilBoardMembers.length > 0 && yedekBoardMembers.length > 0 && (
+              <div className="border-t border-[#001C54]/20"></div>
+            )}
+
+            {yedekBoardMembers.length > 0 && (
+              <div>
+                <h3 className="text-[#001C54] mb-4">Yedek Üyeler</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {yedekBoardMembers.map((member) => (
+                    <div
+                      key={member.id}
+                      className="bg-gradient-to-br from-[#0052A3] to-[#001C54] rounded-lg p-6 text-white hover:shadow-lg transition-shadow"
+                    >
+                      <h4 className="text-lg font-semibold mb-2">{member.name}</h4>
+                      <p className="text-[#FFED00] text-sm">{member.position}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
