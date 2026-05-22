@@ -204,17 +204,27 @@ export const candidates: Candidate[] = [
     ],
     popularity: 62,  // Strong lead in recent sentiment and member discussions (~60-65%)
     boardMembers: [
-      { id: "b14", name: "Barış Göktürk", position: "Başkan Vekili / Destekçi" },
-      { id: "b15", name: "Mahmut Uslu", position: "Yönetim Kurulu Üyesi" },
-      { id: "b16", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi" },
-      { id: "b17", name: "Ömer Onan", position: "Yönetim Kurulu Üyesi" },
-      { id: "b18", name: "Önder Fırat", position: "Yönetim Kurulu Üyesi" },
-      { id: "b19", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi" },
-      { id: "b20", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi" },
-      { id: "b21", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi" },
-      { id: "b22", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi" },
-      { id: "b23", name: "Mehmet İman", position: "Yönetim Kurulu Üyesi" },
-      { id: "b24", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi" }
+      { id: "b14", name: "Barış Göktürk", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b15", name: "Mahmut Nedim Uslu", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b16", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b17", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b18", name: "Ahmet Önder Fırat", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b19", name: "Cihan Kamer", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b20", name: "Fatih Öztürk", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b21", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b22", name: "Tanju Kaya", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b23", name: "Ahmet Murat İman", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b24", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b25", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b26", name: "Mehmet Aydın", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b27", name: "Mehmet Selim Kosif", position: "Yönetim Kurulu Üyesi (Asil Üye)" },
+      { id: "b28", name: "Fatih Aslan", position: "Yönetim Kurulu Üyesi (Yedek Üye)" },
+      { id: "b29", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi (Yedek Üye)" },
+      { id: "b30", name: "Mustafa Aydın Acun", position: "Yönetim Kurulu Üyesi (Yedek Üye)" },
+      { id: "b31", name: "Barış Karagöz", position: "Yönetim Kurulu Üyesi (Yedek Üye)" },
+      { id: "b32", name: "Savaş Adalet", position: "Yönetim Kurulu Üyesi (Yedek Üye)" },
+      { id: "b33", name: "Demre İşcan", position: "Yönetim Kurulu Üyesi (Yedek Üye)" },
+      { id: "b34", name: "Yasemin Babayiğit", position: "Yönetim Kurulu Üyesi (Yedek Üye)" }
     ],
     campaignContacts: [
       { id: "cc2", name: "Yusuf Mertol" }
