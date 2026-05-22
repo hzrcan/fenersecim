@@ -91,7 +91,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması anlaşması - futbol elçisi/akıl rolü; 'Türkiye'yi bilen hoca' öncelikli vurgusu - tecrübeli ve ligi tanıyan profil hedefleniyor; Jorge Jesus (eski Fenerbahçe deneyimiyle güçlü aday), Stefano Pioli (Maldini önerisi), Filipe Luis vb.; yerli: İsmail Kartal öncelikli; agresif strateji, İtalya-AC Milan görüşmeleri: Rafael Leão, Fikayo Tomori, Mike Maignan, Dusan Vlahovic, Nkunku gibi isimler gündemde)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması anlaşması - futbol elçisi/akıl rolü; 'Türkiye'yi bilen hoca' öncelikli vurgusu - tecrübeli ve ligi tanıyan profil hedefleniyor. Yerli: İsmail Kartal öncelikli; agresif strateji, İtalya-AC Milan görüşmeleri: Rafael Leão, Fikayo Tomori, Mike Maignan, Dusan Vlahovic, Nkunku gibi isimler gündemde)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -123,7 +123,7 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan görüşmeleri, Leão, Tomori, Maignan vb. bağlantıları dahil; Paolo Maldini anlaşması - futbol aklı rolü); 20 Mayıs'ta 'Türkiye'yi bilen hoca' vurgusu (Conte denklem dışı bırakıldı); Jorge Jesus ve İsmail Kartal gibi isimler ön planda; kongreye somut isimler hazırlığında; birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz' vurgusu" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan görüşmeleri, Leão, Tomori, Maignan vb. bağlantıları dahil; Paolo Maldini anlaşması - futbol aklı rolü); 20 Mayıs'ta 'Türkiye'yi bilen hoca' vurgusu (Conte denklem dışı bırakıldı); Birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz' vurgusu" }
     ],
     popularity: 38,  // Trailing but active campaigning and transfer buzz providing slight momentum (~35-40% range)
     boardMembers: [
@@ -153,7 +153,7 @@ export const candidates: Candidate[] = [
       { id: "cc1", name: "Yusuf Kenan Çalık" }
     ],
     coachCandidates: [
-      { id: "c1", name: "Jorge Jesus", status: "Güçlü aday (eski Fenerbahçe deneyimiyle 'Türkiye'yi bilen' kriterine uyumlu; her iki adayda da kulislerde)" },
+      { id: "c1", name: "Francesco Farioli", status: "Türkiye'yi iyi bilen profil. Porto deneyimi var. Porto kulübüyle bağlantıları güçlü." },
       { id: "c2", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi çok iyi bilen profil" },
       { id: "c3", name: "Stefano Pioli", status: "Maldini önerisi (İtalya deneyimi var ama Türkiye bilgisi sınırlı)" },
       { id: "c4", name: "Filipe Luis", status: "Liste adayı (yeni nesil; Türkiye deneyimi yok)" }
