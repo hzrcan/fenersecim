@@ -13,7 +13,7 @@ function BoardMemberCard({ member, type }: { member: BoardMember; type: "asil" |
 
   return (
     <Collapsible className={`bg-gradient-to-br ${gradientClass} rounded-lg text-white hover:shadow-lg transition-shadow`}>
-      <CollapsibleTrigger className="w-full text-left p-6 group">
+      <CollapsibleTrigger className="w-full text-left p-6 group cursor-pointer">
         <div className="flex items-start justify-between gap-3">
           <div>
             <h4 className="text-lg font-semibold mb-2">{member.name}</h4>
