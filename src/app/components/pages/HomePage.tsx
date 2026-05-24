@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
-import { Users, Calendar, TrendingUp, Award } from "lucide-react";
+import { Users, Calendar, TrendingUp, Award, Vote } from "lucide-react";
 import { candidates } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createOrganizationSchema, createEventSchema } from "../../../utils/seo";
 
 const ELECTION_DATE = new Date(2026, 5, 7, 20, 0, 0);
+const ELIGIBLE_VOTERS = 44500;
 
 function getCountdownParts(targetDate: Date) {
   const diff = targetDate.getTime() - new Date().getTime();
@@ -22,6 +23,7 @@ function getCountdownParts(targetDate: Date) {
 export function HomePage() {
   const totalCandidates = candidates.length;
   const totalProjects = candidates.reduce((sum, c) => sum + c.projects.length, 0);
+  const eligibleVotersLabel = ELIGIBLE_VOTERS.toLocaleString("tr-TR");
   const [featuredCandidate] = useState(() => candidates[Math.floor(Math.random() * candidates.length)]);
   const [countdown, setCountdown] = useState(() => getCountdownParts(ELECTION_DATE));
   const countdownItems = useMemo(
@@ -101,7 +103,7 @@ export function HomePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
         <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-[#001C54] hover:shadow-xl transition-shadow">
           <div className="flex items-center justify-between mb-4">
             <Users className="w-10 h-10 text-[#001C54]" />
@@ -148,6 +150,17 @@ export function HomePage() {
           </div>
           <h3 className="text-gray-600 mb-1">Misyonumuz</h3>
           <p className="text-sm text-gray-500">Kulüp için en iyi kararı vermek</p>
+        </div>
+
+        <div className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-[#0052A3] hover:shadow-xl transition-shadow">
+          <div className="flex items-center justify-between mb-4">
+            <Vote className="w-10 h-10 text-[#001C54]" />
+            <div className="bg-[#0052A3] rounded-full px-3 py-1 flex items-center justify-center">
+              <span className="font-bold text-white text-sm">{eligibleVotersLabel}</span>
+            </div>
+          </div>
+          <h3 className="text-gray-600 mb-1">Seçim Hakkı Olan Üyeler</h3>
+          <p className="text-sm text-gray-500">Oy kullanma hakkına sahip kongre üyesi sayısı</p>
         </div>
       </div>
 
