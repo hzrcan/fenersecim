@@ -20,6 +20,7 @@ export interface BoardMember {
   position: string;
   type: "asil" | "yedek";
   shortBio?: string;
+  verified?: boolean;
 }
 
 export interface CoachCandidate {

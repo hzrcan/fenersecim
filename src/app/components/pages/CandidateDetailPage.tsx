@@ -231,9 +231,12 @@ export function CandidateDetailPage() {
 
       {candidate.boardMembers && candidate.boardMembers.length > 0 && (
         <div className="bg-white rounded-xl p-8 shadow-lg mt-12">
-          <div className="flex items-center space-x-2 mb-8">
+          <div className="flex items-center flex-wrap gap-2 mb-8">
             <Users className="w-6 h-6 text-[#001C54]" />
             <h2 className="text-[#001C54]">Yönetim Kurulu Üyeleri</h2>
+            <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700 border border-emerald-300">
+              Doğrulanmış
+            </span>
           </div>
           <div className="space-y-8">
             {asilBoardMembers.length > 0 && (

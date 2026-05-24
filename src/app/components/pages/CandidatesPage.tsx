@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { Filter, TrendingUp, Users as UsersIcon } from "lucide-react";
 import { candidates, generateSlug } from "../../data/candidatesData";
@@ -8,7 +8,16 @@ export function CandidatesPage() {
   const [sortBy, setSortBy] = useState<"name" | "popularity">("popularity");
   const [filterCategory, setFilterCategory] = useState<string>("all");
 
-  const categories = ["all", "Altyapı", "Finansal", "Spor", "Teknoloji", "Tesisleşme"];
+  const availableCategories = useMemo(() => {
+    const categories = new Set(candidates.flatMap(c => c.projects.map(p => p.category)));
+    return ["all", ...Array.from(categories).sort((a, b) => a.localeCompare(b, "tr"))];
+  }, []);
+
+  useEffect(() => {
+    if (filterCategory !== "all" && !availableCategories.includes(filterCategory)) {
+      setFilterCategory("all");
+    }
+  }, [availableCategories, filterCategory]);
 
   useEffect(() => {
     // Sayfanın meta bilgilerini güncelle
@@ -62,7 +71,7 @@ export function CandidatesPage() {
               onChange={(e) => setFilterCategory(e.target.value)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#001C54] focus:border-transparent"
             >
-              {categories.map(cat => (
+              {availableCategories.map(cat => (
                 <option key={cat} value={cat}>
                   {cat === "all" ? "Tüm Kategoriler" : cat}
                 </option>
