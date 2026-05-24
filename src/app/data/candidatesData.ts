@@ -131,7 +131,7 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan bağlantıları, Leão, Tomori, Maignan vb.); Paolo Maldini ile strateji/akıl hocalığı anlaşması (resmi görev yok); 20+ Mayıs vurguları: 'Türkiye'yi bilen hoca' (Conte denklem dışı); Birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz', stadyum kapasite artışı (65k) ve tesis projeleri; seçim öncesi somut açıklamalar planı" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan bağlantıları, Leão, Tomori, Maignan vb.); Paolo Maldini ile strateji/akıl hocalığı anlaşması (resmi görev yok); 20+ Mayıs vurguları: 'Türkiye'yi bilen hoca' (Conte denklem dışı); Birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz', stadyum kapasite artışı (64k) ve tesis projeleri; seçim öncesi somut açıklamalar planı" }
     ],
     popularity: 40,  // Active campaigning, Italy buzz, and transfer promises providing momentum (~35-45%)
     boardMembers: [
