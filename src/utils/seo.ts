@@ -176,16 +176,6 @@ export function createOrganizationSchema() {
     description: "Fenerbahçe Spor Kulübü başkanlık seçimleri bilgilendirme platformu",
     url: window.location.origin,
     logo: `${window.location.origin}/favicon.ico`,
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "Customer Service",
-      url: "https://www.fenerbahce.org",
-    },
-    sameAs: [
-      "https://www.facebook.com/fenerbahce",
-      "https://www.twitter.com/fenerbahce",
-      "https://www.instagram.com/fenerbahce",
-    ],
   };
 }
 
