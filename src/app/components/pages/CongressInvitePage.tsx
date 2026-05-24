@@ -240,10 +240,10 @@ export function CongressInvitePage() {
           <div className="bg-white rounded-2xl shadow-lg p-6 border border-blue-100 text-sm text-gray-700">
             <p className="font-semibold text-[#001C54] mb-2">Platformta neler olacak?</p>
             <p className="mb-3">
-              Yol haritası üzerinde çalışıyoruz. Amaç, kongre üyelerinin doğrulanmış bilgiye hızlı eriştiği ve karşılaştırma yapabildiği özel bir karar destek alanı oluşturmak.
+              Hedefimiz, kongre üyelerinin sadece bilgi tükettiği bir ekran değil, birlikte düşünen, birlikte üreten ve birlikte etki oluşturan güçlü bir dijital üye ekosistemi kurmak. Bu alan resmi bir kulüp platformu değil; platform içi doğrulanmış üyelerin güvenle bir araya geldiği, fikirlerinin görünür olduğu ve katılımın gerçek değere dönüştüğü bağımsız bir topluluk merkezi olacak.
             </p>
             <p className="text-gray-600">
-              Erken kayıtlar sayesinde açılış sürümündeki öncelikli özellikleri kongre üyelerinin ihtiyaçlarına göre belirleyeceğiz.
+              Platformu; fikir ve proje önerilerinin birlikte olgunlaştırıldığı, üyelerin ilgi alanlarına göre ağ kurabildiği, gündem başlıklarında topluluk oylamalarıyla nabız tutulabildiği, moderasyonlu tartışma alanlarında sağlıklı diyalog kurulabildiği, bölgesel/tematik çalışma gruplarıyla somut çıktı üretilebildiği ve ortak raporlar üzerinden kolektif hafıza oluşturulabildiği kapsamlı bir kongre üyesi topluluğu olarak tasarlıyoruz.
             </p>
           </div>
 
