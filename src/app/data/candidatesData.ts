@@ -163,9 +163,7 @@ export const candidates: Candidate[] = [
     coachCandidates: [
       { id: "c1", name: "Francesco Farioli", status: "Türkiye'yi iyi bilen profil. Porto deneyimi var." },
       { id: "c2", name: "Roberto Mancini", status: "Türkiye'yi iyi bilen profil. İtalya bağlantıları güçlü." },
-      { id: "c3", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi çok iyi bilen profil" },
-      { id: "c4", name: "Stefano Pioli", status: "Maldini önerisi (İtalya deneyimi var ama Türkiye bilgisi sınırlı)" },
-      { id: "c5", name: "Filipe Luis", status: "Liste adayı (yeni nesil; Türkiye deneyimi yok)" }
+      { id: "c3", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi çok iyi bilen profil" }
     ]
   },
   {
