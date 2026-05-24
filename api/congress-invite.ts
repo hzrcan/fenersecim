@@ -1,3 +1,5 @@
+/// <reference types="node" />
+
 type InvitePayload = {
   fullName: string;
   sicilNo: string;
