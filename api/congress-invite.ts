@@ -131,7 +131,6 @@ export default async function handler(req: any, res: any) {
             <li>Sicil No: ${safeSicilNo}</li>
             <li>E-posta: ${safeEmail}</li>
             <li>Telefon: ${safePhone}</li>
-            <li>Kaynak: ${safeSource}</li>
           </ul>
         </div>
       `,
