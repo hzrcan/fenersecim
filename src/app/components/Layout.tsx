@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router";
-import { Home, Users, FolderKanban, GitCompare, Newspaper } from "lucide-react";
+import { Home, Users, FolderKanban, GitCompare, UserPlus, Sparkles } from "lucide-react";
 import { Analytics } from "@vercel/analytics/react";
 
 export function Layout() {
@@ -10,6 +10,7 @@ export function Layout() {
     { path: "/adaylar", label: "Adaylar", icon: Users },
     { path: "/projeler", label: "Projeler", icon: FolderKanban },
     { path: "/karsilastir", label: "Karşılaştır", icon: GitCompare },
+    { path: "/kongre-davet", label: "Kongre Davet", icon: UserPlus },
     // { path: "/haberler", label: "Haberler", icon: Newspaper }, // Hidden from menu
   ];
 
@@ -64,6 +65,23 @@ export function Layout() {
           </div>
         </div>
       </footer>
+
+      <Link
+        to="/kongre-davet?source=invite-page"
+        className="fixed bottom-4 right-4 z-50 group"
+        aria-label="Kongre üyeleri davet listesi"
+      >
+        <div className="rounded-2xl bg-[#001C54] text-white shadow-2xl border border-white/20 px-4 py-3 w-[280px] max-w-[calc(100vw-2rem)] transition-all group-hover:translate-y-[-2px] group-hover:bg-[#003F7F]">
+          <p className="text-[11px] uppercase tracking-wide text-[#FFED00] mb-1">Yakında</p>
+          <div className="flex items-start gap-2">
+            <Sparkles className="w-4 h-4 mt-0.5 text-[#FFED00]" />
+            <div>
+              <p className="text-sm font-semibold leading-5">Kongre Üyelerine Özel Platform</p>
+              <p className="text-xs text-blue-100 mt-1">Davet listesine katılmak için tıklayın.</p>
+            </div>
+          </div>
+        </div>
+      </Link>
 
       <Analytics />
     </div>

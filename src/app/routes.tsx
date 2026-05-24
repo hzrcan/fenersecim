@@ -6,6 +6,7 @@ import { CandidateDetailPage } from "./components/pages/CandidateDetailPage";
 import { ProjectsPage } from "./components/pages/ProjectsPage";
 import { ComparePage } from "./components/pages/ComparePage";
 import { NewsPage } from "./components/pages/NewsPage";
+import { CongressInvitePage } from "./components/pages/CongressInvitePage";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
       { path: "projeler", Component: ProjectsPage },
       { path: "karsilastir", Component: ComparePage },
       { path: "haberler", Component: NewsPage },
+      { path: "kongre-davet", Component: CongressInvitePage },
     ],
   },
 ]);
