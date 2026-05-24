@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from "react-router";
 import { ArrowLeft, ChevronDown, TrendingUp, Users, Briefcase, Target, Clock, Trophy } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../ui/collapsible";
 import { getCandidateBySlug, generateSlug, getSlugFromIdOrSlug, type BoardMember } from "../../data/candidatesData";
-import { updatePageMeta, addStructuredData, createCandidateSchema, createBreadcrumbSchema } from "../../../utils/seo";
+import { updatePageMeta, addStructuredData, createCandidateSchema, createBreadcrumbSchema, createBoardMemberListSchema } from "../../../utils/seo";
 
 function BoardMemberCard({ member, type }: { member: BoardMember; type: "asil" | "yedek" }) {
   const gradientClass = type === "asil"
@@ -65,10 +65,13 @@ export function CandidateDetailPage() {
       // Aday profil yapılandırılmış verisi
       addStructuredData(createCandidateSchema({
         id: candidate.id,
+        slug: generateSlug(candidate.name),
         name: candidate.name,
         slogan: candidate.slogan,
         photo: candidate.photo,
         popularity: candidate.popularity,
+        knowsAbout: [...new Set(candidate.projects.map((project) => project.category))],
+        affiliation: ["Fenerbahçe Spor Kulübü"],
       }));
 
       // Breadcrumb yapılandırılmış verisi
@@ -79,6 +82,20 @@ export function CandidateDetailPage() {
           { name: candidate.name, url: `https://fenersecim.com/adaylar/${generateSlug(candidate.name)}` },
         ])
       );
+
+      if (candidate.boardMembers && candidate.boardMembers.length > 0) {
+        addStructuredData(
+          createBoardMemberListSchema(
+            candidate.name,
+            `https://fenersecim.com/adaylar/${generateSlug(candidate.name)}`,
+            candidate.boardMembers.map((member) => ({
+              name: member.name,
+              position: member.position,
+              shortBio: member.shortBio,
+            }))
+          )
+        );
+      }
     }
   }, [candidate]);
 

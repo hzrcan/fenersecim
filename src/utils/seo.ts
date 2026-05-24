@@ -15,6 +15,9 @@ interface SEOMetadata {
   modifiedDate?: string;
 }
 
+const STRUCTURED_DATA_SCRIPT_ID = "fenersecim-structured-data";
+let lastStructuredDataPath = "";
+
 export function updatePageMeta(metadata: SEOMetadata) {
   // Güncelle başlık
   document.title = metadata.title;
@@ -88,15 +91,45 @@ function updateCanonicalUrl(url?: string) {
  * JSON-LD Yapılandırılmış Veri
  */
 export function addStructuredData(data: Record<string, any>) {
-  const script = document.createElement("script");
-  script.type = "application/ld+json";
-  script.textContent = JSON.stringify(data);
+  const currentPath = window.location.pathname;
+  const shouldResetGraph = lastStructuredDataPath !== currentPath;
+  lastStructuredDataPath = currentPath;
 
-  // Eski script'i kaldır (varsa)
-  const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-  existingScripts.forEach(s => s.remove());
+  let script = document.getElementById(STRUCTURED_DATA_SCRIPT_ID) as HTMLScriptElement | null;
 
-  document.head.appendChild(script);
+  if (!script) {
+    script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = STRUCTURED_DATA_SCRIPT_ID;
+    document.head.appendChild(script);
+  }
+
+  let payload: Record<string, any> = {
+    "@context": "https://schema.org",
+    "@graph": [],
+  };
+
+  if (!shouldResetGraph && script.textContent) {
+    try {
+      const parsed = JSON.parse(script.textContent);
+      if (parsed && Array.isArray(parsed["@graph"])) {
+        payload = parsed;
+      }
+    } catch {
+      payload = {
+        "@context": "https://schema.org",
+        "@graph": [],
+      };
+    }
+  }
+
+  if (Array.isArray(data["@graph"])) {
+    payload["@graph"] = [...payload["@graph"], ...data["@graph"]];
+  } else {
+    payload["@graph"].push(data);
+  }
+
+  script.textContent = JSON.stringify(payload);
 }
 
 /**
@@ -104,10 +137,13 @@ export function addStructuredData(data: Record<string, any>) {
  */
 export function createCandidateSchema(candidate: {
   id: string;
+  slug?: string;
   name: string;
   slogan: string;
   photo: string;
   popularity: number;
+  knowsAbout?: string[];
+  affiliation?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -115,7 +151,12 @@ export function createCandidateSchema(candidate: {
     name: candidate.name,
     description: candidate.slogan,
     image: candidate.photo,
-    url: `${window.location.origin}/adaylar/${candidate.id}`,
+    url: `${window.location.origin}/adaylar/${candidate.slug || candidate.id}`,
+    knowsAbout: candidate.knowsAbout,
+    affiliation: candidate.affiliation?.map((item) => ({
+      "@type": "Organization",
+      name: item,
+    })),
     worksFor: {
       "@type": "Organization",
       name: "Fenerbahçe Spor Kulübü",
@@ -237,5 +278,64 @@ export function createEventSchema(event: {
       url: "https://www.fenerbahce.org",
     },
     url: event.url,
+  };
+}
+
+export function createFAQSchema(items: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+export function createQASchema(
+  items: Array<{ question: string; answers: Array<{ candidate: string; answer: string }> }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "QAPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      suggestedAnswer: item.answers.map((entry) => ({
+        "@type": "Answer",
+        text: entry.answer,
+        author: {
+          "@type": "Person",
+          name: entry.candidate,
+        },
+      })),
+    })),
+  };
+}
+
+export function createBoardMemberListSchema(candidateName: string, candidateUrl: string, members: Array<{
+  name: string;
+  position: string;
+  shortBio?: string;
+}>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${candidateName} yönetim kurulu üyeleri`,
+    itemListElement: members.map((member, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Person",
+        name: member.name,
+        jobTitle: member.position,
+        description: member.shortBio,
+        url: candidateUrl,
+      },
+    })),
   };
 }

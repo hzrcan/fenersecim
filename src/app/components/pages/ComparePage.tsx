@@ -1,7 +1,31 @@
 import { useEffect, useState } from "react";
 import { Check, X, TrendingUp } from "lucide-react";
 import { candidates, generateSlug } from "../../data/candidatesData";
-import { updatePageMeta, addStructuredData, createBreadcrumbSchema } from "../../../utils/seo";
+import { updatePageMeta, addStructuredData, createBreadcrumbSchema, createQASchema } from "../../../utils/seo";
+
+const compareQaItems = [
+  {
+    question: "Hangi aday sportif başarıya daha hızlı odaklanıyor?",
+    answers: [
+      { candidate: "Hakan Safi", answer: "Transfer ve teknik ekip konusunda hızlı ve iddialı sezon başlangıcı hedefi vurgulanıyor." },
+      { candidate: "Aziz Yıldırım", answer: "Kısa vadede şampiyonluk ve güçlü kadro kurma önceliği açık şekilde öne çıkıyor." },
+    ],
+  },
+  {
+    question: "Mali ve yapısal güçlenme yaklaşımı nasıl farklı?",
+    answers: [
+      { candidate: "Hakan Safi", answer: "Gelir artışına dayalı uzun vadeli finansal hedefler ve altyapı yatırımları öne çıkıyor." },
+      { candidate: "Aziz Yıldırım", answer: "Denetim, yönetim deneyimi ve yapısal dönüşüm odaklı model vurgulanıyor." },
+    ],
+  },
+  {
+    question: "Stadyum ve tesis gelişimi konusunda neler vaat ediliyor?",
+    answers: [
+      { candidate: "Hakan Safi", answer: "Stadyum kapasite artışı ve tesis yenileme adımlarıyla uzun vadeli gelir hedefleniyor." },
+      { candidate: "Aziz Yıldırım", answer: "Stadyum modernizasyonu ve kapasite artışı, hızlandırılmış izin süreçleriyle ele alınıyor." },
+    ],
+  },
+];
 
 export function ComparePage() {
   const [selectedCandidates, setSelectedCandidates] = useState<string[]>([
@@ -13,7 +37,7 @@ export function ComparePage() {
     // Sayfanın meta bilgilerini güncelle
     updatePageMeta({
       title: "Adayları Karşılaştır | Fenerbahçe Başkanlık Seçimleri 2026",
-      description: "Fenerbahçe Spor Kulübü 2026 başkanlık adaylarını yan yana karşılaştırın. Vizyonlarını, projelerini ve popülaritesini karşılaştıran interaktif araç.",
+      description: "Fenerbahçe başkanlık adaylarını yan yana karşılaştırın: proje odakları, deneyim, kampanya ekipleri ve yönetim yaklaşımlarını tek tabloda inceleyin.",
       keywords: "aday karşılaştırma, Fenerbahçe başkanlık, 2026 seçimi, adaylar, karşılaştırma aracı",
       image: "https://fenersecim.com/og-image.png",
       url: "https://fenersecim.com/karsilastir",
@@ -27,6 +51,8 @@ export function ComparePage() {
         { name: "Karşılaştır", url: "https://fenersecim.com/karsilastir" },
       ])
     );
+
+    addStructuredData(createQASchema(compareQaItems));
   }, []);
 
   const handleCandidateChange = (index: number, candidateId: string) => {
@@ -289,6 +315,24 @@ export function ComparePage() {
             >
               {candidate?.name} Profilini Görüntüle
             </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-12 rounded-2xl bg-white border border-slate-200 shadow-lg p-6 sm:p-8">
+        <h3 className="text-[#001C54] mb-6">Karar Desteği: Kısa Soru-Cevap</h3>
+        <div className="space-y-5">
+          {compareQaItems.map((item) => (
+            <div key={item.question} className="rounded-lg border border-slate-200 p-4">
+              <p className="text-[#001C54] font-medium mb-3">{item.question}</p>
+              <ul className="space-y-2">
+                {item.answers.map((entry) => (
+                  <li key={`${item.question}-${entry.candidate}`} className="text-sm text-gray-600">
+                    <span className="font-semibold text-[#001C54]">{entry.candidate}:</span> {entry.answer}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </div>

@@ -2,10 +2,24 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { Users, Calendar, TrendingUp, Award, Vote } from "lucide-react";
 import { candidates } from "../../data/candidatesData";
-import { updatePageMeta, addStructuredData, createOrganizationSchema, createEventSchema } from "../../../utils/seo";
+import { updatePageMeta, addStructuredData, createOrganizationSchema, createEventSchema, createFAQSchema } from "../../../utils/seo";
 
 const ELECTION_DATE = new Date(2026, 5, 7, 20, 0, 0);
 const ELIGIBLE_VOTERS = 44500;
+const homepageFaqItems = [
+  {
+    question: "Fenerbahçe başkanlık seçimi ne zaman?",
+    answer: "Olağanüstü seçimli genel kurul 6-7 Haziran 2026 tarihlerinde gerçekleşecektir.",
+  },
+  {
+    question: "Bu platformda adaylar nasıl karşılaştırılır?",
+    answer: "Adayların vizyonu, proje kategorileri, deneyim başlıkları ve kamuoyuna yansıyan güncel ilgi seviyesi birlikte sunulur.",
+  },
+  {
+    question: "Kongre üyeleri neden ön kayıt bırakmalı?",
+    answer: "Seçim sonrası açılacak özel kongre platformuna erken davet ve bilgilendirme almak için ön kayıt önerilir.",
+  },
+];
 
 function getCountdownParts(targetDate: Date) {
   const diff = targetDate.getTime() - new Date().getTime();
@@ -40,7 +54,7 @@ export function HomePage() {
     // Sayfanın meta bilgilerini güncelle
     updatePageMeta({
       title: "Fenerbahçe Başkanlık Seçimleri 2026 | Anasayfa",
-      description: "Fenerbahçe Spor Kulübü 2026 başkanlık seçimleri hakkında kapsamlı bilgi. Adayları tanıyın, vizyonlarını karşılaştırın ve şeffaf seçim süreci hakkında bilgi alın.",
+      description: "Fenerbahçe 2026 başkanlık seçimini tek yerde takip edin: aday profilleri, proje farkları, karşılaştırma aracı ve kongre üyeleri için kayıt adımları.",
       keywords: "Fenerbahçe, başkanlık seçimleri, 2026, seçim, spor kulübü, başkan adayları",
       image: "https://fenersecim.com/og-image.png",
       url: "https://fenersecim.com/",
@@ -60,6 +74,8 @@ export function HomePage() {
         url: "https://fenersecim.com/",
       })
     );
+
+    addStructuredData(createFAQSchema(homepageFaqItems));
   }, []);
 
   useEffect(() => {
@@ -77,7 +93,7 @@ export function HomePage() {
           <div>
             <p className="text-xs sm:text-sm tracking-wide text-[#FFED00]">CANLI GERİ SAYIM</p>
             <p className="text-lg sm:text-xl font-semibold">
-              {countdown.isFinished ? "Secim tamamlandi" : "Fenerbahçe 2026 seçimine kalan sure"}
+              {countdown.isFinished ? "Seçim tamamlandı" : "Fenerbahçe 2026 seçimine kalan süre"}
             </p>
           </div>
           <div className="grid grid-cols-4 gap-2 sm:gap-3 w-full sm:w-auto">
@@ -286,6 +302,18 @@ export function HomePage() {
           </a>
           {' '}adresine yazınız. Adaylar ve temsilcileri de bilgileri doğru tutmak için bize bilgi gönderebilirler. Tüm düzeltmeler en kısa sürede uygulanacaktır.
         </p>
+      </div>
+
+      <div className="mt-12 rounded-2xl bg-white border border-slate-200 shadow-lg p-6 sm:p-8">
+        <h3 className="text-[#001C54] mb-6">Sık Sorulan Sorular</h3>
+        <div className="space-y-4">
+          {homepageFaqItems.map((item) => (
+            <details key={item.question} className="group rounded-lg border border-slate-200 p-4 open:bg-slate-50">
+              <summary className="cursor-pointer text-[#001C54] font-medium">{item.question}</summary>
+              <p className="mt-3 text-sm text-gray-600">{item.answer}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </div>
   );

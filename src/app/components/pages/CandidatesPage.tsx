@@ -2,7 +2,22 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { Filter, TrendingUp, Users as UsersIcon } from "lucide-react";
 import { candidates, generateSlug } from "../../data/candidatesData";
-import { updatePageMeta, addStructuredData, createBreadcrumbSchema } from "../../../utils/seo";
+import { updatePageMeta, addStructuredData, createBreadcrumbSchema, createFAQSchema } from "../../../utils/seo";
+
+const candidateFaqItems = [
+  {
+    question: "Popülerlik skoru resmi bir anket sonucu mudur?",
+    answer: "Hayır. Platformdaki popülerlik skoru kamuoyu ilgisini yansıtan yaklaşık bir göstergedir ve resmi seçim sonucu yerine geçmez.",
+  },
+  {
+    question: "Aday profillerinde hangi başlıklar yer alır?",
+    answer: "Her aday için biyografi, vizyon, proje başlıkları, deneyim, yönetim kurulu ve kampanya ekip bilgileri paylaşılır.",
+  },
+  {
+    question: "Adayları en hızlı nasıl karşılaştırabilirim?",
+    answer: "Adayları Karşılaştır sayfasında iki adayı yan yana seçip proje kategorileri ve temel farkları tek tabloda görebilirsiniz.",
+  },
+];
 
 export function CandidatesPage() {
   const [sortBy, setSortBy] = useState<"name" | "popularity">("popularity");
@@ -23,7 +38,7 @@ export function CandidatesPage() {
     // Sayfanın meta bilgilerini güncelle
     updatePageMeta({
       title: "Başkanlık Adayları | Fenerbahçe Seçimleri 2026",
-      description: `Fenerbahçe Spor Kulübü 2026 başkanlık seçimleri için ${candidates.length} aday hakkında bilgi alın. Her adayın vizyonunu, projelerini ve popülaritesini karşılaştırın.`,
+      description: `Fenerbahçe 2026 başkanlık seçimi için ${candidates.length} adayın profilini inceleyin. Vizyon, proje odağı ve deneyim farklarını tek sayfada karşılaştırın.`,
       keywords: "Fenerbahçe adayları, başkanlık adayları, 2026 seçimi, aday profilleri, seçim",
       image: candidates[0]?.photo || "https://fenersecim.com/og-image.png",
       url: "https://fenersecim.com/adaylar",
@@ -37,6 +52,8 @@ export function CandidatesPage() {
         { name: "Adaylar", url: "https://fenersecim.com/adaylar" },
       ])
     );
+
+    addStructuredData(createFAQSchema(candidateFaqItems));
   }, []);
 
   const filteredCandidates = candidates
@@ -176,6 +193,18 @@ export function CandidatesPage() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-12 rounded-2xl bg-white border border-slate-200 shadow-lg p-6 sm:p-8">
+        <h3 className="text-[#001C54] mb-6">Adaylar Hakkında Sık Sorulan Sorular</h3>
+        <div className="space-y-4">
+          {candidateFaqItems.map((item) => (
+            <details key={item.question} className="group rounded-lg border border-slate-200 p-4 open:bg-slate-50">
+              <summary className="cursor-pointer text-[#001C54] font-medium">{item.question}</summary>
+              <p className="mt-3 text-sm text-gray-600">{item.answer}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </div>
   );
