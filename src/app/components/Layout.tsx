@@ -23,7 +23,7 @@ export function Layout() {
               <div className="w-10 h-10 bg-[#FFED00] rounded-full flex items-center justify-center">
                 <span className="font-bold text-[#001C54]">FB</span>
               </div>
-              <span className="text-white hidden sm:block">Başkanlık Seçimleri</span>
+              <span className="text-white hidden sm:block">Fenerbahçe Seçim Platformu</span>
             </Link>
 
             <div className="flex space-x-1">
