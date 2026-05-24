@@ -100,7 +100,7 @@ export function CandidatesPage() {
           <p className="text-sm text-gray-600">Seçim sonrası açılış daveti için iletişim bilginizi bırakabilirsiniz.</p>
         </div>
         <Link
-          to="/kongre-davet?source=candidates"
+          to="/kongre-uyesi-on-kayit?source=candidates"
           className="inline-flex items-center justify-center rounded-lg bg-[#001C54] text-white px-4 py-2.5 hover:bg-[#003F7F] transition-colors"
         >
           Davet Listesine Katıl

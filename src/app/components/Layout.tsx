@@ -10,7 +10,7 @@ export function Layout() {
     { path: "/adaylar", label: "Adaylar", icon: Users },
     { path: "/projeler", label: "Projeler", icon: FolderKanban },
     { path: "/karsilastir", label: "Karşılaştır", icon: GitCompare },
-    { path: "/kongre-davet", label: "Kongre Davet", icon: UserPlus, featured: true },
+    { path: "/kongre-uyesi-on-kayit", label: "Kongre Üyesi Ön Kayıt", icon: UserPlus, featured: true },
     // { path: "/haberler", label: "Haberler", icon: Newspaper }, // Hidden from menu
   ];
 
@@ -73,17 +73,17 @@ export function Layout() {
       </footer>
 
       <Link
-        to="/kongre-davet?source=invite-page"
+        to="/kongre-uyesi-on-kayit?source=invite-page"
         className="fixed bottom-4 right-4 z-50 group"
-        aria-label="Kongre üyeleri davet listesi"
+        aria-label="Kongre üyeleri davet listesine hemen katıl"
       >
         <div className="rounded-2xl bg-[#001C54] text-white shadow-2xl border border-white/20 px-4 py-3 w-[280px] max-w-[calc(100vw-2rem)] transition-all group-hover:translate-y-[-2px] group-hover:bg-[#003F7F]">
-          <p className="text-[11px] uppercase tracking-wide text-[#FFED00] mb-1">Yakında</p>
+          <p className="text-[11px] uppercase tracking-wide text-[#FFED00] mb-1">Ön Kayıt Açık</p>
           <div className="flex items-start gap-2">
             <Sparkles className="w-4 h-4 mt-0.5 text-[#FFED00]" />
             <div>
               <p className="text-sm font-semibold leading-5">Kongre Üyelerine Özel Platform</p>
-              <p className="text-xs text-blue-100 mt-1">Davet listesine katılmak için tıklayın.</p>
+              <p className="text-xs text-blue-100 mt-1">Yerini şimdi ayırt, açılışta ilk sen haberdar ol.</p>
             </div>
           </div>
         </div>

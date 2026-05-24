@@ -44,19 +44,19 @@ export function CongressInvitePage() {
 
   useEffect(() => {
     updatePageMeta({
-      title: "Kongre Üyesi Davet Listesi | Fenerbahçe Seçimleri",
+      title: "Kongre Üyesi Ön Kayıt | Fenerbahçe Seçimleri",
       description:
-        "Kongre üyeleri için davet listesine katılın. Ayrı kongre platformu açıldığında e-posta ile bilgilendirme alın.",
-      keywords: "kongre üyesi, davet listesi, fenerbahçe seçim, üye platformu",
+        "Kongre üyeleri için ön kayda katılın. Ayrı kongre platformu açıldığında e-posta ile ilk bilgilendirmeyi alın.",
+      keywords: "kongre üyesi, ön kayıt, davet listesi, fenerbahçe seçim, üye platformu",
       image: "https://fenersecim.com/og-image.png",
-      url: "https://fenersecim.com/kongre-davet",
+      url: "https://fenersecim.com/kongre-uyesi-on-kayit",
       type: "website",
     });
 
     addStructuredData(
       createBreadcrumbSchema([
         { name: "Anasayfa", url: "https://fenersecim.com/" },
-        { name: "Kongre Davet", url: "https://fenersecim.com/kongre-davet" },
+        { name: "Kongre Üyesi Ön Kayıt", url: "https://fenersecim.com/kongre-uyesi-on-kayit" },
       ]),
     );
   }, []);
@@ -128,15 +128,15 @@ export function CongressInvitePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8 rounded-2xl bg-gradient-to-r from-[#001C54] via-[#0052A3] to-[#001C54] text-white p-6 sm:p-8 shadow-xl">
-        <h1 className="text-white mb-3">Kongre Üyesi Davet Listesi</h1>
+        <h1 className="text-white mb-3">Kongre Üyesi Ön Kayıt</h1>
         <p className="text-blue-100 max-w-3xl">
-          Seçim sonrası yalnızca kongre üyelerine özel ayrı bir platform açacağız. Açılışta size davet gönderebilmemiz için temel iletişim bilgilerinizi bırakabilirsiniz.
+          Seçim sonrası yalnızca kongre üyelerine özel ayrı bir platform açacağız. Şimdi ön kaydını oluştur, açılışta davet ve erişim bilgilendirmesini ilk alanlardan ol.
         </p>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-blue-100">
-          <h2 className="text-[#001C54] mb-6">Kayıt Formu</h2>
+          <h2 className="text-[#001C54] mb-6">Hemen Katıl</h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-2">
@@ -213,7 +213,7 @@ export function CongressInvitePage() {
               disabled={isSubmitting}
               className="w-full bg-[#001C54] text-white hover:bg-[#003F7F]"
             >
-              {isSubmitting ? "Kaydediliyor..." : "Davet Listesine Katıl"}
+              {isSubmitting ? "Kaydediliyor..." : "Ön Kaydı Tamamla"}
             </Button>
           </form>
         </div>

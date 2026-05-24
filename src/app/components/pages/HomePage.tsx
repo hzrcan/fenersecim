@@ -252,7 +252,7 @@ export function HomePage() {
               Projeleri Keşfet
             </Link>
             <Link
-              to="/kongre-davet?source=homepage"
+              to="/kongre-uyesi-on-kayit?source=homepage"
               className="block bg-[#0052A3] text-white px-6 py-3 rounded-lg hover:bg-[#003F7F] transition-colors"
             >
               Kongre Üyesi Davet Listesine Katıl
@@ -267,7 +267,7 @@ export function HomePage() {
           Seçim sonrası açılacak ayrı kongre platformuna davet almak için ad, sicil ve e-posta bilginizi bırakabilirsiniz.
         </p>
         <Link
-          to="/kongre-davet?source=homepage"
+          to="/kongre-uyesi-on-kayit?source=homepage"
           className="inline-flex items-center rounded-lg bg-[#001C54] text-white px-5 py-3 hover:bg-[#003F7F] transition-colors"
         >
           Davet Ön Listesine Katıl

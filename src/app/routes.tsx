@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
       { path: "projeler", Component: ProjectsPage },
       { path: "karsilastir", Component: ComparePage },
       { path: "haberler", Component: NewsPage },
-      { path: "kongre-davet", Component: CongressInvitePage },
+      { path: "kongre-uyesi-on-kayit", Component: CongressInvitePage },
     ],
   },
 ]);
