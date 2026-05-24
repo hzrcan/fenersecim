@@ -200,7 +200,7 @@ export function HomePage() {
           <div className="space-y-4">
             {[
               { date: "28 Nisan", event: "Seçim Kararı Alındı - Başkanımız Sadettin Saran tarafından", status: "completed" },
-              { date: "22 Mayıs", event: "Başkan ve Üyeleri için adaylık başvuruları 22 Mayıs 2026, saat 18.00'e dek yapılabilecektir.", status: "upcoming" },
+              { date: "22 Mayıs", event: "Başkan ve Üyeleri için adaylık başvuruları 22 Mayıs 2026, saat 18.00'e dek yapılabilecektir.", status: "completed" },
               { date: "6 Haziran", event: "Konuşmalar - Olağanüstü Seçimli Genel Kurul", status: "upcoming" },
               { date: "7 Haziran", event: "Seçim Günü - Oy Atılıyor ve Sonuç Belli Oluyor", status: "upcoming" },
             ].map((item, index) => (
