@@ -19,6 +19,7 @@ export interface BoardMember {
   name: string;
   position: string;
   type: "asil" | "yedek";
+  shortBio?: string;
 }
 
 export interface CoachCandidate {
@@ -135,27 +136,27 @@ export const candidates: Candidate[] = [
     ],
     popularity: 40,  // Active campaigning, Italy buzz, and transfer promises providing momentum (~35-45%)
     boardMembers: [
-      { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b2", name: "Metin Doğan", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b3", name: "Agah Ruşen Çetin", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b4", name: "Metin Sipahioğlu", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b5", name: "Dağlarca Çağlar", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b6", name: "Rahmi Mertay Türk", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b7", name: "Mustafa Ömer Topbaş", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b8", name: "Özgür Özaktaç", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b9", name: "Atakan Altınbaş", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b10", name: "Orhan Turan", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b11", name: "Selahattin Süleymanoğlu", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b12", name: "Ogün Doğan", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b13", name: "Şanser Özyıldırım", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b14", name: "Taha Gökberk Doğan", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b15", name: "Esra Öztürk Çilingir", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b16", name: "Ahmet Bulut", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b17", name: "Ahmet Murat Emanetoğlu", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b18", name: "Ertuğrul Eren Ergen", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b19", name: "Barış Öztürk", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b20", name: "Mustafa Enes Yıldırım", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b21", name: "Aras Bağ", position: "Yönetim Kurulu Üyesi", type: "yedek" }
+      { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aytemiz Petrol'un kurucusu. Sanayi ve enerji teknolojileri sektörlerinde uzun yıllara dayanan tecrübeye sahip iş insanı; Fenerbahçeliler 2000 Derneği eski başkanı." },
+      { id: "b2", name: "Metin Doğan", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Fenerbahçe camiasının tanınmış isimlerinden; dernek ve kulüp faaliyetlerinde uzun yıllar aktif rol almış emektar yönetici." },
+      { id: "b3", name: "Agah Ruşen Çetin", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "TUREKS Grubu Yönetim Kurulu Başkanı. 1907 Fenerbahçe Derneği kurucusu ve eski başkanı (2017-2021); eski Fenerbahçe ve TFF yönetim kurulu üyesi." },
+      { id: "b4", name: "Metin Sipahioğlu", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "1983 doğumlu. 2018-2021 döneminde Fenerbahçe yönetim kurulu üyesi olarak kurumsal iletişim ve kadın basketboldan sorumlu görev yaptı." },
+      { id: "b5", name: "Dağlarca Çağlar", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İş insanı ve spor yöneticisi; Çağdaş Bodrumspor'da görev aldı. Fenerbahçe altyapısında futbol oynamış, altyapı bağlarıyla öne çıkan isim." },
+      { id: "b6", name: "Rahmi Mertay Türk", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "1988 Ankara doğumlu. ŞA-RA Grup Genel Müdürü ve Yönetim Kurulu Başkanı; enerji, inşaat ve turizm alanlarında faaliyet gösteriyor." },
+      { id: "b7", name: "Mustafa Ömer Topbaş", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Fenerbahçe Futbol A.Ş. Yönetim Kurulu Üyesi. Sportif yönetim tarafında aktif rol alan, spor yönetimi eğitimi bulunan yönetici." },
+      { id: "b8", name: "Özgür Özaktaç", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "1988 İstanbul doğumlu, Özaktaç A.Ş. Yönetim Kurulu Başkanı. Eski Fenerbahçe yönetim kurulu üyesi; altyapı ve akademilerde görev yaptı." },
+      { id: "b9", name: "Atakan Altınbaş", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Altınbaş Holding'in genç kuşak temsilcisi. Tekstil, enerji, lüks tüketim ve finans sektörlerinde faaliyet gösteren holding yönetiminde yer alıyor." },
+      { id: "b10", name: "Orhan Turan", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Fenerbahçe kongre üyesi iş insanı; kulüp faaliyetlerinde aktif rol alıyor." },
+      { id: "b11", name: "Selahattin Süleymanoğlu", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Halk Bankası eski Genel Müdür Yardımcısı. Finans ve spor yönetimi alanlarında tecrübeli, voleybol camiasında tanınan isim." },
+      { id: "b12", name: "Ogün Doğan", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Doğanlar Holding Yönetim Kurulu Üyesi. Enerji ve holding faaliyetlerinde aktif rol alan iş insanı." },
+      { id: "b13", name: "Şanser Özyıldırım", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İstanbul Jet Havacılık ve Yakıt Hizmetleri A.Ş. kurucu ve yönetim kurulu başkanı. Fenerbahçe tekerlekli sandalye basketbol takımının isim sponsoru." },
+      { id: "b14", name: "Taha Gökberk Doğan", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Avukat ve spor hukukçusu. Fenerbahçeli Hukukçular Derneği kurucu başkanı; kulüpte iletişim ve voleybol şubelerinde görev yaptı." },
+      { id: "b15", name: "Esra Öztürk Çilingir", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe Sicil Kurulu üyesi; idari operasyonlar ve üyelik süreçlerinde uzman." },
+      { id: "b16", name: "Ahmet Bulut", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe Yüksek Divan Kurulu üyesi; kongre ve divan toplantılarında aktif rol alan camia ismi." },
+      { id: "b17", name: "Ahmet Murat Emanetoğlu", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Op. Dr.; eski Fenerbahçe yönetim kurulu üyesi ve 1907 Fenerbahçe Derneği üyesi." },
+      { id: "b18", name: "Ertuğrul Eren Ergen", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe kongre üyesi ve camia destekçisi." },
+      { id: "b19", name: "Barış Öztürk", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe kongre üyesi; dernek faaliyetlerinde aktif." },
+      { id: "b20", name: "Mustafa Enes Yıldırım", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe kongre üyesi." },
+      { id: "b21", name: "Aras Bağ", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe kongre üyesi; iş dünyasında aktif." }
     ],
     campaignContacts: [
       { id: "cc1", name: "Yusuf Kenan Çalık" }
@@ -227,27 +228,27 @@ export const candidates: Candidate[] = [
     ],
     popularity: 60,  // Strong lead in sentiment, veteran support, and recent list gains (~55-65%)
     boardMembers: [
-      { id: "b22", name: "Barış Göktürk", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b23", name: "Mahmut Nedim Uslu", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b24", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b25", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b26", name: "Ahmet Önder Fırat", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b27", name: "Cihan Kamer", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b28", name: "Fatih Öztürk", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b29", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b30", name: "Tanju Kaya", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b31", name: "Ahmet Murat İman", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b32", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi", type: "asil" },  // Recently added from Safi's list
-      { id: "b33", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b34", name: "Mehmet Aydın", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b35", name: "Mehmet Selim Kosif", position: "Yönetim Kurulu Üyesi", type: "asil" },
-      { id: "b36", name: "Fatih Aslan", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b37", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b38", name: "Mustafa Aydın Acun", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b39", name: "Barış Karagöz", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b40", name: "Savaş Adalet", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b41", name: "Demre İşcan", position: "Yönetim Kurulu Üyesi", type: "yedek" },
-      { id: "b42", name: "Yasemin Babayiğit", position: "Yönetim Kurulu Üyesi", type: "yedek" }
+      { id: "b22", name: "Barış Göktürk", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Göktürk Holding Yönetim Kurulu Başkanı. Eski Fenerbahçe Futbol A.Ş. yönetim kurulu üyesi." },
+      { id: "b23", name: "Mahmut Nedim Uslu", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aziz Yıldırım dönemlerinde görev yapmış eski Fenerbahçe yöneticisi." },
+      { id: "b24", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İş insanı; önceki Yıldırım yönetimlerinde aktif rol almış yönetici." },
+      { id: "b25", name: "Mustafa Çağlar", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Fenerbahçe camiasından, iş dünyası destekçisi." },
+      { id: "b26", name: "Ahmet Önder Fırat", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Önceki dönemlerde yönetimde yer almış tecrübeli isim." },
+      { id: "b27", name: "Cihan Kamer", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Eski Fenerbahçe Asbaşkanı. Atasay Kuyumculuk CEO'su ve iş insanı." },
+      { id: "b28", name: "Fatih Öztürk", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aziz Yıldırım'ın güvendiği, kulüp yönetimine aşina isim." },
+      { id: "b29", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İş dünyasından Fenerbahçeli yönetici." },
+      { id: "b30", name: "Tanju Kaya", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Camia ve iş dünyasından destekçi isim." },
+      { id: "b31", name: "Ahmet Murat İman", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Yıldırım listelerinde yer alan tecrübeli isim." },
+      { id: "b32", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İş insanı; önceki yönetim dönemlerinden tanınan isim." },  // Recently added from Safi's list
+      { id: "b33", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Genç kuşak Fenerbahçeli yönetici adayı." },
+      { id: "b34", name: "Mehmet Aydın", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Tecrübeli camia ismi." },
+      { id: "b35", name: "Mehmet Selim Kosif", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Yıldırım dönemlerinde aktif rol almış isim." },
+      { id: "b36", name: "Fatih Aslan", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Kongre üyesi ve camia destekçisi." },
+      { id: "b37", name: "Volkan Akan", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe camiasında destekçi isimlerden biri." },
+      { id: "b38", name: "Mustafa Aydın Acun", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Yedek yönetim kurulu adayı." },
+      { id: "b39", name: "Barış Karagöz", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe kongre üyesi." },
+      { id: "b40", name: "Savaş Adalet", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçe camiasında yer alan destekçi isim." },
+      { id: "b41", name: "Demre İşcan", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Destekçi üye." },
+      { id: "b42", name: "Yasemin Babayiğit", position: "Yönetim Kurulu Üyesi", type: "yedek", shortBio: "Fenerbahçeli kadın üye." }
     ],
     campaignContacts: [
       { id: "cc2", name: "Yusuf Mertol" }

@@ -1,8 +1,37 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router";
-import { ArrowLeft, TrendingUp, Users, Briefcase, Target, Clock, Trophy } from "lucide-react";
-import { getCandidateBySlug, generateSlug, getSlugFromIdOrSlug } from "../../data/candidatesData";
+import { ArrowLeft, ChevronDown, TrendingUp, Users, Briefcase, Target, Clock, Trophy } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../ui/collapsible";
+import { getCandidateBySlug, generateSlug, getSlugFromIdOrSlug, type BoardMember } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createCandidateSchema, createBreadcrumbSchema } from "../../../utils/seo";
+
+function BoardMemberCard({ member, type }: { member: BoardMember; type: "asil" | "yedek" }) {
+  const gradientClass = type === "asil"
+    ? "from-[#001C54] to-[#003F7F]"
+    : "from-[#0052A3] to-[#001C54]";
+  const typeLabel = type === "asil" ? "Asil Üye" : "Yedek Üye";
+
+  return (
+    <Collapsible className={`bg-gradient-to-br ${gradientClass} rounded-lg text-white hover:shadow-lg transition-shadow`}>
+      <CollapsibleTrigger className="w-full text-left p-6 group">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h4 className="text-lg font-semibold mb-2">{member.name}</h4>
+            <p className="text-[#FFED00] text-sm">{member.position} ({typeLabel})</p>
+          </div>
+          <ChevronDown className="w-5 h-5 text-[#FFED00] mt-1 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+        </div>
+      </CollapsibleTrigger>
+      <CollapsibleContent className="px-6 pb-6 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+        <div className="border-t border-white/20 pt-4">
+          <p className="text-sm text-gray-100 leading-relaxed">
+            {member.shortBio || "Bu üye için kısa biyografi yakında eklenecektir."}
+          </p>
+        </div>
+      </CollapsibleContent>
+    </Collapsible>
+  );
+}
 
 export function CandidateDetailPage() {
   const { slug } = useParams();
@@ -212,13 +241,7 @@ export function CandidateDetailPage() {
                 <h3 className="text-[#001C54] mb-4">Asil Üyeler</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {asilBoardMembers.map((member) => (
-                    <div
-                      key={member.id}
-                      className="bg-gradient-to-br from-[#001C54] to-[#003F7F] rounded-lg p-6 text-white hover:shadow-lg transition-shadow"
-                    >
-                      <h4 className="text-lg font-semibold mb-2">{member.name}</h4>
-                      <p className="text-[#FFED00] text-sm">{member.position}</p>
-                    </div>
+                    <BoardMemberCard key={member.id} member={member} type="asil" />
                   ))}
                 </div>
               </div>
@@ -233,13 +256,7 @@ export function CandidateDetailPage() {
                 <h3 className="text-[#001C54] mb-4">Yedek Üyeler</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {yedekBoardMembers.map((member) => (
-                    <div
-                      key={member.id}
-                      className="bg-gradient-to-br from-[#0052A3] to-[#001C54] rounded-lg p-6 text-white hover:shadow-lg transition-shadow"
-                    >
-                      <h4 className="text-lg font-semibold mb-2">{member.name}</h4>
-                      <p className="text-[#FFED00] text-sm">{member.position}</p>
-                    </div>
+                    <BoardMemberCard key={member.id} member={member} type="yedek" />
                   ))}
                 </div>
               </div>
