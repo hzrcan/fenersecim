@@ -10,7 +10,7 @@ export function Layout() {
     { path: "/adaylar", label: "Adaylar", icon: Users },
     { path: "/projeler", label: "Projeler", icon: FolderKanban },
     { path: "/karsilastir", label: "Karşılaştır", icon: GitCompare },
-    { path: "/kongre-davet", label: "Kongre Davet", icon: UserPlus },
+    { path: "/kongre-davet", label: "Kongre Davet", icon: UserPlus, featured: true },
     // { path: "/haberler", label: "Haberler", icon: Newspaper }, // Hidden from menu
   ];
 
@@ -31,6 +31,7 @@ export function Layout() {
                 const Icon = item.icon;
                 const isActive = location.pathname === item.path ||
                   (item.path !== "/" && location.pathname.startsWith(item.path));
+                const isFeatured = item.featured;
 
                 return (
                   <Link
@@ -39,11 +40,16 @@ export function Layout() {
                     className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all ${
                       isActive
                         ? "bg-[#FFED00] text-[#001C54]"
-                        : "text-white hover:bg-white/10"
+                        : isFeatured
+                          ? "bg-[#FFED00] text-[#001C54] hover:bg-[#FFE733] shadow-md ring-1 ring-[#FFED00]/60"
+                          : "text-white hover:bg-white/10"
                     }`}
                   >
                     <Icon className="w-4 h-4" />
-                    <span className="hidden md:inline">{item.label}</span>
+                    <span className="hidden md:inline font-medium">{item.label}</span>
+                    {isFeatured && !isActive && (
+                      <span className="hidden lg:inline-flex h-2 w-2 rounded-full bg-[#001C54] animate-pulse" aria-hidden="true" />
+                    )}
                   </Link>
                 );
               })}
