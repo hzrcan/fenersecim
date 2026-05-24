@@ -123,7 +123,7 @@ export const candidates: Candidate[] = [
       {
         id: "p9",
         title: "Stadyum ve Tesis Yenileme",
-        description: "Şükrü Saracoğlu Stadyumu'nu aynı yerde kapasite artışı (65.000 kişiye çıkarma); loca sayısını artırma ve tribün gelirlerini maksimize etme. Tesis projelerine de öncelik (kulübe uzun vadeli gelir artışı hedefi)",
+        description: "Şükrü Saracoğlu Stadyumu'nu aynı yerde kapasite artışı (64.000 kişiye çıkarma); loca sayısını artırma ve tribün gelirlerini maksimize etme. Tesis projelerine de öncelik (kulübe uzun vadeli gelir artışı hedefi)",
         category: "Altyapı",
         icon: "stadium",
         priority: "acil"
