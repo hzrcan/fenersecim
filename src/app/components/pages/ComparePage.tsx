@@ -94,7 +94,7 @@ export function ComparePage() {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr className="bg-gray-50">
-                  <td className="px-6 py-4 text-[#001C54]">Slogan</td>
+                  <td className="px-6 py-4 text-[#001C54] align-top">Slogan</td>
                   {compareData.map((candidate) => (
                     <td key={candidate?.id} className="px-6 py-4 text-center text-gray-600 italic">
                       "{candidate?.slogan}"
@@ -103,7 +103,7 @@ export function ComparePage() {
                 </tr>
 
                 <tr>
-                  <td className="px-6 py-4 text-[#001C54] flex items-center space-x-2">
+                  <td className="px-6 py-4 text-[#001C54] flex items-start space-x-2 align-top">
                     <TrendingUp className="w-5 h-5" />
                     <span>Popülarite</span>
                   </td>
@@ -123,7 +123,7 @@ export function ComparePage() {
                 </tr>
 
                 <tr className="bg-gray-50">
-                  <td className="px-6 py-4 text-[#001C54]">Toplam Projeler</td>
+                  <td className="px-6 py-4 text-[#001C54] align-top">Toplam Projeler</td>
                   {compareData.map((candidate) => (
                     <td key={candidate?.id} className="px-6 py-4 text-center">
                       <span className="inline-block px-4 py-2 bg-[#FFED00] text-[#001C54] rounded-full">
@@ -134,7 +134,7 @@ export function ComparePage() {
                 </tr>
 
                 <tr>
-                  <td className="px-6 py-4 text-[#001C54]">Deneyim</td>
+                  <td className="px-6 py-4 text-[#001C54] align-top">Deneyim</td>
                   {compareData.map((candidate) => (
                     <td key={candidate?.id} className="px-6 py-4">
                       <ul className="text-sm text-gray-600 space-y-1">
@@ -150,7 +150,7 @@ export function ComparePage() {
                 </tr>
 
                 <tr className="bg-gray-50">
-                  <td className="px-6 py-4 text-[#001C54]">
+                  <td className="px-6 py-4 text-[#001C54] align-top">
                     Yönetim Kurulu Üyeleri
                     <span className="ml-2 inline-block px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-100 text-emerald-700 border border-emerald-300 align-middle">
                       Doğrulanmış
@@ -201,7 +201,7 @@ export function ComparePage() {
                 </tr>
 
                 <tr>
-                  <td className="px-6 py-4 text-[#001C54]">Seçim Kampanyası İletişim Sorumluları</td>
+                  <td className="px-6 py-4 text-[#001C54] align-top">Seçim Kampanyası İletişim Sorumluları</td>
                   {compareData.map((candidate) => (
                     <td key={candidate?.id} className="px-6 py-4">
                       {candidate?.campaignContacts && candidate.campaignContacts.length > 0 ? (
@@ -221,7 +221,7 @@ export function ComparePage() {
                 </tr>
 
                 <tr>
-                  <td className="px-6 py-4 text-[#001C54]">Antrenör Adayları</td>
+                  <td className="px-6 py-4 text-[#001C54] align-top">Antrenör Adayları</td>
                   {compareData.map((candidate) => (
                     <td key={candidate?.id} className="px-6 py-4">
                       {candidate?.coachCandidates && candidate.coachCandidates.length > 0 ? (
@@ -242,7 +242,7 @@ export function ComparePage() {
 
                 {allCategories.map((category) => (
                   <tr key={category} className="bg-gray-50">
-                    <td className="px-6 py-4 text-[#001C54]">{category}</td>
+                    <td className="px-6 py-4 text-[#001C54] align-top">{category}</td>
                     {compareData.map((candidate) => {
                       const hasCategory = candidate?.projects.some(p => p.category === category);
                       const categoryProjects = candidate?.projects.filter(p => p.category === category) || [];
