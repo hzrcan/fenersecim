@@ -201,7 +201,12 @@ export function ComparePage() {
                 </tr>
 
                 <tr>
-                  <td className="px-6 py-4 text-[#001C54] align-top">Seçim Kampanyası İletişim Sorumluları</td>
+                  <td className="px-6 py-4 text-[#001C54] align-top">
+                    Seçim Kampanyası İletişim Sorumluları
+                    <span className="ml-2 inline-block px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-100 text-emerald-700 border border-emerald-300 align-middle">
+                      Doğrulanmış
+                    </span>
+                  </td>
                   {compareData.map((candidate) => (
                     <td key={candidate?.id} className="px-6 py-4">
                       {candidate?.campaignContacts && candidate.campaignContacts.length > 0 ? (
