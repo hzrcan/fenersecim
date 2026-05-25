@@ -133,9 +133,9 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; İtalya transfer/hoca turu (AC Milan bağlantıları, Leão, Tomori, Maignan vb.); Paolo Maldini ile strateji/akıl hocalığı anlaşması (resmi görev yok); 20+ Mayıs vurguları: 'Türkiye'yi bilen hoca' (Conte denklem dışı); Birleşme çağrılarını reddetti; 'Dünya yıldızları getireceğiz', stadyum kapasite artışı (64k) ve tesis projeleri; seçim öncesi somut açıklamalar planı" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; 22 Mayıs'ta yönetim listesini açıkladı; İtalya turu ve Maldini görüşmeleri; Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz', stadyum kapasite artışı (64k) ve tesis projeleri; seçim öncesi somut açıklamalar planı; dernek ziyaretleri devam ediyor" }
     ],
-    popularity: 40,  // Active campaigning, Italy buzz, and transfer promises providing momentum (~35-45%)
+    popularity: 45,
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aytemiz Petrol'un kurucusu. Sanayi ve enerji teknolojileri sektörlerinde uzun yıllara dayanan tecrübeye sahip iş insanı; Fenerbahçeliler 2000 Derneği eski başkanı." },
       { id: "b2", name: "Metin Doğan", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Fenerbahçe camiasının tanınmış isimlerinden; dernek ve kulüp faaliyetlerinde uzun yıllar aktif rol almış emektar yönetici." },
@@ -225,9 +225,9 @@ export const candidates: Candidate[] = [
     pastInvolvement: [
       { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Aktif görev" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl liderlik" },
-      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk desteği + Özgür Peker transferi; birlik çağrısı; dernek/kongre buluşmaları; seçim tarihinin erkene çekilmesi talebi; Oğuz Çetin, Aykut Kocaman vb. ile futbol kontrolü planı; Jorge Jesus öncelikli; Sörloth ana transfer hedefi; stadyum kapasite artışı (64-65k) projesi" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk desteği + Özgür Peker transferi; 22 Mayıs basın toplantısı ve birlik çağrıları (Ali Koç + Safi); dernek buluşmaları; Oğuz Çetin, Aykut Kocaman vb. ile futbol komitesi; Sörloth ve bomba transfer hedefleri; stadyum kapasite artışı (64-65k) projesi" }
     ],
-    popularity: 60,  // Strong lead in sentiment, veteran support, and recent list gains (~55-65%)
+    popularity: 55,
     boardMembers: [
       { id: "b22", name: "Barış Göktürk", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Göktürk Holding Yönetim Kurulu Başkanı. Eski Fenerbahçe Futbol A.Ş. yönetim kurulu üyesi." },
       { id: "b23", name: "Mahmut Nedim Uslu", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aziz Yıldırım dönemlerinde görev yapmış eski Fenerbahçe yöneticisi." },
@@ -239,7 +239,7 @@ export const candidates: Candidate[] = [
       { id: "b29", name: "Batuhan Özdemir", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İş dünyasından Fenerbahçeli yönetici." },
       { id: "b30", name: "Tanju Kaya", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Camia ve iş dünyasından destekçi isim." },
       { id: "b31", name: "Ahmet Murat İman", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Yıldırım listelerinde yer alan tecrübeli isim." },
-      { id: "b32", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İş insanı; önceki yönetim dönemlerinden tanınan isim." },  // Recently added from Safi's list
+      { id: "b32", name: "Özgür Peker", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İş insanı; önceki yönetim dönemlerinden tanınan isim." },
       { id: "b33", name: "Yusuf Buğra Tanık", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Genç kuşak Fenerbahçeli yönetici adayı." },
       { id: "b34", name: "Mehmet Aydın", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Tecrübeli camia ismi." },
       { id: "b35", name: "Mehmet Selim Kosif", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Yıldırım dönemlerinde aktif rol almış isim." },
