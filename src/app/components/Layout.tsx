@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Outlet, Link, useLocation } from "react-router";
 import { Home, Users, FolderKanban, GitCompare, UserPlus, Tv, Sparkles } from "lucide-react";
 import { Analytics } from "@vercel/analytics/react";
@@ -80,6 +81,10 @@ function getShareContent(pathname: string) {
 export function Layout() {
   const location = useLocation();
   const shareContent = getShareContent(location.pathname);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname]);
 
   const navItems = [
     { path: "/", label: "Anasayfa", icon: Home },
