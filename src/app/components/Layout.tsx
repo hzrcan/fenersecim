@@ -3,8 +3,76 @@ import { Home, Users, FolderKanban, GitCompare, UserPlus, Sparkles } from "lucid
 import { Analytics } from "@vercel/analytics/react";
 import { ShareActions } from "./ShareActions";
 
+function formatCandidateNameFromSlug(slug: string) {
+  return decodeURIComponent(slug)
+    .split("-")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toLocaleUpperCase("tr-TR") + part.slice(1))
+    .join(" ");
+}
+
+function getShareContent(pathname: string) {
+  if (pathname === "/") {
+    return {
+      title: "Fenerbahce Baskanlik Secimleri 2026",
+      text: "Adaylari, projeleri ve secim takvimini tek yerde incele.",
+    };
+  }
+
+  if (pathname === "/adaylar") {
+    return {
+      title: "Fenerbahce Baskan Adaylari",
+      text: "Tum baskan adaylarini vizyon ve projeleriyle karsilastir.",
+    };
+  }
+
+  if (pathname.startsWith("/adaylar/")) {
+    const slug = pathname.split("/").pop() || "";
+    const candidateName = formatCandidateNameFromSlug(slug);
+
+    return {
+      title: `${candidateName} | Baskanlik Adayi`,
+      text: `${candidateName} aday profilini ve projelerini incele.`,
+    };
+  }
+
+  if (pathname === "/projeler") {
+    return {
+      title: "Fenerbahce Icin Onerilen Projeler",
+      text: "Adaylarin spor, finans ve altyapi odakli proje planlarini kesfet.",
+    };
+  }
+
+  if (pathname === "/karsilastir") {
+    return {
+      title: "Adaylari Karsilastir",
+      text: "Baskan adaylarini yan yana karsilastir ve farklari tek tabloda gor.",
+    };
+  }
+
+  if (pathname === "/kongre-uyesi-on-kayit") {
+    return {
+      title: "Kongre Uyesi On Kayit",
+      text: "Kongre uyelerine ozel platform daveti icin on kaydini olustur.",
+    };
+  }
+
+  if (pathname === "/haberler") {
+    return {
+      title: "Secim Haberleri ve Guncellemeler",
+      text: "Fenerbahce secim surecindeki son haber ve analizleri takip et.",
+    };
+  }
+
+  return {
+    title: "Fenerbahce Secim Platformu",
+    text: "Fenerbahce secimleriyle ilgili bu sayfayi incele.",
+  };
+}
+
 export function Layout() {
   const location = useLocation();
+  const shareContent = getShareContent(location.pathname);
 
   const navItems = [
     { path: "/", label: "Anasayfa", icon: Home },
@@ -64,7 +132,8 @@ export function Layout() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
           <ShareActions
-            text="Fenerbahce Secim Platformu'nda bu sayfayi incele"
+            title={shareContent.title}
+            text={shareContent.text}
             className="mt-4"
           />
         </div>
