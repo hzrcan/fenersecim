@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from "react-router";
 import { Home, Users, FolderKanban, GitCompare, UserPlus, Sparkles } from "lucide-react";
 import { Analytics } from "@vercel/analytics/react";
+import { ShareActions } from "./ShareActions";
 
 export function Layout() {
   const location = useLocation();
@@ -60,6 +61,13 @@ export function Layout() {
 
       <main>
         <Outlet />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+          <ShareActions
+            text="Fenerbahce Secim Platformu'nda bu sayfayi incele"
+            className="mt-4"
+          />
+        </div>
       </main>
 
       <footer className="bg-[#001C54] text-white mt-20">
