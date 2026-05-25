@@ -9,7 +9,6 @@ function BoardMemberCard({ member, type }: { member: BoardMember; type: "asil" |
   const gradientClass = type === "asil"
     ? "from-[#001C54] to-[#003F7F]"
     : "from-[#0052A3] to-[#001C54]";
-  const typeLabel = type === "asil" ? "Asil Üye" : "Yedek Üye";
 
   return (
     <Collapsible className={`bg-gradient-to-br ${gradientClass} rounded-lg text-white hover:shadow-lg transition-shadow`}>
@@ -17,7 +16,7 @@ function BoardMemberCard({ member, type }: { member: BoardMember; type: "asil" |
         <div className="flex items-start justify-between gap-3">
           <div>
             <h4 className="text-lg font-semibold mb-2">{member.name}</h4>
-            <p className="text-[#FFED00] text-sm">{member.position} ({typeLabel})</p>
+            <p className="text-[#FFED00] text-sm">{member.position}</p>
           </div>
           <ChevronDown className="w-5 h-5 text-[#FFED00] mt-1 transition-transform duration-200 group-data-[state=open]:rotate-180" />
         </div>
