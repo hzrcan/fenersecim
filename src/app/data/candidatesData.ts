@@ -255,7 +255,6 @@ export const candidates: Candidate[] = [
     ],
     coachCandidates: [
       { id: "c6", name: "Aykut Kocaman", status: "Güçlü yerli alternatif (futbol aklı / TD rolü vurgusu; Oğuz Çetin ve diğer veterenlerle futbol kontrolü)" },
-      { id: "c7", name: "Roberto Mancini", status: "Listede" },
       { id: "c8", name: "Nuri Şahin", status: "Alternatifler" }
     ]
   }
