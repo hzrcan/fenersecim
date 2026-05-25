@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router";
-import { Home, Users, FolderKanban, GitCompare, UserPlus, Sparkles } from "lucide-react";
+import { Home, Users, FolderKanban, GitCompare, UserPlus, Tv, Sparkles } from "lucide-react";
 import { Analytics } from "@vercel/analytics/react";
 import { ShareActions } from "./ShareActions";
 
@@ -50,6 +50,13 @@ function getShareContent(pathname: string) {
     };
   }
 
+  if (pathname === "/roportajlar") {
+    return {
+      title: "Aday Roportajlari",
+      text: "Baskan adaylarinin roportajlarini tek sayfadan izleyin.",
+    };
+  }
+
   if (pathname === "/kongre-uyesi-on-kayit") {
     return {
       title: "Kongre Uyesi On Kayit",
@@ -79,6 +86,7 @@ export function Layout() {
     { path: "/adaylar", label: "Adaylar", icon: Users },
     { path: "/projeler", label: "Projeler", icon: FolderKanban },
     { path: "/karsilastir", label: "Karşılaştır", icon: GitCompare },
+    { path: "/roportajlar", label: "Röportajlar", icon: Tv },
     { path: "/kongre-uyesi-on-kayit", label: "Kongre Üyesi Ön Kayıt", icon: UserPlus, featured: true },
     // { path: "/haberler", label: "Haberler", icon: Newspaper }, // Hidden from menu
   ];
