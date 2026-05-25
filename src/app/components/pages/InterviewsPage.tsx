@@ -5,6 +5,7 @@ import {
   createBreadcrumbSchema,
   updatePageMeta,
 } from "../../../utils/seo";
+import { interviewSummaries } from "../../data/interviewSummaries";
 
 const interviews = [
   {
@@ -27,6 +28,17 @@ function getEmbedUrl(videoId: string) {
 
 function getWatchUrl(videoId: string) {
   return `https://www.youtube.com/watch?v=${videoId}`;
+}
+
+function formatUpdatedAt(value: string) {
+  const date = new Date(value);
+  return date.toLocaleString("tr-TR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 }
 
 export function InterviewsPage() {
@@ -58,11 +70,12 @@ export function InterviewsPage() {
     });
 
     interviews.forEach((video) => {
+      const summary = interviewSummaries.find((item) => item.videoId === video.id);
       const schemaVideo: Record<string, unknown> = {
         "@context": "https://schema.org",
         "@type": "VideoObject",
         name: video.title,
-        description: video.description,
+        description: summary?.quickSummary || video.description,
         thumbnailUrl: `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`,
         embedUrl: getEmbedUrl(video.id),
         contentUrl: getWatchUrl(video.id),
@@ -99,6 +112,10 @@ export function InterviewsPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {interviews.map((video) => (
+          (() => {
+            const summary = interviewSummaries.find((item) => item.videoId === video.id);
+
+            return (
           <section key={video.id} className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
             <div className="aspect-video bg-black">
               <iframe
@@ -123,8 +140,63 @@ export function InterviewsPage() {
 
               <p className="text-gray-600 text-sm mb-4">{video.description}</p>
 
+              {summary ? (
+                <div className="mt-5 border-t border-slate-200 pt-5 space-y-4">
+                  <div className="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                    <div className="flex items-center justify-between gap-3 mb-2">
+                      <p className="text-xs font-semibold tracking-wide uppercase text-[#001C54]">60 Saniyede Özet</p>
+                      <span className={`text-[11px] px-2 py-1 rounded-full ${summary.status === "gozden-gecirildi" ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
+                        {summary.status === "gozden-gecirildi" ? "Gözden Geçirildi" : "Taslak"}
+                      </span>
+                    </div>
+                    <p className="text-sm text-slate-700">{summary.quickSummary}</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold text-[#001C54] mb-2">Öne Çıkan Başlıklar</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+                      {summary.keyPoints.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold text-[#001C54] mb-2">Belirtilen Taahhütler</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+                      {summary.commitments.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold text-[#001C54] mb-2">Henüz Netleşmeyen Noktalar</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+                      {summary.unclearPoints.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="rounded-lg border border-slate-200 p-3 text-xs text-slate-600 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <span>Son güncelleme: {formatUpdatedAt(summary.updatedAt)}</span>
+                    <a
+                      href={summary.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0052A3] hover:underline"
+                    >
+                      Kaynak: {summary.sourceLabel}
+                    </a>
+                  </div>
+                </div>
+              ) : null}
+
             </div>
           </section>
+            );
+          })()
         ))}
       </div>
     </div>
