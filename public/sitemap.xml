@@ -66,4 +66,11 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Metodoloji ve Şeffaflık Sayfası -->
+  <url>
+    <loc>https://fenersecim.com/metodoloji-seffaflik</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

@@ -15,15 +15,15 @@ function formatCandidateNameFromSlug(slug: string) {
 function getShareContent(pathname: string) {
   if (pathname === "/") {
     return {
-      title: "Fenerbahce Baskanlik Secimleri 2026",
-      text: "Adaylari, projeleri ve secim takvimini tek yerde incele.",
+      title: "Fenerbahçe Başkanlık Seçimleri 2026",
+      text: "Adayları, projeleri ve seçim takvimini tek yerde incele.",
     };
   }
 
   if (pathname === "/adaylar") {
     return {
-      title: "Fenerbahce Baskan Adaylari",
-      text: "Tum baskan adaylarini vizyon ve projeleriyle karsilastir.",
+      title: "Fenerbahçe Başkan Adayları",
+      text: "Tüm başkan adaylarını vizyon ve projeleriyle karşılaştır.",
     };
   }
 
@@ -32,49 +32,49 @@ function getShareContent(pathname: string) {
     const candidateName = formatCandidateNameFromSlug(slug);
 
     return {
-      title: `${candidateName} | Baskanlik Adayi`,
+      title: `${candidateName} | Başkanlık Adayı`,
       text: `${candidateName} aday profilini ve projelerini incele.`,
     };
   }
 
   if (pathname === "/projeler") {
     return {
-      title: "Fenerbahce Icin Onerilen Projeler",
-      text: "Adaylarin spor, finans ve altyapi odakli proje planlarini kesfet.",
+      title: "Fenerbahçe İçin Önerilen Projeler",
+      text: "Adayların spor, finans ve altyapı odaklı proje planlarını keşfet.",
     };
   }
 
   if (pathname === "/karsilastir") {
     return {
-      title: "Adaylari Karsilastir",
-      text: "Baskan adaylarini yan yana karsilastir ve farklari tek tabloda gor.",
+      title: "Adayları Karşılaştır",
+      text: "Başkan adaylarını yan yana karşılaştır ve farkları tek tabloda gör.",
     };
   }
 
   if (pathname === "/roportajlar") {
     return {
-      title: "Aday Roportajlari",
-      text: "Baskan adaylarinin roportajlarini tek sayfadan izleyin.",
+      title: "Aday Röportajları",
+      text: "Başkan adaylarının röportajlarını tek sayfadan izleyin.",
     };
   }
 
   if (pathname === "/kongre-uyesi-on-kayit") {
     return {
-      title: "Kongre Uyesi On Kayit",
-      text: "Kongre uyelerine ozel platform daveti icin on kaydini olustur.",
+      title: "Kongre Üyesi Ön Kayıt",
+      text: "Kongre üyelerine özel platform daveti için ön kaydını oluştur.",
     };
   }
 
   if (pathname === "/haberler") {
     return {
-      title: "Secim Haberleri ve Guncellemeler",
-      text: "Fenerbahce secim surecindeki son haber ve analizleri takip et.",
+      title: "Seçim Haberleri ve Güncellemeler",
+      text: "Fenerbahçe seçim sürecindeki son haber ve analizleri takip et.",
     };
   }
 
   return {
-    title: "Fenerbahce Secim Platformu",
-    text: "Fenerbahce secimleriyle ilgili bu sayfayi incele.",
+    title: "Fenerbahçe Seçim Platformu",
+    text: "Fenerbahçe seçimleriyle ilgili bu sayfayı incele.",
   };
 }
 
@@ -157,6 +157,14 @@ export function Layout() {
           <div className="text-center">
             <p className="text-sm opacity-80">
               © 2026 Fenerbahçe Seçim Platformu. Tasarım ve Geliştirme: <a href="https://hizircan.nl" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFED00] transition-colors">hizircan.nl</a>
+            </p>
+            <p className="text-xs opacity-80 mt-2">
+              Kurucu beyanı: Platform geliştiricisi kongre üyesidir. Bu platform resmi kulüp veya aday kampanya sitesi değildir.
+            </p>
+            <p className="text-xs mt-1">
+              <Link to="/metodoloji-seffaflik" className="hover:text-[#FFED00] underline underline-offset-2">
+                Metodoloji ve şeffaflık notları
+              </Link>
             </p>
           </div>
         </div>
