@@ -278,6 +278,50 @@ export function HomePage() {
       </div>
 
       <div className="mb-12 rounded-2xl bg-white border border-blue-100 shadow-lg p-6 sm:p-8">
+        <div className="mb-8 rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 to-blue-50 p-6 sm:p-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-[#0052A3] mb-1">Yeni İçerik</p>
+              <h3 className="text-[#001C54] mb-2">Aday Röportajları Yayında</h3>
+              <p className="text-sm text-gray-600">
+                Aziz Yıldırım ve Hakan Safi'nin TRT SPOR röportajlarını tek sayfada izleyebilir, özet başlıkları hızlıca okuyabilirsiniz.
+              </p>
+            </div>
+            <Link
+              to="/roportajlar"
+              className="inline-flex items-center justify-center rounded-lg bg-[#001C54] text-white px-5 py-3 hover:bg-[#003F7F] transition-colors"
+            >
+              Röportaj Sayfasına Git
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { name: "Aziz Yıldırım", videoId: "5KhqO9Cael4" },
+              { name: "Hakan Safi", videoId: "PQaDBiMete8" },
+            ].map((item) => (
+              <Link
+                key={item.name}
+                to="/roportajlar"
+                className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:shadow-md transition-shadow"
+              >
+                <div className="aspect-video bg-slate-100">
+                  <img
+                    src={`https://img.youtube.com/vi/${item.videoId}/hqdefault.jpg`}
+                    alt={`${item.name} röportaj küçük resmi`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-[#001C54] font-semibold">{item.name}</p>
+                  <p className="text-xs text-slate-500 mt-1">Röportaj özetini ve videoyu görüntüle</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <h3 className="text-[#001C54] mb-2">Kongre Üyesi misiniz?</h3>
         <p className="text-gray-600 mb-4">
           Seçim sonrası açılacak ayrı kongre platformuna davet almak için ad, sicil ve e-posta bilginizi bırakabilirsiniz.
