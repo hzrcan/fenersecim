@@ -23,6 +23,13 @@ const interviews = [
     description: "Aziz Yıldırım'ın seçim özel yayınındaki kapsamlı değerlendirmesi.",
   },
   {
+    id: "dDQ2ip1X8nY",
+    candidate: "Hakan Safi",
+    broadcaster: "A Spor",
+    title: "Hakan Safi | A Spor Gündem Özel",
+    description: "Hakan Safi'nin A Spor Gündem Özel yayınındaki kapsamlı değerlendirmesi.",
+  },
+  {
     id: "PQaDBiMete8",
     candidate: "Hakan Safi",
     broadcaster: "TRT SPOR",
@@ -100,7 +107,7 @@ export function InterviewsPage() {
         contentUrl: getWatchUrl(video.id),
         publisher: {
           "@type": "Organization",
-          name: "TRT SPOR",
+          name: video.broadcaster,
         },
         inLanguage: "tr-TR",
       };
@@ -125,7 +132,7 @@ export function InterviewsPage() {
         </div>
         <h1 className="text-white mb-3">Röportajlar</h1>
         <p className="text-blue-100 max-w-3xl">
-            Aziz Yıldırım ve Hakan Safi röportajlarını adaylara göre gruplu şekilde tek sayfada izleyebilirsiniz.
+          Aziz Yıldırım ve Hakan Safi'nin röportajlarını adaylara göre gruplu şekilde tek sayfada izleyebilirsiniz.
         </p>
       </div>
 

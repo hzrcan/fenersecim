@@ -291,7 +291,7 @@ export function HomePage() {
               <p className="text-xs uppercase tracking-wide text-[#0052A3] mb-1">Yeni İçerik</p>
               <h3 className="text-[#001C54] mb-2">Aday Röportajları Yayında</h3>
               <p className="text-sm text-gray-600">
-                Aziz Yıldırım ve Hakan Safi'nin TRT SPOR röportajlarını tek sayfada izleyebilir, özet başlıkları hızlıca okuyabilirsiniz.
+                Aziz Yıldırım ve Hakan Safi'nin röportajlarını tek sayfada izleyebilir, özet başlıkları hızlıca okuyabilirsiniz.
               </p>
             </div>
             <Link
@@ -302,13 +302,15 @@ export function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               { name: "Aziz Yıldırım", videoId: "5KhqO9Cael4" },
+              { name: "Aziz Yıldırım", videoId: "THoM8jXbbcg" },
               { name: "Hakan Safi", videoId: "PQaDBiMete8" },
+              { name: "Hakan Safi", videoId: "dDQ2ip1X8nY" },
             ].map((item) => (
               <Link
-                key={item.name}
+                key={item.videoId}
                 to="/roportajlar"
                 className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:shadow-md transition-shadow"
               >

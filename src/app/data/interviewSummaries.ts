@@ -101,4 +101,33 @@ export const interviewSummaries: InterviewSummary[] = [
     updatedAt: "2026-05-25T21:00:00+03:00",
     status: "gozden-gecirildi",
   },
+  {
+    videoId: "dDQ2ip1X8nY",
+    candidate: "Hakan Safi",
+    quickSummary:
+      "Hakan Safi bu A Spor Gündem Özel yayınında adaylığını hız, enerji, cesaret ve kulübe doğrudan maddi-manevi katkı sunma iddiasıyla savundu. Transferlerde önceliği omurgayı kuracak santrfor, sol stoper ve kaleci bölgelerine verdi; Türkiye ligini bilen hoca, stadyum kapasite artışı, pilot takımlar, Fener GO/Fenerium ve sürdürülebilir gelir modeli üzerinden 2050 vizyonu çizdi.",
+    keyPoints: [
+      "Adaylık kararını beklemeden aldığını, kulüpte zaman kaybı ve kararsızlık istemediğini söyledi.",
+      "Kutuplaşma, kibir ve iç kavganın Fenerbahçe'yi yorduğunu; birlik, saygı ve göz teması üzerine kurulu bir kültür istediğini anlattı.",
+      "Transferde ilk hedefin omurgayı kurmak olduğunu, forvet, sol stoper ve kaleci için aynı anda çalışma yürüttüklerini belirtti.",
+      "Teknik direktörde Türkiye ligini bilen profili tercih edeceğini, rakamlar ve istatistiklerle karar verdiğini vurguladı.",
+      "Stadı mevcut yerde 64.500 bandına çıkaracak bir kapasite artışı ve bunun gelir tarafını büyütecek bir model anlattı.",
+      "Pilot takımlar, Fener GO, Fenerium, altyapı ve eğitim projeleriyle kulübün sürdürülebilir gelir üretmesi gerektiğini söyledi.",
+    ],
+    commitments: [
+      "Seçilirse ilk hedefinin şampiyonluk olacağını ve kadroyu buna göre kuracağını söyledi.",
+      "Dünya yıldızlarını ve seçim öncesi netleşecek transferleri kongre üyeleriyle paylaşma sözü verdi.",
+      "Stadyum kapasite artışını, izin ve mühendislik süreçleriyle birlikte hayata geçirme hedefini açıkladı.",
+      "Amatör branşları küçültmek yerine koruyup büyütme ve yeni gelir kanalları oluşturma yaklaşımını benimsediğini belirtti.",
+    ],
+    unclearPoints: [
+      "Söz verilen transfer isimleri ve teknik direktör tercihi nihai olarak açıklanmadı.",
+      "Stadyum büyütme projesinin resmi finansman, izin ve uygulama takvimi netleştirilmedi.",
+      "Fener GO, Fenerium ve pilot takım modelinin hukuki/operasyonel yapısı ayrıntılandırılmadı.",
+    ],
+    sourceUrl: "https://www.youtube.com/watch?v=dDQ2ip1X8nY",
+    sourceLabel: "A Spor Gündem Özel Röportajı",
+    updatedAt: "2026-05-26T12:00:00+03:00",
+    status: "gozden-gecirildi",
+  },
 ];
