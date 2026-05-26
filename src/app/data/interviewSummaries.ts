@@ -42,6 +42,37 @@ export const interviewSummaries: InterviewSummary[] = [
     status: "gozden-gecirildi",
   },
   {
+    videoId: "THoM8jXbbcg",
+    candidate: "Aziz Yıldırım",
+    quickSummary:
+      "Aziz Yıldırım bu uzun röportajda adaylık gerekçesini 12 yıllık sportif düşüş, camiada birlik ihtiyacı ve kulübün yeniden güçlü kimliğine dönmesi hedefiyle açıkladı. Transfer planında önceliği santrfora verdiğini, Şampiyonlar Ligi ön elemesi takvimini merkeze alan kadro mühendisliği yapacaklarını ve UEFA limitlerine uyumlu finansman modeliyle ilerleyeceklerini söyledi.",
+    keyPoints: [
+      "Geçen yıl aday olmama kararını gençleşme ve çok adaylı demokratik süreç beklentisiyle açıkladı; bu yıl adaylığını kulüpte başarısızlığın normalleşmesine bağladı.",
+      "Teknik ve sportif modelde futbol aklı, yönetim kurulu ve futbol yapılanmasının birlikte çalışacağı bir yapı hedeflediğini belirtti.",
+      "Kadro planında ilk önceliğin santrfor olduğunu, devamında stoper/sol bek gibi bölgelere ihtiyaca göre takviye yapılacağını söyledi.",
+      "Milli takım takvimi nedeniyle ön eleme döneminde oluşabilecek eksiklere karşı geniş ve hazır kadro ihtiyacını vurguladı.",
+      "UEFA mali limitleri ve lisans kriterlerinin belirleyici olduğunu, yüksek harcamanın tek başına çözüm olmadığını ifade etti.",
+      "Birlik mesajını öne çıkararak tribün-atmosfer etkisinin sportif sonuçlarda kritik rol oynadığını tekrar vurguladı.",
+    ],
+    commitments: [
+      "Bu adaylığının son adaylığı olduğunu ve bir yıllık güçlü sonuç odaklı dönem hedeflediğini belirtti.",
+      "Öncelikli transfer olarak iki santrfor planladıklarını, pazarlık süreciyle kulüp menfaatini koruyacaklarını söyledi.",
+      "UEFA kriterlerine uygun şekilde kurumsal yapı içinde transfer ve finansman yönetimi sözü verdi.",
+      "Stadyum kapasite artışı projesini seçim sonrası izin süreçleriyle hızla başlatma hedefini paylaştı.",
+      "Seçimden sonra mevcut kadroyla tek tek görüşüp kalacak-gidecek planını netleştireceklerini ifade etti.",
+    ],
+    unclearPoints: [
+      "Açıklanan transfer önceliklerinin hangi isim/profil ve kesin bütçe aralığıyla tamamlanacağı netleşmedi.",
+      "UEFA limiti kapsamında kullanılabilir kaynakların sezon bazlı detay dağılımı somut tabloyla paylaşılmadı.",
+      "Teknik direktör kararının takvimi ve nihai aday listesi röportajda kesinleştirilmedi.",
+      "Bahsedilen uzun vadeli büyük gelir projesinin kapsamı ve resmi zaman planı açıklanmadı.",
+    ],
+    sourceUrl: "https://www.youtube.com/watch?v=THoM8jXbbcg",
+    sourceLabel: "Sports Digitale YouTube Röportaj Kaydı",
+    updatedAt: "2026-05-26T10:30:00+03:00",
+    status: "gozden-gecirildi",
+  },
+  {
     videoId: "PQaDBiMete8",
     candidate: "Hakan Safi",
     quickSummary:
