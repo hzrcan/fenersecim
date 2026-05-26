@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/uye-topluluk",
+      "destination": "/kongre-uyesi-on-kayit",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
