@@ -124,50 +124,6 @@ export function HomePage() {
         <p className="text-gray-500 max-w-2xl mx-auto text-sm mt-2">
           Bu platform, Fenerbahçe seçimlerinde şeffaflığı ve demokratik katılımı desteklemek amacıyla oluşturulmuştur ve sürekli olarak güncellenecektir.
         </p>
-
-        <div className="mt-8 mx-auto max-w-4xl rounded-2xl border border-blue-100 bg-white p-4 sm:p-6 shadow-lg text-left">
-          <p className="text-xs uppercase tracking-wide text-[#0052A3] mb-3">İlk Kez Gelenler İçin Hızlı Başlangıç</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            <Link
-              to="/karsilastir"
-              className="rounded-xl border border-slate-200 p-4 hover:border-[#0052A3] hover:shadow-sm transition-all"
-            >
-              <p className="text-sm font-semibold text-[#001C54]">1. Adayları 2 dakikada karşılaştır</p>
-              <p className="text-xs text-slate-600 mt-1">Vizyon, proje ve farkları tek tabloda gör.</p>
-            </Link>
-            <Link
-              to="/roportajlar"
-              className="rounded-xl border border-slate-200 p-4 hover:border-[#0052A3] hover:shadow-sm transition-all"
-            >
-              <p className="text-sm font-semibold text-[#001C54]">2. Röportaj özetleriyle hızlan</p>
-              <p className="text-xs text-slate-600 mt-1">Uzun içerikler yerine öne çıkan başlıkları oku.</p>
-            </Link>
-            <Link
-              to="/kongre-uyesi-on-kayit?source=homepage_quick_start"
-              className="rounded-xl border border-slate-200 p-4 hover:border-[#0052A3] hover:shadow-sm transition-all"
-            >
-              <p className="text-sm font-semibold text-[#001C54]">3. Kongre üyesiysen daveti kaçırma</p>
-              <p className="text-xs text-slate-600 mt-1">Ön kayıt ile özel platform açılışını ilk öğrenenlerden ol.</p>
-            </Link>
-          </div>
-
-          <div className="mt-4 flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={() => scrollToSection("hizli-islemler")}
-              className="inline-flex items-center rounded-lg bg-[#001C54] text-white px-4 py-2 text-sm hover:bg-[#003F7F] transition-colors"
-            >
-              Hızlı İşlemlere Git
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollToSection("secim-takvimi")}
-              className="inline-flex items-center rounded-lg border border-[#001C54] text-[#001C54] px-4 py-2 text-sm hover:bg-slate-50 transition-colors"
-            >
-              Seçim Takvimine Git
-            </button>
-          </div>
-        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
