@@ -181,7 +181,7 @@ export function Layout() {
             <Sparkles className="w-4 h-4 mt-0.5 text-[#FFED00]" />
             <div>
               <p className="text-sm font-semibold leading-5">Kongre Üyelerine Özel Platform</p>
-              <p className="text-xs text-blue-100 mt-1">Yerini şimdi ayırt, açılışta ilk sen haberdar ol.</p>
+              <p className="text-xs text-blue-100 mt-1">Hemen katıl, davet ve erişim bilgisini ilk alanlardan ol.</p>
             </div>
           </div>
         </div>

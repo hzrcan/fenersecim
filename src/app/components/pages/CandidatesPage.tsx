@@ -114,13 +114,13 @@ export function CandidatesPage() {
       <div className="mb-8 rounded-xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <p className="text-[#001C54] font-semibold">Kongre üyeleri için ayrı platform hazırlıyoruz</p>
-          <p className="text-sm text-gray-600">Seçim sonrası açılış daveti için iletişim bilginizi bırakabilirsiniz.</p>
+          <p className="text-sm text-gray-600">Davet, açılış duyurusu ve erişim bilgilerini ilk alanlardan olmak için ön kaydınızı bırakın.</p>
         </div>
         <Link
           to="/kongre-uyesi-on-kayit?source=candidates"
           className="inline-flex items-center justify-center rounded-lg bg-[#001C54] text-white px-4 py-2.5 hover:bg-[#003F7F] transition-colors"
         >
-          Davet Listesine Katıl
+          Hemen Ön Kayıt Oluştur
         </Link>
       </div>
 
