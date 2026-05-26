@@ -81,6 +81,7 @@ function getShareContent(pathname: string) {
 export function Layout() {
   const location = useLocation();
   const shareContent = getShareContent(location.pathname);
+  const showInviteSharePrompt = location.pathname === "/kongre-uyesi-on-kayit";
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
@@ -144,10 +145,21 @@ export function Layout() {
         <Outlet />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+          {showInviteSharePrompt ? (
+            <div className="mt-4 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 via-white to-yellow-50 p-4 sm:p-5 text-center shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-wide text-[#0052A3]">Daha fazla üyeye ulaşalım</p>
+              <p className="mt-1 text-sm sm:text-base text-[#001C54] font-medium">
+                Daha fazla kongre üyesine ulaşmamıza yardımcı olun.
+              </p>
+              <p className="mt-1 text-xs sm:text-sm text-slate-600">
+                Bu sayfayı ilgili kongre üyeleriyle paylaşarak davet listesine daha fazla kişinin ulaşmasını sağlayabilirsiniz.
+              </p>
+            </div>
+          ) : null}
           <ShareActions
             title={shareContent.title}
             text={shareContent.text}
-            className="mt-4"
+            className={showInviteSharePrompt ? "mt-3" : "mt-4"}
           />
         </div>
       </main>
