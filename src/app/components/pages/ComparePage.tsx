@@ -52,7 +52,7 @@ export function ComparePage() {
       ])
     );
 
-    addStructuredData(createQASchema(compareQaItems));
+    addStructuredData(createQASchema(compareQaItems, "https://fenersecim.com/karsilastir"));
   }, []);
 
   const handleCandidateChange = (index: number, candidateId: string) => {

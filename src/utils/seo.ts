@@ -287,17 +287,25 @@ export function createFAQSchema(items: Array<{ question: string; answer: string 
 }
 
 export function createQASchema(
-  items: Array<{ question: string; answers: Array<{ candidate: string; answer: string }> }>
+  items: Array<{ question: string; answers: Array<{ candidate: string; answer: string; url?: string; datePublished?: string }> }>,
+  pageUrl?: string
 ) {
+  const now = new Date().toISOString().split("T")[0];
   return {
     "@context": "https://schema.org",
     "@type": "QAPage",
     mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
+      text: item.question,
+      answerCount: item.answers.length,
+      datePublished: now,
       suggestedAnswer: item.answers.map((entry) => ({
         "@type": "Answer",
         text: entry.answer,
+        datePublished: entry.datePublished ?? now,
+        upvoteCount: 0,
+        url: entry.url ?? pageUrl ?? window.location.href,
         author: {
           "@type": "Person",
           name: entry.candidate,
