@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Outlet, Link, useLocation } from "react-router";
-import { Home, Users, FolderKanban, GitCompare, UserPlus, Tv, Sparkles } from "lucide-react";
+import { Home, Users, FolderKanban, GitCompare, Tv } from "lucide-react";
 import { Analytics } from "@vercel/analytics/react";
 import { ShareActions } from "./ShareActions";
 
@@ -58,13 +58,6 @@ function getShareContent(pathname: string) {
     };
   }
 
-  if (pathname === "/kongre-uyesi-on-kayit") {
-    return {
-      title: "Kongre Üyesi Ön Kayıt",
-      text: "Kongre üyelerine özel platform daveti için ön kaydını oluştur.",
-    };
-  }
-
   if (pathname === "/haberler") {
     return {
       title: "Seçim Haberleri ve Güncellemeler",
@@ -81,7 +74,6 @@ function getShareContent(pathname: string) {
 export function Layout() {
   const location = useLocation();
   const shareContent = getShareContent(location.pathname);
-  const showInviteSharePrompt = location.pathname === "/kongre-uyesi-on-kayit";
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
@@ -93,7 +85,6 @@ export function Layout() {
     { path: "/projeler", label: "Projeler", icon: FolderKanban },
     { path: "/karsilastir", label: "Karşılaştır", icon: GitCompare },
     { path: "/roportajlar", label: "Röportajlar", icon: Tv },
-    { path: "/kongre-uyesi-on-kayit", label: "Kongre Üyesi Ön Kayıt", icon: UserPlus, featured: true },
     // { path: "/haberler", label: "Haberler", icon: Newspaper }, // Hidden from menu
   ];
 
@@ -114,7 +105,6 @@ export function Layout() {
                 const Icon = item.icon;
                 const isActive = location.pathname === item.path ||
                   (item.path !== "/" && location.pathname.startsWith(item.path));
-                const isFeatured = item.featured;
 
                 return (
                   <Link
@@ -123,16 +113,11 @@ export function Layout() {
                     className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all ${
                       isActive
                         ? "bg-[#FFED00] text-[#001C54]"
-                        : isFeatured
-                          ? "bg-[#FFED00] text-[#001C54] hover:bg-[#FFE733] shadow-md ring-1 ring-[#FFED00]/60"
-                          : "text-white hover:bg-white/10"
+                        : "text-white hover:bg-white/10"
                     }`}
                   >
                     <Icon className="w-4 h-4" />
                     <span className="hidden md:inline font-medium">{item.label}</span>
-                    {isFeatured && !isActive && (
-                      <span className="hidden lg:inline-flex h-2 w-2 rounded-full bg-[#001C54] animate-pulse" aria-hidden="true" />
-                    )}
                   </Link>
                 );
               })}
@@ -145,21 +130,10 @@ export function Layout() {
         <Outlet />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
-          {showInviteSharePrompt ? (
-            <div className="mt-4 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 via-white to-yellow-50 p-4 sm:p-5 text-center shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-wide text-[#0052A3]">Daha fazla üyeye ulaşalım</p>
-              <p className="mt-1 text-sm sm:text-base text-[#001C54] font-medium">
-                Daha fazla kongre üyesine ulaşmamıza yardımcı olun.
-              </p>
-              <p className="mt-1 text-xs sm:text-sm text-slate-600">
-                Bu sayfayı ilgili kongre üyeleriyle paylaşarak davet listesine daha fazla kişinin ulaşmasını sağlayabilirsiniz.
-              </p>
-            </div>
-          ) : null}
           <ShareActions
             title={shareContent.title}
             text={shareContent.text}
-            className={showInviteSharePrompt ? "mt-3" : "mt-4"}
+            className="mt-4"
           />
         </div>
       </main>
@@ -173,31 +147,9 @@ export function Layout() {
             <p className="text-xs opacity-80 mt-2">
               Kurucu beyanı: Platform geliştiricisi kongre üyesidir. Bu platform resmi kulüp veya aday kampanya sitesi değildir.
             </p>
-            <p className="text-xs mt-1">
-              <Link to="/metodoloji-seffaflik" className="hover:text-[#FFED00] underline underline-offset-2">
-                Metodoloji ve şeffaflık notları
-              </Link>
-            </p>
           </div>
         </div>
       </footer>
-
-      <Link
-        to="/kongre-uyesi-on-kayit?source=invite-page"
-        className="fixed bottom-4 right-4 z-50 group"
-        aria-label="Kongre üyeleri davet listesine hemen katıl"
-      >
-        <div className="rounded-2xl bg-[#001C54] text-white shadow-2xl border border-white/20 px-4 py-3 w-[280px] max-w-[calc(100vw-2rem)] transition-all group-hover:translate-y-[-2px] group-hover:bg-[#003F7F]">
-          <p className="text-[11px] uppercase tracking-wide text-[#FFED00] mb-1">Ön Kayıt Açık</p>
-          <div className="flex items-start gap-2">
-            <Sparkles className="w-4 h-4 mt-0.5 text-[#FFED00]" />
-            <div>
-              <p className="text-sm font-semibold leading-5">Kongre Üyelerine Özel Platform</p>
-              <p className="text-xs text-blue-100 mt-1">Hemen katıl, davet ve erişim bilgisini ilk alanlardan ol.</p>
-            </div>
-          </div>
-        </div>
-      </Link>
 
       <Analytics />
     </div>

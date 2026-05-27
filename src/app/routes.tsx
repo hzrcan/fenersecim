@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import { Layout } from "./components/Layout";
 import { HomePage } from "./components/pages/HomePage";
 import { CandidatesPage } from "./components/pages/CandidatesPage";
@@ -6,9 +6,7 @@ import { CandidateDetailPage } from "./components/pages/CandidateDetailPage";
 import { ProjectsPage } from "./components/pages/ProjectsPage";
 import { ComparePage } from "./components/pages/ComparePage";
 import { NewsPage } from "./components/pages/NewsPage";
-import { CongressInvitePage } from "./components/pages/CongressInvitePage";
 import { InterviewsPage } from "./components/pages/InterviewsPage";
-import { MethodologyTransparencyPage } from "./components/pages/TransparencyMethodologyPage";
 
 export const router = createBrowserRouter([
   {
@@ -23,8 +21,8 @@ export const router = createBrowserRouter([
       { path: "karsilastir", Component: ComparePage },
       { path: "roportajlar", Component: InterviewsPage },
       { path: "haberler", Component: NewsPage },
-      { path: "kongre-uyesi-on-kayit", Component: CongressInvitePage },
-      { path: "metodoloji-seffaflik", Component: MethodologyTransparencyPage },
+      { path: "kongre-uyesi-on-kayit", element: <Navigate to="/" replace /> },
+      { path: "metodoloji-seffaflik", element: <Navigate to="/" replace /> },
     ],
   },
 ]);

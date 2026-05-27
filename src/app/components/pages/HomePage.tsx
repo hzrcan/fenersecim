@@ -274,12 +274,6 @@ export function HomePage() {
             >
               Projeleri Keşfet
             </Link>
-            <Link
-              to="/kongre-uyesi-on-kayit?source=homepage"
-              className="block bg-[#0052A3] text-white px-6 py-3 rounded-lg hover:bg-[#003F7F] transition-colors"
-            >
-              Kongre Üyesi Davet Listesine Katıl
-            </Link>
           </div>
         </div>
       </div>
@@ -331,16 +325,6 @@ export function HomePage() {
           </div>
         </div>
 
-        <h3 className="text-[#001C54] mb-2">Kongre Üyesi misiniz?</h3>
-        <p className="text-gray-600 mb-4">
-          Seçim sonrası açılacak ayrı kongre platformuna davet almak için ad ve e-posta bilginizi bırakabilirsiniz.
-        </p>
-        <Link
-          to="/kongre-uyesi-on-kayit?source=homepage"
-          className="inline-flex items-center rounded-lg bg-[#001C54] text-white px-5 py-3 hover:bg-[#003F7F] transition-colors"
-        >
-          Davet Ön Listesine Katıl
-        </Link>
       </div>
 
       <div className="bg-blue-50 border-l-4 border-[#0052A3] rounded-lg p-6 mt-12">

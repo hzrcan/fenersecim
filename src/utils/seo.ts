@@ -22,6 +22,10 @@ export function updatePageMeta(metadata: SEOMetadata) {
   // Güncelle başlık
   document.title = metadata.title;
 
+  // Site-wide SEO visibility is intentionally disabled.
+  updateMetaTag("robots", "noindex, nofollow, noarchive, nosnippet, noimageindex");
+  updateMetaTag("googlebot", "noindex, nofollow, noarchive, nosnippet, noimageindex");
+
   // Güncelle veya oluştur meta etiketleri
   updateMetaTag("description", metadata.description);
   updateMetaTag("keywords", metadata.keywords);
