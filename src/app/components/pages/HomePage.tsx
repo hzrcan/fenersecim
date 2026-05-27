@@ -14,11 +14,7 @@ const homepageFaqItems = [
   {
     question: "Bu platformda adaylar nasıl karşılaştırılır?",
     answer: "Adayların vizyonu, proje kategorileri, deneyim başlıkları ve kamuoyuna yansıyan güncel ilgi seviyesi birlikte sunulur.",
-  },
-  {
-    question: "Kongre üyeleri neden ön kayıt bırakmalı?",
-    answer: "Seçim sonrası açılacak özel kongre platformuna erken davet ve bilgilendirme almak için ön kayıt önerilir.",
-  },
+  }
 ];
 
 function getCountdownParts(targetDate: Date) {
