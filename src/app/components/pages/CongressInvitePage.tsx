@@ -174,6 +174,17 @@ export function CongressInvitePage() {
         </p>
       </div>
 
+      <div className="mb-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 sm:p-6 text-sm text-amber-950 shadow-sm">
+        <p className="font-semibold text-[#001C54] mb-2">Bilgilendirme Notu</p>
+        <p>
+          Kulüp adına herhangi bir veri toplanmamakta olup bu platform Fenerbahçe Spor Kulübü&apos;nün resmi bir çalışması değildir.
+          Amaç, kongre üyeleri ve taraftarların fikir/proje üretmesini sağlayacak bağımsız bir dijital topluluk oluşturmaktır.
+          Yanlış anlaşılmayı önlemek için tüm duyurularda &quot;resmi kulüp platformu değildir, kulüp adına veri toplanmaz&quot;
+          ibaresi yer almaktadır.
+          Toplanan bilgiler yalnızca katılım ve iletişim amacıyla, KVKK&apos;ya uygun şekilde ve açık bilgilendirme ile alınmaktadır.
+        </p>
+      </div>
+
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div id="invite-form" className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-blue-100">
           <h2 className="text-[#001C54] mb-2">Hemen Katıl</h2>
