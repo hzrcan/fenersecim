@@ -99,7 +99,7 @@ export function MethodologyTransparencyPage() {
             <h2 className="text-[#001C54]">Veri Toplama ve Saklama</h2>
           </div>
           <ul className="text-sm text-gray-700 space-y-2">
-            <li>Kongre üyesi ön kayıt formunda minimum veri toplanır: ad soyad, sicil no, e-posta, opsiyonel telefon.</li>
+            <li>Kongre üyesi ön kayıt formunda minimum veri toplanır: ad soyad, e-posta, opsiyonel telefon.</li>
             <li>Bu veri yalnızca davet ve bilgilendirme amacıyla kullanılır; oy kullanma süreciyle ilişkili değildir.</li>
             <li>Silme ve düzeltme talepleri e-posta üzerinden alınıp en kısa sürede sonuçlandırılır.</li>
           </ul>

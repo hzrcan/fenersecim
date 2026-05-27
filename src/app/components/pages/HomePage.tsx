@@ -333,7 +333,7 @@ export function HomePage() {
 
         <h3 className="text-[#001C54] mb-2">Kongre Üyesi misiniz?</h3>
         <p className="text-gray-600 mb-4">
-          Seçim sonrası açılacak ayrı kongre platformuna davet almak için ad, sicil ve e-posta bilginizi bırakabilirsiniz.
+          Seçim sonrası açılacak ayrı kongre platformuna davet almak için ad ve e-posta bilginizi bırakabilirsiniz.
         </p>
         <Link
           to="/kongre-uyesi-on-kayit?source=homepage"

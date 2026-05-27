@@ -2,7 +2,6 @@
 
 type InvitePayload = {
   fullName: string;
-  sicilNo: string;
   phone?: string;
   email: string;
   consentToContact: boolean;
@@ -74,13 +73,12 @@ export default async function handler(req: any, res: any) {
 
   const body = (req.body || {}) as Partial<InvitePayload>;
   const fullName = (body.fullName || "").trim();
-  const sicilNo = (body.sicilNo || "").trim();
   const phone = (body.phone || "").trim();
   const email = (body.email || "").trim().toLowerCase();
   const source = (body.source || "unknown").trim();
   const consentToContact = Boolean(body.consentToContact);
 
-  if (fullName.length < 4 || sicilNo.length < 4 || !isValidEmail(email) || !isValidPhone(phone)) {
+  if (fullName.length < 4 || !isValidEmail(email) || !isValidPhone(phone)) {
     return res.status(400).json({
       ok: false,
       message: "Invalid form data.",
@@ -95,7 +93,6 @@ export default async function handler(req: any, res: any) {
   }
 
   const safeName = htmlEscape(fullName);
-  const safeSicilNo = htmlEscape(sicilNo);
   const safePhone = phone ? htmlEscape(phone) : "Belirtilmedi";
   const safeEmail = htmlEscape(email);
   const safeSource = htmlEscape(source);
@@ -112,7 +109,6 @@ export default async function handler(req: any, res: any) {
           <p>Fenerbahçe kongre üyelerine özel platform için davet ön kaydınızı aldık. Platform açıldığında sizi bu e-posta adresi üzerinden bilgilendireceğiz.</p>
           <p style="margin-top:16px;"><strong>Kayıt bilgileri</strong></p>
           <ul>
-            <li>Sicil No: ${safeSicilNo}</li>
             <li>E-posta: ${safeEmail}</li>
             <li>Telefon: ${safePhone}</li>
           </ul>
@@ -130,9 +126,9 @@ export default async function handler(req: any, res: any) {
           <h2 style="margin-bottom:12px;">Yeni kayıt geldi</h2>
           <ul>
             <li>Ad Soyad: ${safeName}</li>
-            <li>Sicil No: ${safeSicilNo}</li>
             <li>E-posta: ${safeEmail}</li>
             <li>Telefon: ${safePhone}</li>
+            <li>Kaynak: ${safeSource}</li>
           </ul>
         </div>
       `,

@@ -18,7 +18,7 @@ import {
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^[+0-9\s()-]{7,20}$/;
 
-type FieldName = "fullName" | "sicilNo" | "phone" | "email" | "consent";
+type FieldName = "fullName" | "phone" | "email" | "consent";
 
 function getLeadSource(search: string): LeadSource {
   const params = new URLSearchParams(search);
@@ -35,7 +35,6 @@ export function CongressInvitePage() {
   const source = useMemo(() => getLeadSource(location.search), [location.search]);
 
   const [fullName, setFullName] = useState("");
-  const [sicilNo, setSicilNo] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
@@ -72,13 +71,6 @@ export function CongressInvitePage() {
       return "";
     }
 
-    if (field === "sicilNo") {
-      if (sicilNo.trim().length < 4) {
-        return "Lütfen geçerli bir sicil no girin.";
-      }
-      return "";
-    }
-
     if (field === "email") {
       if (!EMAIL_REGEX.test(email.trim())) {
         return "Geçerli bir e-posta adresi girin.";
@@ -103,7 +95,6 @@ export function CongressInvitePage() {
   function validateForm() {
     const errors: Partial<Record<FieldName, string>> = {
       fullName: getFieldError("fullName"),
-      sicilNo: getFieldError("sicilNo"),
       phone: getFieldError("phone"),
       email: getFieldError("email"),
       consent: getFieldError("consent"),
@@ -136,7 +127,6 @@ export function CongressInvitePage() {
     setIsSubmitting(true);
     const result = await submitCongressInviteLead({
       fullName,
-      sicilNo,
       phone,
       email,
       consentToContact: consent,
@@ -156,7 +146,6 @@ export function CongressInvitePage() {
         : (result.message || "Kaydınız alındı. Platform yayına açıldığında size e-posta ile davet gönderilecektir."),
     );
     setFullName("");
-    setSicilNo("");
     setPhone("");
     setEmail("");
     setConsent(false);
@@ -211,29 +200,6 @@ export function CongressInvitePage() {
               />
               {fieldErrors.fullName ? (
                 <p id="fullName-error" className="text-xs text-red-600">{fieldErrors.fullName}</p>
-              ) : null}
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="sicilNo">Sicil No <span className="text-xs text-gray-500">(Üyelik numaranız)</span></Label>
-              <Input
-                id="sicilNo"
-                value={sicilNo}
-                onChange={(event) => {
-                  setSicilNo(event.target.value);
-                  if (fieldErrors.sicilNo) {
-                    setFieldErrors((previous) => ({ ...previous, sicilNo: "" }));
-                  }
-                }}
-                onBlur={() => handleFieldBlur("sicilNo")}
-                placeholder="Örn. 12345"
-                className={fieldErrors.sicilNo ? "border-red-400 focus-visible:ring-red-400" : ""}
-                aria-invalid={Boolean(fieldErrors.sicilNo)}
-                aria-describedby={fieldErrors.sicilNo ? "sicilNo-error" : "sicilNo-help"}
-              />
-              <p id="sicilNo-help" className="text-xs text-gray-500">Kulüp üyelik kaydınızda geçen sicil numarasını girin.</p>
-              {fieldErrors.sicilNo ? (
-                <p id="sicilNo-error" className="text-xs text-red-600">{fieldErrors.sicilNo}</p>
               ) : null}
             </div>
 
@@ -352,7 +318,7 @@ export function CongressInvitePage() {
               </li>
               <li className="flex items-start gap-3">
                 <ShieldCheck className="w-4 h-4 text-[#0052A3] mt-0.5" />
-                Şimdilik yalnızca davet amacıyla minimum veri (ad, sicil no, e-posta ve opsiyonel telefon) toplamak için.
+                Şimdilik yalnızca davet amacıyla minimum veri (ad, e-posta ve opsiyonel telefon) toplamak için.
               </li>
             </ul>
           </div>

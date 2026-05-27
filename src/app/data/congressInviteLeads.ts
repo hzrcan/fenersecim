@@ -2,7 +2,6 @@ export type LeadSource = "homepage" | "candidates" | "invite-page" | "unknown";
 
 export interface CongressInviteLeadInput {
   fullName: string;
-  sicilNo: string;
   phone?: string;
   email: string;
   consentToContact: boolean;
@@ -12,7 +11,6 @@ export interface CongressInviteLeadInput {
 export interface CongressInviteLeadRecord {
   id: string;
   fullName: string;
-  sicilNo: string;
   phone?: string;
   email: string;
   consentToContact: boolean;
@@ -67,7 +65,6 @@ function createRecord(input: CongressInviteLeadInput): CongressInviteLeadRecord 
   return {
     id: crypto.randomUUID(),
     fullName: normalizeName(input.fullName),
-    sicilNo: input.sicilNo.trim(),
     phone: normalizePhone(input.phone),
     email: normalizeEmail(input.email),
     consentToContact: input.consentToContact,
