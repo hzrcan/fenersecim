@@ -81,8 +81,8 @@ export const candidates: Candidate[] = [
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
-    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya odaklı (AC Milan bağlantıları) transfer ve teknik direktör görüşmeleri sürüyor; Paolo Maldini ile futbol stratejisi/transfer akıl hocalığı anlaşması sağladı (Maldini resmi görev almayacak, dostluk/akıl hocalığı rolü; görüşmeler İstanbul ve Milano'da gerçekleşti).",
-    vision: "Uzun vadeli (1+3 yıl) planlarla kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya görüşmeleriyle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu. Seçim sürecinde tereddüt etmeden harekete geçtiğini, Fenerbahçe'ye maddi/manevi her türlü katkıyı sunmaya hazır olduğunu belirtiyor. 'Türkiye'yi bilen, işi ehli hoca getireceğiz' mesajı veriyor (Sportif direktör olmayacak, hoca doğrudan yönetim kurulu ve başkana bağlı çalışacak). Seçim öncesi hoca + en az 2-4 bomba transfer açıklaması planlıyor.",
+    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya odaklı (AC Milan bağlantıları) transfer ve teknik direktör görüşmeleri sürüyor; Paolo Maldini ile futbol stratejisi/transfer akıl hocalığı anlaşması sağladı (Maldini resmi görev almayacak, dostluk/akıl hocalığı rolü). Seçim öncesi somut hoca + transfer açıklamaları planlıyor. Dernek ziyaretleri (Şanlıurfa, Mardin vb.) devam ediyor. Aziz Yıldırım'ın birlik çağrısını reddetti.",
+    vision: "Uzun vadeli (1+3 yıl) planlarla kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya görüşmeleriyle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu. 'Türkiye'yi bilen, işi ehli hoca getireceğiz' mesajı veriyor (Sportif direktör olmayacak, hoca doğrudan yönetim kurulu ve başkana bağlı çalışacak). Seçim öncesi hoca + en az 2-4 bomba transfer açıklaması hedefi sürüyor.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
       "Eski Fenerbahçe Yönetim Kurulu Üyesi",
@@ -93,7 +93,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması/transfer akıl hocalığı anlaşması; 'Türkiye'yi bilen hoca' öncelikli - tecrübeli ve ligi tanıyan profil. Yerli: İsmail Kartal öncelikli seçeneklerden; agresif İtalya-AC Milan görüşmeleri: Rafael Leão, Fikayo Tomori, Mike Maignan, Dusan Vlahovic, Nkunku vb. gibi isimler gündemde. Seçim öncesi hoca + 2-4 bomba transfer duyurusu hedefi; 'Dünya yıldızları getireceğiz', 4 baba transfer vaadi)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması/transfer akıl hocalığı anlaşması sürüyor. Roberto Mancini temasları aktif. Yerli: İsmail Kartal öncelikli. Bombalar: Rafael Leão, Tomori, Maignan, Vlahović, Nkunku, Guirassy, Pavlidis, Greenwood vb. gibi isimler gündemde. Seçim öncesi hoca + 2-4 bomba transfer duyurusu hedefi; 'Dünya yıldızları getireceğiz', 4 baba transfer vaadi)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -135,8 +135,8 @@ export const candidates: Candidate[] = [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
       { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; 22 Mayıs'ta yönetim listesini açıkladı; İtalya turu ve Maldini görüşmeleri; Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz', stadyum kapasite artışı (64k) ve tesis projeleri; seçim öncesi somut açıklamalar planı; dernek ziyaretleri devam ediyor" }
     ],
-    popularity: 45,  // No major verified shift needed; recent polls show ~47% support in some surveys, but core base holds steady vs. Yıldırım's experience edge
-    boardMembers: [  // Matches verified 22 Mayıs list
+    popularity: 46,
+    boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aytemiz Petrol'un kurucusu. Sanayi ve enerji teknolojileri sektörlerinde uzun yıllara dayanan tecrübeye sahip iş insanı; Fenerbahçeliler 2000 Derneği eski başkanı." },
       { id: "b2", name: "Metin Doğan", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Fenerbahçe camiasının tanınmış isimlerinden; dernek ve kulüp faaliyetlerinde uzun yıllar aktif rol almış emektar yönetici." },
       { id: "b3", name: "Agah Ruşen Çetin", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "TUREKS Grubu Yönetim Kurulu Başkanı. 1907 Fenerbahçe Derneği kurucusu ve eski başkanı (2017-2021); eski Fenerbahçe ve TFF yönetim kurulu üyesi." },
@@ -163,7 +163,7 @@ export const candidates: Candidate[] = [
       { id: "cc1", name: "Yusuf Kenan Çalık" }
     ],
     coachCandidates: [
-      { id: "c2", name: "Roberto Mancini", status: "Türkiye'yi iyi bilen profil. İtalya bağlantıları güçlü." },
+      { id: "c2", name: "Roberto Mancini", status: "İtalya bağlantıları güçlü, görüşmeler aktif" },
       { id: "c3", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi çok iyi bilen profil" }
     ]
   },
@@ -172,8 +172,8 @@ export const candidates: Candidate[] = [
     name: "Aziz Yıldırım",
     slogan: "Tecrübe ve Zafer",
     photo: "/assets/azizyildirim.jpg",
-    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı. Barış Göktürk’ün desteğini aldı, derneklerle buluşmalar yapıyor (Bursa, İzmir vb.). Özgür Peker’yi Safi listesinden kendi listesine kattı.",
-    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. 2026-27 sezonu için 'şampiyonluk mecburiyeti' vurgusu ('Olamazsa çok büyük tehlikeler bekliyor'). Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. Birleşme çağrıları yaptı (kısmen başarılı; Barış Göktürk katıldı).",
+    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonluk ve başarıyla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı. Barış Göktürk’ün desteğini aldı, Özgür Peker’yi Safi listesinden kendi listesine kattı. Dernek buluşmaları (Bursa, İzmir, Mardin, Çorlu, Londra vb.) yoğun şekilde devam ediyor.",
+    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. 2026-27 sezonu için 'şampiyonluk mecburiyeti' vurgusu. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. Birleşme çağrıları yaptı (Barış Göktürk katıldı). 'Yıldız + 10 asker' felsefesiyle tecrübeli futbol komitesi (Oğuz Çetin, Aykut Kocaman, Volkan Demirel, Dirk Kuijt vb.).",
     experience: [
       "Fenerbahçe Başkanı (1998-2018)",
       "Çok sayıda lig ve kupa şampiyonluğu",
@@ -183,7 +183,7 @@ export const candidates: Candidate[] = [
       {
         id: "p5",
         title: "Hemen Şampiyonluk",
-        description: "Kısa vadede zirve hedefi (2026-27 mecburiyeti; 'Olamazsa büyük tehlikeler bekliyor'). İlk transferler: Alexander Sörloth ana hedef (B planı Lukaku), en az 3-5 bomba isim (Sörloth, Muriqi, Kim Min-jae, Zhegrova, Malick Diouf vb. bağlantıları). Seçim öncesi 2 forvet + ek isimler açıklaması hedefi; en fazla 5-6 transfer",
+        description: "Kısa vadede zirve hedefi (2026-27 mecburiyeti). İlk transferler: 2 santrfor (Sörloth/Lukaku/Muriqi bağlantıları); 1 Haziran'da 2 isim açıklaması hedefi. En az 3-5 bomba isim (Sörloth, Muriqi, Kim Min-jae, Zhegrova, Malick Diouf, Rashford vb.). Toplam 5-6 transfer sınırı.",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -207,7 +207,7 @@ export const candidates: Candidate[] = [
       {
         id: "p8",
         title: "Futbol Aklı ve Yapısal Dönüşüm",
-        description: "Eski Fenerbahçe efsanelerinden (Oğuz Çetin - futbol aklı, Aykut Kocaman - teknik/TD rolü, Volkan Demirel vb.) oluşan danışma/transfer/izleme komitesi kurma; tecrübelerinden faydalanarak karar mekanizmasını güçlendirme (son haftalarda planlar netleşti)",
+        description: "Eski Fenerbahçe efsanelerinden (Oğuz Çetin - futbol aklı, Aykut Kocaman - teknik/TD rolü, Volkan Demirel vb.) oluşan danışma/transfer/izleme komitesi kurma",
         category: "Yönetim",
         icon: "shield",
         priority: "acil"
@@ -215,7 +215,7 @@ export const candidates: Candidate[] = [
       {
         id: "p10",
         title: "Stadyum Yenileme",
-        description: "Şükrü Saracoğlu Stadyumu'nu aynı yerde modernize etme ve kapasite artışı (64.000-65.000 kişiye çıkarma); loca sayısını artırma, yeni/modern tribünler. İzin süreçlerini hızlandırma ve gelir artışı hedefi",
+        description: "Şükrü Saracoğlu Stadyumu'nu aynı yerde modernize etme ve kapasite artışı (64.000-65.000 kişiye çıkarma); loca sayısını artırma, yeni/modern tribünler",
         category: "Altyapı",
         icon: "stadium",
         priority: "acil"
@@ -224,10 +224,10 @@ export const candidates: Candidate[] = [
     pastInvolvement: [
       { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Aktif görev" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl liderlik" },
-      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk desteği + Özgür Peker transferi; 22 Mayıs basın toplantısı ve birlik çağrıları (Ali Koç + Safi); dernek buluşmaları; Oğuz Çetin, Aykut Kocaman vb. ile futbol komitesi; Sörloth ve bomba transfer hedefleri; stadyum kapasite artışı (64-65k) projesi; Londra transfer görüşmeleri planı" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk + Özgür Peker desteği; 22 Mayıs basın toplantısı ve birlik çağrıları; dernek buluşmaları; Oğuz Çetin, Aykut Kocaman vb. ile futbol komitesi; 2 santrfor + bomba transfer hedefleri (1 Haziran açıklaması); stadyum kapasite artışı (64-65k) projesi; Londra transfer görüşmeleri planı" }
     ],
-    popularity: 55,
-    boardMembers: [ 
+    popularity: 54,
+    boardMembers: [
       { id: "b22", name: "Barış Göktürk", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Göktürk Holding Yönetim Kurulu Başkanı. Eski Fenerbahçe Futbol A.Ş. yönetim kurulu üyesi." },
       { id: "b23", name: "Mahmut Nedim Uslu", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aziz Yıldırım dönemlerinde görev yapmış eski Fenerbahçe yöneticisi." },
       { id: "b24", name: "Nihat Özbağı", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "İş insanı; önceki Yıldırım yönetimlerinde aktif rol almış yönetici." },
@@ -254,7 +254,7 @@ export const candidates: Candidate[] = [
       { id: "cc2", name: "Yusuf Mertol" }
     ],
     coachCandidates: [
-      { id: "c8", name: "Aykut Kocaman", status: "Aday" }
+      { id: "c8", name: "Aykut Kocaman", status: "Öncelikli aday" }
     ]
   }
 ];
