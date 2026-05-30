@@ -254,10 +254,7 @@ export const candidates: Candidate[] = [
       { id: "cc2", name: "Yusuf Mertol" }
     ],
     coachCandidates: [
-      { id: "c6", name: "Nuri Şahin", status: "Aday" },
-      { id: "c7", name: "İsmail Kartal", status: "Aday" },
-      { id: "c8", name: "Aykut Kocaman", status: "Aday" },
-      { id: "c9", name: "Vincenzo Montella", status: "Aday" }
+      { id: "c8", name: "Aykut Kocaman", status: "Aday" }
     ]
   }
 ];
