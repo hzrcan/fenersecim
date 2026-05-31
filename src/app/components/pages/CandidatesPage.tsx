@@ -113,8 +113,9 @@ export function CandidatesPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredCandidates.map((candidate) => (
-          <div
+          <Link
             key={candidate.id}
+            to={`/adaylar/${generateSlug(candidate.name)}`}
             className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow group"
           >
             <div className="relative h-64 overflow-hidden">
@@ -171,14 +172,13 @@ export function CandidatesPage() {
                 </div>
               </div>
 
-              <Link
-                to={`/adaylar/${generateSlug(candidate.name)}`}
+              <div
                 className="block w-full bg-[#FFED00] text-[#001C54] py-3 rounded-lg text-center hover:bg-[#FFC600] transition-colors"
               >
                 Tam Profili Görüntüle
-              </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
