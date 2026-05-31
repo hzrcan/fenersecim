@@ -5,24 +5,63 @@ import { updatePageMeta, addStructuredData, createBreadcrumbSchema, createQASche
 
 const compareQaItems = [
   {
-    question: "Hangi aday sportif başarıya daha hızlı odaklanıyor?",
+    question: "Güncel açıklamalara göre kısa vadede sportif öncelik nasıl şekilleniyor?",
     answers: [
-      { candidate: "Hakan Safi", answer: "Transfer ve teknik ekip konusunda hızlı ve iddialı sezon başlangıcı hedefi vurgulanıyor." },
-      { candidate: "Aziz Yıldırım", answer: "Kısa vadede şampiyonluk ve güçlü kadro kurma önceliği açık şekilde öne çıkıyor." },
+      {
+        candidate: "Hakan Safi",
+        answer:
+          "31 Mayıs güncellemelerinde omurga transferleri (forvet/sol stoper/kanat), Türkiye ligini bilen teknik direktör ve seçim öncesi bazı hamleleri duyurma hedefi öne çıkıyor.",
+      },
+      {
+        candidate: "Aziz Yıldırım",
+        answer:
+          "Son yayınlarda 4-6 takviye planı, santrfor önceliği ve ilk sezon için net şampiyonluk hedefi vurgulanıyor; teknik kadro kararının yönetimle birlikte netleşeceği belirtiliyor.",
+      },
     ],
   },
   {
-    question: "Mali ve yapısal güçlenme yaklaşımı nasıl farklı?",
+    question: "Mali sürdürülebilirlik ve kurumsal modelde öne çıkan farklar neler?",
     answers: [
-      { candidate: "Hakan Safi", answer: "Gelir artışına dayalı uzun vadeli finansal hedefler ve altyapı yatırımları öne çıkıyor." },
-      { candidate: "Aziz Yıldırım", answer: "Denetim, yönetim deneyimi ve yapısal dönüşüm odaklı model vurgulanıyor." },
+      {
+        candidate: "Hakan Safi",
+        answer:
+          "Gelir büyümesini stadyum kapasitesi, ticari kanallar (Fener GO/Fenerium), pilot takım ve uzun vadeli operasyon modeliyle birlikte ele alıyor; bazı başlıklarda uygulama detayı henüz sınırlı.",
+      },
+      {
+        candidate: "Aziz Yıldırım",
+        answer:
+          "UEFA mali limitlerine uyum, borç/faiz baskısını azaltma ve disiplinli transfer bütçesi çerçevesini öne çıkarıyor; büyük gelir projelerinin takvimi henüz tam netleşmiş değil.",
+      },
     ],
   },
   {
-    question: "Stadyum ve tesis gelişimi konusunda neler vaat ediliyor?",
+    question: "Stadyum ve tesis başlığında son güncellemeler ne söylüyor?",
     answers: [
-      { candidate: "Hakan Safi", answer: "Stadyum kapasite artışı ve tesis yenileme adımlarıyla uzun vadeli gelir hedefleniyor." },
-      { candidate: "Aziz Yıldırım", answer: "Stadyum modernizasyonu ve kapasite artışı, hızlandırılmış izin süreçleriyle ele alınıyor." },
+      {
+        candidate: "Hakan Safi",
+        answer:
+          "Mevcut lokasyonda 64-65 bin bandına çıkış, yaklaşık 1.5 yıllık tamamlanma hedefi ve gelir tarafını büyütme yaklaşımı korunuyor; ruhsat/finansman adımları henüz detaylandırılmadı.",
+      },
+      {
+        candidate: "Aziz Yıldırım",
+        answer:
+          "60-65 bin kapasite bandı, etaplı ilerleme ve loca/gelir artışı hedefi devam ediyor; başlangıç tarihi, sözleşme modeli ve resmi süreç takvimi henüz kesin değil.",
+      },
+    ],
+  },
+  {
+    question: "Belirsiz kalan kritik karar noktaları hangileri?",
+    answers: [
+      {
+        candidate: "Hakan Safi",
+        answer:
+          "Nihai teknik direktör ismi, vaat edilen transferlerin kesin listesi ve stadyum projesinin resmi uygulama takvimi hâlâ netleşme aşamasında.",
+      },
+      {
+        candidate: "Aziz Yıldırım",
+        answer:
+          "Transfer bütçesinin detay dağılımı, teknik kadro kararının son hali ve büyük gelir projelerinin operasyonel yol haritası için ek açıklama bekleniyor.",
+      },
     ],
   },
 ];
