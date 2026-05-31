@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router";
-import { ArrowLeft, ChevronDown, TrendingUp, Users, Briefcase, Target, Clock, Trophy } from "lucide-react";
+import { ArrowLeft, ChevronDown, TrendingUp, Users, Briefcase, Target, Clock, Trophy, ArrowRightLeft } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../ui/collapsible";
-import { getCandidateBySlug, generateSlug, getSlugFromIdOrSlug, type BoardMember } from "../../data/candidatesData";
+import { getCandidateBySlug, generateSlug, getSlugFromIdOrSlug, type BoardMember, type PotentialTransfer } from "../../data/candidatesData";
 import { updatePageMeta, addStructuredData, createCandidateSchema, createBreadcrumbSchema, createBoardMemberListSchema } from "../../../utils/seo";
 
 function BoardMemberCard({ member, type }: { member: BoardMember; type: "asil" | "yedek" }) {
@@ -30,6 +30,12 @@ function BoardMemberCard({ member, type }: { member: BoardMember; type: "asil" |
       </CollapsibleContent>
     </Collapsible>
   );
+}
+
+function sourceTypeLabel(sourceType: PotentialTransfer["sourceType"]) {
+  if (sourceType === "club_statement") return "Kulup Aciklamasi";
+  if (sourceType === "trusted_media") return "Guvenilir Medya";
+  return "X Tartismasi";
 }
 
 export function CandidateDetailPage() {
@@ -323,6 +329,47 @@ export function CandidateDetailPage() {
                 <span className="inline-block px-3 py-1 bg-[#FFED00] text-[#001C54] text-xs rounded-full">
                   {coach.status}
                 </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {candidate.potentialTransfers && candidate.potentialTransfers.length > 0 && (
+        <div className="bg-white rounded-xl p-8 shadow-lg mt-12">
+          <div className="flex items-center space-x-2 mb-3">
+            <ArrowRightLeft className="w-6 h-6 text-[#001C54]" />
+            <h2 className="text-[#001C54]">Potansiyel Transferler</h2>
+          </div>
+          <p className="text-sm text-gray-500 mb-8">
+            Bu liste kampanya donemi aciklamalari, guvenilir medya haberleri ve X gundemindeki son tartismalarin ozetinden olusur.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {candidate.potentialTransfers.map((transfer) => (
+              <div
+                key={transfer.id}
+                className="rounded-xl border border-[#001C54]/10 p-5 bg-gradient-to-br from-white to-blue-50"
+              >
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <h3 className="text-[#001C54]">{transfer.playerName}</h3>
+                  <span className="text-xs px-2 py-1 rounded-full bg-[#001C54] text-white whitespace-nowrap">
+                    {transfer.position}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-700 mb-3">{transfer.status}</p>
+                <div className="text-xs text-gray-600 space-y-1">
+                  <p>
+                    <span className="font-semibold text-[#001C54]">Kaynak Tipi:</span> {sourceTypeLabel(transfer.sourceType)}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[#001C54]">Kaynak:</span> {transfer.source}
+                  </p>
+                  {transfer.xDiscussion && (
+                    <p>
+                      <span className="font-semibold text-[#001C54]">X Ozet:</span> {transfer.xDiscussion}
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>

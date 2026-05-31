@@ -12,6 +12,7 @@ export interface Candidate {
   boardMembers?: BoardMember[];
   coachCandidates?: CoachCandidate[];
   campaignContacts?: CampaignContact[];
+  potentialTransfers?: PotentialTransfer[];
 }
 
 export interface BoardMember {
@@ -27,6 +28,18 @@ export interface CoachCandidate {
   id: string;
   name: string;
   status: string;
+}
+
+export interface PotentialTransfer {
+  id: string;
+  playerName: string;
+  position: string;
+  status: string;
+  source: string;
+  sourceUrl?: string;
+  sourceType: "trusted_media" | "club_statement" | "x_discussion";
+  xDiscussion?: string;
+  xQueryUrl?: string;
 }
 
 export interface CampaignContact {
@@ -93,7 +106,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması/transfer akıl hocalığı görüşmeleri yapıldı; Roberto Mancini temasları aktif. Yerli: İsmail Kartal öncelikli seçeneklerden. Bombalar: Rafael Leão, Tomori, Maignan, Vlahović, Nkunku, Guirassy, Pavlidis, Greenwood vb. Liverpool bağlantılarıyla kaleci görüşmeleri başladı. Seçim öncesi somut hoca + 2-4 bomba transfer duyurusu hedefi; 'Dünya yıldızları getireceğiz', 4 baba transfer vaadi)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması/transfer akıl hocalığı görüşmeleri yapıldı; Roberto Mancini temasları aktif. Yerli: İsmail Kartal öncelikli seçeneklerden. Bombalar: Tomori, Maignan, Nkunku, Guirassy, Pavlidis, Greenwood vb. Liverpool bağlantılarıyla kaleci görüşmeleri başladı. Seçim öncesi somut hoca + 2-4 bomba transfer duyurusu hedefi; 'Dünya yıldızları getireceğiz', 4 baba transfer vaadi)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -165,6 +178,50 @@ export const candidates: Candidate[] = [
     coachCandidates: [
       { id: "c2", name: "Roberto Mancini", status: "İtalya bağlantıları güçlü, görüşmeler aktif" },
       { id: "c3", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi bilen profil" }
+    ],
+    potentialTransfers: [
+      {
+        id: "t2",
+        playerName: "Mason Greenwood",
+        position: "Sag Kanat / Forvet",
+        status: "Son tartismalarda one cikan potansiyel alternatif",
+        source: "Spor medyasi transfer iddialari ve aday etrafindaki guncel tartismalar",
+        sourceUrl: "https://www.trtspor.com.tr/haber/futbol/transfer-gundemi",
+        sourceType: "trusted_media",
+        xDiscussion: "X gundeminde son donemde hizi artan rumor basliklarindan biri",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Greenwood&src=typed_query&f=live"
+      },
+      {
+        id: "t3",
+        playerName: "Mike Maignan",
+        position: "Kaleci",
+        status: "Kaleci transfer plani kapsaminda gecen adaylardan",
+        source: "Spor medyasi ve kampanya odakli transfer tartismalari",
+        sourceUrl: "https://www.trtspor.com.tr/haber/futbol/transfer-gundemi",
+        sourceType: "trusted_media",
+        xDiscussion: "X uzerinde kaleci aday listelerinde konusuluyor",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Maignan&src=typed_query&f=live"
+      },
+      {
+        id: "t4",
+        playerName: "Serhou Guirassy",
+        position: "Forvet",
+        status: "Ileri hat icin anilan alternatiflerden",
+        source: "Kampanya donemi transfer iddialari",
+        sourceType: "x_discussion",
+        xDiscussion: "X uzerinde taraftar ve yorumcu hesaplarinda duzenli sekilde gundeme geliyor",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Guirassy&src=typed_query&f=live"
+      },
+      {
+        id: "t9",
+        playerName: "Robert Lewandowski",
+        position: "Forvet",
+        status: "Yeni donemde ortaya cikan yuksek profilli dedikodu",
+        source: "X gundemi ve yorumcu hesaplarindaki son tartismalar",
+        sourceType: "x_discussion",
+        xDiscussion: "X tarafinda son gunlerde hizlanan ancak resmi teyidi olmayan rumor",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Lewandowski&src=typed_query&f=live"
+      }
     ]
   },
   {
@@ -255,6 +312,60 @@ export const candidates: Candidate[] = [
     ],
     coachCandidates: [
       { id: "c8", name: "Aykut Kocaman", status: "Öncelikli aday" }
+    ],
+    potentialTransfers: [
+      {
+        id: "t5",
+        playerName: "Alexander Sorloth",
+        position: "Forvet",
+        status: "Oncelikli golcu hedefi olarak sikca aniliyor",
+        source: "Kampanya aciklamalari ve spor medyasi",
+        sourceUrl: "https://www.trtspor.com.tr/haber/futbol/aziz-yildirim-iki-oyuncuyla-anlastik-31470560",
+        sourceType: "trusted_media",
+        xDiscussion: "X uzerinde en yuksek etkilesim alan forvet basliklarindan biri",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Sorloth&src=typed_query&f=live"
+      },
+      {
+        id: "t6",
+        playerName: "Vedat Muriqi",
+        position: "Forvet",
+        status: "Forvet rotasyonu icin one cikan isim",
+        source: "Aday cevresi iddialari ve medya degerlendirmeleri",
+        sourceUrl: "https://www.trtspor.com.tr/haber/futbol/aziz-yildirim-iki-oyuncuyla-anlastik-31470560",
+        sourceType: "trusted_media",
+        xDiscussion: "X tarafinda ikinci forvet profili olarak siklikla konusuluyor",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Muriqi&src=typed_query&f=live"
+      },
+      {
+        id: "t7",
+        playerName: "Kim Min-jae",
+        position: "Stoper",
+        status: "Savunma lideri profili olarak gundeme geliyor",
+        source: "Spor medyasi transfer iddialari",
+        sourceType: "x_discussion",
+        xDiscussion: "X uzerinde nostalji ve sportif uyum gerekcesiyle yogun tartisiliyor",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Kim%20Min-jae&src=typed_query&f=live"
+      },
+      {
+        id: "t8",
+        playerName: "Marcus Rashford",
+        position: "Sol Kanat / Forvet",
+        status: "Yuksek profilli yildiz adaylari arasinda geciyor",
+        source: "Transfer iddia haberleri ve yorum programlari",
+        sourceType: "x_discussion",
+        xDiscussion: "X'te etkilesimi yuksek ancak maliyet nedeniyle tartismali basliklardan",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Rashford&src=typed_query&f=live"
+      },
+      {
+        id: "t10",
+        playerName: "Nathan Ake",
+        position: "Stoper / Sol Bek",
+        status: "Savunma rotasyonunu guclendirecek cok yonlu profil olarak aniliyor",
+        source: "Transfer iddia haberleri ve yorumcu degerlendirmeleri",
+        sourceType: "x_discussion",
+        xDiscussion: "X'te stoper ve sol bek esnekligi nedeniyle ozellikle savunma kurgusunda konusuluyor",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Nathan%20Ake&src=typed_query&f=live"
+      }
     ]
   }
 ];

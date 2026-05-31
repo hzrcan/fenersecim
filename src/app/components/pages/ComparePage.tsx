@@ -271,6 +271,28 @@ export function ComparePage() {
                   ))}
                 </tr>
 
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 text-[#001C54] align-top">Potansiyel Transferler</td>
+                  {compareData.map((candidate) => (
+                    <td key={candidate?.id} className="px-6 py-4">
+                      {candidate?.potentialTransfers && candidate.potentialTransfers.length > 0 ? (
+                        <ul className="text-sm text-gray-600 space-y-2">
+                          {candidate.potentialTransfers.slice(0, 5).map((transfer) => (
+                            <li key={transfer.id} className="flex flex-col rounded-md border border-gray-200 p-2 bg-white">
+                              <span className="font-medium text-[#001C54]">
+                                {transfer.playerName} <span className="text-xs text-gray-500">({transfer.position})</span>
+                              </span>
+                              <span className="text-xs text-gray-500">{transfer.status}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <X className="w-6 h-6 text-gray-300 mx-auto" />
+                      )}
+                    </td>
+                  ))}
+                </tr>
+
                 {allCategories.map((category) => (
                   <tr key={category} className="bg-gray-50">
                     <td className="px-6 py-4 text-[#001C54] align-top">{category}</td>
