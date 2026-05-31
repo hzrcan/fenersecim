@@ -23,6 +23,13 @@ const interviews = [
     description: "Aziz Yıldırım'ın seçim özel yayınındaki kapsamlı değerlendirmesi.",
   },
   {
+    id: "1z6BC5yMV4s",
+    candidate: "Aziz Yıldırım",
+    broadcaster: "Sözcü TV",
+    title: "Aziz Yıldırım | Sözcü TV Özel Yayını",
+    description: "Aziz Yıldırım'ın Sözcü TV özel yayınındaki seçim ve kulüp gündemi değerlendirmesi.",
+  },
+  {
     id: "dDQ2ip1X8nY",
     candidate: "Hakan Safi",
     broadcaster: "A Spor",
@@ -35,6 +42,13 @@ const interviews = [
     broadcaster: "TRT SPOR",
     title: "Hakan Safi | TRT SPOR Röportajı",
     description: "Hakan Safi'nin TRT SPOR yayınındaki değerlendirmesi.",
+  },
+  {
+    id: "zIuK7TACKqY",
+    candidate: "Hakan Safi",
+    broadcaster: "YouTube Özel İçerik",
+    title: "Hakan Safi | Bir Gün ve Seçim Gündemi",
+    description: "Hakan Safi'nin seçim kampanyası günü, kadro planı ve yönetim modeli açıklamaları.",
   },
 ];
 

@@ -73,6 +73,36 @@ export const interviewSummaries: InterviewSummary[] = [
     status: "gozden-gecirildi",
   },
   {
+    videoId: "1z6BC5yMV4s",
+    candidate: "Aziz Yıldırım",
+    quickSummary:
+      "Aziz Yıldırım Sözcü TV özel yayınında adaylık kararını camiada birlik ihtiyacı ve uzun süren sportif başarısızlık gerekçesiyle açıkladı. Kısa vadede şampiyonluk hedefi, 4-6 oyunculuk transfer planı, teknik direktör kararının kapsamlı değerlendirmeyle verilmesi ve stat kapasite artışıyla gelir büyütme ekseninde bir yol haritası paylaştı.",
+    keyPoints: [
+      "4 Nisan otobüs saldırısı dosyasının yeniden incelenmesini önemli bulduğunu ve sürecin aydınlatılmasının camia için kritik olduğunu söyledi.",
+      "Adaylık gerekçesini 12 yıllık şampiyonluk hasreti, kulüp içi dağınıklık ve birlik ihtiyacı üzerinden anlattı.",
+      "Transfer planında santrfor önceliğini vurgulayarak toplamda 4-6 takviye ihtiyacından söz etti.",
+      "Teknik direktör için birden fazla adayla temas olduğunu, nihai kararın yönetimle birlikte verileceğini belirtti.",
+      "Stadyumun 64-65 bin kapasite bandına çıkarılmasını ve loca/gelir artışı hedefini paylaştı.",
+      "Kısa vadeli sportif hedefin net şekilde şampiyonluk olduğunu, uzun vadede kurumsal gelir projeleri üzerinde çalıştıklarını ifade etti.",
+    ],
+    commitments: [
+      "Seçilmesi halinde ilk sezon için ana hedefin şampiyonluk olacağını söyledi.",
+      "Santrfor başta olmak üzere ihtiyaç duyulan bölgelere hızlı transfer hamlesi yapacaklarını belirtti.",
+      "Teknik direktör ve kadro kararlarını yönetimle birlikte takvim içinde netleştireceklerini ifade etti.",
+      "Stat kapasite artışı ve ek gelir projelerini seçim sonrası hızla başlatmayı hedeflediğini açıkladı.",
+    ],
+    unclearPoints: [
+      "Bahsedilen transfer planının nihai oyuncu listesi ve kesin bütçe dağılımı netleşmedi.",
+      "Teknik direktör tercihinde kesin isim ve resmi imza takvimi açıklanmadı.",
+      "Stat projesinin izin, ihale ve uygulama adımlarına ilişkin detaylı zaman planı paylaşılmadı.",
+      "Sözü edilen büyük gelir projelerinin operasyonel modeli ve resmi yol haritası somutlaştırılmadı.",
+    ],
+    sourceUrl: "https://www.youtube.com/watch?v=1z6BC5yMV4s",
+    sourceLabel: "Sözcü TV YouTube Özel Yayını",
+    updatedAt: "2026-05-31T20:00:00+03:00",
+    status: "gozden-gecirildi",
+  },
+  {
     videoId: "PQaDBiMete8",
     candidate: "Hakan Safi",
     quickSummary:
@@ -128,6 +158,36 @@ export const interviewSummaries: InterviewSummary[] = [
     sourceUrl: "https://www.youtube.com/watch?v=dDQ2ip1X8nY",
     sourceLabel: "A Spor Gündem Özel Röportajı",
     updatedAt: "2026-05-26T12:00:00+03:00",
+    status: "gozden-gecirildi",
+  },
+  {
+    videoId: "zIuK7TACKqY",
+    candidate: "Hakan Safi",
+    quickSummary:
+      "Hakan Safi bu videoda kampanya günü akışını paylaşırken Fenerbahçe'nin şampiyonluk planını omurga transferleri, Türkiye ligini bilen teknik direktör profili, güçlü lobi ve yakın takip modeli üzerinden anlattı. Sportif direktör yerine başkan-yönetim-teknik ekip eksenli bir yönetim yapısı savunduğunu ve seçim öncesi etkili transfer adımları hedeflediğini belirtti.",
+    keyPoints: [
+      "Kampanya sürecinde saha içi hedefi net biçimde şampiyonluk olarak tanımladı ve bunu çoklu başlıkların aynı anda çalışmasıyla ilişkilendirdi.",
+      "Transfer önceliklerinde sol stoper, sağ kanat ve forvet bölgelerini öne çıkardı; kaleci için de şartlara bağlı ek hamle ihtimalinden bahsetti.",
+      "Sportif direktör modeli yerine teknik direktör + yönetim kurulu + başkan zinciriyle doğrudan karar alma yaklaşımını savundu.",
+      "Türkiye ligini bilen teknik direktör tercihinin kritik olduğunu ve kadro mühendisliğinin buna göre kurulacağını söyledi.",
+      "Uluslararası bağlantılar ve futbol çevresiyle ilişkileri üzerinden transfer süreçlerinde hız/avantaj sağlayabileceklerini ifade etti.",
+      "Maldini ile ilişkinin resmi görevden ziyade istişari ve uluslararası futbol ağı desteği niteliğinde olduğunu belirtti.",
+    ],
+    commitments: [
+      "Seçilmesi halinde kısa sürede etkili bir kadro yapılanmasıyla şampiyonluk yarışında güçlü bir takım kurma sözü verdi.",
+      "Belirttiği kritik mevkiler için transfer hamleleri yapacaklarını ve seçim öncesi bazı adımları duyurmayı hedeflediklerini söyledi.",
+      "Fenerbahçe'nin kurumsal temsil/lobi gücünü farklı kurullarda artıracak bir yapılanma hedeflediğini ifade etti.",
+      "Başkan olarak futbol operasyonunu doğrudan takip edeceğini ve karar mekanizmasında aktif rol alacağını vurguladı.",
+    ],
+    unclearPoints: [
+      "Bahsedilen transferlerin nihai isimleri, maliyet dağılımı ve resmi imza takvimi netleştirilmedi.",
+      "Teknik direktör için çizilen profilin hangi adayla somutlaşacağı açıklanmadı.",
+      "Sportif direktörsüz modelin görev paylaşımı ve operasyonel sınırları detaylı organizasyon şemasıyla sunulmadı.",
+      "Seçim öncesi açıklanacağı belirtilen transfer adımlarının kapsamı ve kesin zamanlaması netleşmedi.",
+    ],
+    sourceUrl: "https://www.youtube.com/watch?v=zIuK7TACKqY",
+    sourceLabel: "YouTube Kampanya Günü Röportajı",
+    updatedAt: "2026-05-31T20:30:00+03:00",
     status: "gozden-gecirildi",
   },
 ];
