@@ -144,6 +144,11 @@ export function Layout() {
             <p className="text-sm opacity-80">
               © 2026 Fenerbahçe Seçim Platformu. Tasarım ve Geliştirme: <a href="https://hizircan.nl" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFED00] transition-colors">hizircan.nl</a>
             </p>
+            <p className="text-xs opacity-90 mt-2">
+              <Link to="/metodoloji-seffaflik" className="hover:text-[#FFED00] transition-colors underline underline-offset-2">
+                Metodoloji ve Şeffaflık Notları
+              </Link>
+            </p>
             <p className="text-xs opacity-80 mt-2">
               Kurucu beyanı: Bu platform resmi kulüp veya aday kampanya sitesi değildir.
             </p>

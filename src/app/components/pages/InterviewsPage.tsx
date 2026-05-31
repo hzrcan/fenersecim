@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router";
 import { PlayCircle, Tv } from "lucide-react";
 import {
   addStructuredData,

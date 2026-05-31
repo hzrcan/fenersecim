@@ -7,6 +7,7 @@ import { ProjectsPage } from "./components/pages/ProjectsPage";
 import { ComparePage } from "./components/pages/ComparePage";
 import { NewsPage } from "./components/pages/NewsPage";
 import { InterviewsPage } from "./components/pages/InterviewsPage";
+import { MethodologyTransparencyPage } from "./components/pages/TransparencyMethodologyPage";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
       { path: "roportajlar", Component: InterviewsPage },
       { path: "haberler", Component: NewsPage },
       { path: "kongre-uyesi-on-kayit", element: <Navigate to="/" replace /> },
-      { path: "metodoloji-seffaflik", element: <Navigate to="/" replace /> },
+      { path: "metodoloji-seffaflik", Component: MethodologyTransparencyPage },
     ],
   },
 ]);

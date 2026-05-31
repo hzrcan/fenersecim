@@ -225,6 +225,21 @@ export function CandidateDetailPage() {
         </div>
       </div>
 
+      <div className="mb-12 rounded-2xl border border-blue-100 bg-blue-50 p-6 sm:p-8">
+        <h2 className="text-[#001C54] mb-3">Kaynak ve Doğrulama Notu</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Bu profildeki içerikler kamuya açık aday beyanları, yayın kayıtları ve açık kaynak haber akışları üzerinden derlenir.
+          Platform tarafsız bilgi sunmayı hedefler; kesinleşmemiş başlıklar ilgili bölümlerde açıkça belirtilir.
+        </p>
+        <p className="text-sm text-gray-700">
+          Detaylı metodoloji, düzeltme süreci ve çıkar çatışması beyanı için{" "}
+          <Link to="/metodoloji-seffaflik" className="text-[#0052A3] hover:underline font-semibold">
+            Metodoloji ve Şeffaflık sayfasını
+          </Link>{" "}
+          inceleyebilirsiniz.
+        </p>
+      </div>
+
       <div className="bg-white rounded-xl p-8 shadow-lg">
         <div className="flex items-center space-x-2 mb-8">
           <Clock className="w-6 h-6 text-[#001C54]" />
