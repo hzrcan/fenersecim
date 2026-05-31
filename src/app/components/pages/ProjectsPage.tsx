@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { Building, Users, TrendingUp, Smartphone, Trophy, Globe, Heart, BarChart, Gamepad2 } from "lucide-react";
 import { allProjects, generateSlug } from "../../data/candidatesData";
@@ -18,8 +18,29 @@ const iconMap: Record<string, any> = {
 
 export function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedCandidate, setSelectedCandidate] = useState<string>("all");
 
-  const categories = ["all", ...new Set(allProjects.map(p => p.category))];
+  const candidateFilters = useMemo(() => {
+    const uniqueCandidates = Array.from(
+      new Map(allProjects.map((project) => [project.candidateId, project.candidateName])).entries()
+    )
+      .map(([id, name]) => ({ id, name }))
+      .sort((a, b) => a.name.localeCompare(b.name, "tr"));
+
+    return [{ id: "all", name: "Tüm Adaylar" }, ...uniqueCandidates];
+  }, []);
+
+  const projectsForCandidate = selectedCandidate === "all"
+    ? allProjects
+    : allProjects.filter((project) => project.candidateId === selectedCandidate);
+
+  const categories = ["all", ...new Set(projectsForCandidate.map((p) => p.category))];
+
+  useEffect(() => {
+    if (!categories.includes(selectedCategory)) {
+      setSelectedCategory("all");
+    }
+  }, [categories, selectedCategory]);
 
   useEffect(() => {
     // Sayfanın meta bilgilerini güncelle
@@ -42,14 +63,14 @@ export function ProjectsPage() {
   }, []);
 
   const filteredProjects = selectedCategory === "all"
-    ? allProjects
-    : allProjects.filter(p => p.category === selectedCategory);
+    ? projectsForCandidate
+    : projectsForCandidate.filter((p) => p.category === selectedCategory);
 
   const projectsByCategory = categories
     .filter(cat => cat !== "all")
     .map(category => ({
       category,
-      count: allProjects.filter(p => p.category === category).length,
+      count: projectsForCandidate.filter((p) => p.category === category).length,
     }));
 
   return (
@@ -59,6 +80,25 @@ export function ProjectsPage() {
         <p className="text-gray-600">
           Başkanlık adayları tarafından önerilen tüm girişimleri ve projeleri keşfedin
         </p>
+      </div>
+
+      <div className="mb-8">
+        <p className="text-sm text-gray-600 mb-3">Adaya göre filtrele</p>
+        <div className="flex flex-wrap gap-2">
+          {candidateFilters.map((candidate) => (
+            <button
+              key={candidate.id}
+              onClick={() => setSelectedCandidate(candidate.id)}
+              className={`px-4 py-2 rounded-full border text-sm transition-colors ${
+                selectedCandidate === candidate.id
+                  ? "bg-[#001C54] text-white border-[#001C54]"
+                  : "bg-white text-[#001C54] border-gray-200 hover:border-[#FFED00]"
+              }`}
+            >
+              {candidate.name}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
@@ -88,6 +128,10 @@ export function ProjectsPage() {
           <div className="text-sm">Tüm Projeler</div>
         </button>
       </div>
+
+      <p className="text-sm text-gray-500 mb-6">
+        {filteredProjects.length} proje gösteriliyor
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project) => {
