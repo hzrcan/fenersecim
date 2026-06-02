@@ -94,8 +94,8 @@ export const candidates: Candidate[] = [
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
-    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya bağlantıları güçlü; Paolo Maldini ile İstanbul'da görüşme gerçekleştirdi (futbol stratejisi/transfer akıl hocalığı). Roberto Mancini ve diğer İtalyan bağlantıları aktif. Seçim öncesi hoca + transfer açıklamaları planlıyor. Dernek ziyaretleri (Şanlıurfa, Mardin vb.) ve Avrupa temasları sürüyor. Aziz Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz' vurgusu yapıyor. Liverpool'dan kaleci (Ederson alternatifi) ve diğer bombalar gündemde.",
-    vision: "Uzun vadeli (1+3 yıl) planlarla kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya görüşmeleriyle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu. 'Türkiye'yi bilen, işi ehli hoca getireceğiz' mesajı (Sportif direktör olmayacak). Seçim öncesi hoca + bomba transfer açıklamaları hedefi sürüyor. Stadyum kapasite artışı (64k) ve altyapı/pilot takım projeleri öne çıkıyor.",
+    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya bağlantıları güçlü; AC Milan ile transfer stratejisi görüşmeleri gerçekleştirdi. Roberto Mancini ve diğer İtalyan bağlantıları aktif. Seçim öncesi hoca + transfer açıklamaları planlıyor. Dernek ziyaretleri (Muğla/Bodrum, İstanbul Fenerbahçeliler Derneği vb.) yoğun şekilde sürüyor. Aziz Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz' vurgusu yapıyor. Hakan Çalhanoğlu ve Merih Demiral ile temsilciler üzerinden görüşmelerde prensip anlaşması iddiaları var (2 milli oyuncu vaadi). Liverpool bağlantılarıyla kaleci ve diğer bombalar gündemde. 6-7 Haziran seçimleri öncesi 'çarşambadan itibaren her gün bayram havası' vaat ediyor.",
+    vision: "Uzun vadeli (1+3 yıl) planlarla kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya görüşmeleriyle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu. 'Türkiye'yi bilen, işi ehli hoca getireceğiz' mesajı (Sportif direktör olmayacak). Seçim öncesi hoca + bomba transfer açıklamaları hedefi sürüyor (2 milli + 2-3 dünya yıldızı). Stadyum kapasite artışı (64k) ve altyapı/pilot takım projeleri öne çıkıyor. Kulüp gelirini 350M €'dan 500M €+ seviyeye çıkarma hedefi.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
       "Eski Fenerbahçe Yönetim Kurulu Üyesi",
@@ -106,7 +106,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro (Paolo Maldini ile futbol yapılanması/transfer akıl hocalığı görüşmeleri yapıldı; Roberto Mancini temasları aktif. Yerli: İsmail Kartal öncelikli seçeneklerden. Bombalar: Tomori, Maignan, Nkunku, Guirassy, Pavlidis, Greenwood vb. Liverpool bağlantılarıyla kaleci görüşmeleri başladı. Seçim öncesi somut hoca + 2-4 bomba transfer duyurusu hedefi; 'Dünya yıldızları getireceğiz', 4 baba transfer vaadi)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro (AC Milan ile transfer stratejisi görüşmeleri; Roberto Mancini temasları aktif. Yerli: İsmail Kartal öncelikli seçeneklerden. Son açıklamalarda 2 milli oyuncu (Hakan Çalhanoğlu ve Merih Demiral) ile prensip anlaşması iddiaları. Bombalar: Greenwood, Maignan, Nkunku, Guirassy, Pavlidis, Lewandowski vb. Liverpool bağlantılarıyla kaleci görüşmeleri. Seçim öncesi somut hoca + 2-4 bomba transfer duyurusu hedefi; '2 milli + 2-3 dünya yıldızı getireceğiz', 4 baba transfer vaadi. Çarşambadan itibaren günlük bayram havası açıklamaları planlanıyor)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -114,7 +114,7 @@ export const candidates: Candidate[] = [
       {
         id: "p2",
         title: "Mali Yapı Güçlendirme",
-        description: "Holding tecrübesiyle finansal disiplin ve sürdürülebilir gelir modelleri (kulüp gelirini 350M €'dan 1 milyar €'ya çıkarma hedefi)",
+        description: "Holding tecrübesiyle finansal disiplin ve sürdürülebilir gelir modelleri (kulüp gelirini 350M €'dan 500M €+ seviyeye çıkarma hedefi)",
         category: "Finansal",
         icon: "trending-up",
         priority: "acil"
@@ -122,7 +122,7 @@ export const candidates: Candidate[] = [
       {
         id: "p3",
         title: "Taraftar ve Birlik",
-        description: "Camia bütünlüğünü sağlama, dernek ve divan ziyaretleri",
+        description: "Camia bütünlüğünü sağlama, dernek ve divan ziyaretleri (Muğla, Bodrum, İstanbul dernek buluşmaları yoğun)",
         category: "Topluluk",
         icon: "heart",
         priority: "önemli"
@@ -146,7 +146,7 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; 22 Mayıs'ta yönetim listesini açıkladı; İtalya/Avrupa turu, Maldini görüşmesi ve Liverpool bağlantıları; Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz', stadyum kapasite artışı (64k), pilot takımlar ve tesis projeleri; seçim öncesi somut açıklamalar planı; dernek ziyaretleri devam ediyor" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; 22 Mayıs'ta yönetim listesini açıkladı; İtalya/AC Milan görüşmeleri, Mancini temasları ve Liverpool bağlantıları; Hakan Çalhanoğlu + Merih Demiral temsilcileriyle görüşmeler ve prensip anlaşması iddiaları; Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz'; stadyum kapasite artışı (64k), pilot takımlar ve tesis projeleri; Muğla/Bodrum/İstanbul dernek ziyaretleri; seçim öncesi (6-7 Haziran) somut hoca + transfer açıklamaları ve 'bayram havası' planı sürüyor" }
     ],
     popularity: 46, // Polls approximate; dynamic
     boardMembers: [
@@ -176,7 +176,7 @@ export const candidates: Candidate[] = [
       { id: "cc1", name: "Yusuf Kenan Çalık" }
     ],
     coachCandidates: [
-      { id: "c2", name: "Roberto Mancini", status: "İtalya bağlantıları güçlü, görüşmeler aktif" },
+      { id: "c2", name: "Roberto Mancini", status: "İtalya bağlantıları güçlü, görüşmeler aktif (en kuvvetli adaylardan)" },
       { id: "c3", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi bilen profil" }
     ],
     potentialTransfers: [
@@ -184,43 +184,54 @@ export const candidates: Candidate[] = [
         id: "t2",
         playerName: "Mason Greenwood",
         position: "Sag Kanat / Forvet",
-        status: "Son tartismalarda one cikan potansiyel alternatif",
-        source: "Spor medyasi transfer iddialari ve aday etrafindaki guncel tartismalar",
+        status: "Son dönemde kişisel anlaşma iddiaları ve medya haberlerinde öne çıkan potansiyel alternatif",
+        source: "Spor medyası transfer iddiaları",
         sourceUrl: "https://www.trtspor.com.tr/haber/futbol/transfer-gundemi",
         sourceType: "trusted_media",
-        xDiscussion: "X gundeminde son donemde hizi artan rumor basliklarindan biri",
+        xDiscussion: "X gündeminde son dönemde hızı artan rumor başlıklarından biri",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Greenwood&src=typed_query&f=live"
       },
       {
         id: "t3",
         playerName: "Mike Maignan",
         position: "Kaleci",
-        status: "Kaleci transfer plani kapsaminda gecen adaylardan",
-        source: "Spor medyasi ve kampanya odakli transfer tartismalari",
+        status: "Kaleci transfer planı kapsamında geçen adaylardan (Liverpool bağlantıları aktif)",
+        source: "Spor medyası ve kampanya odaklı transfer tartışmaları",
         sourceUrl: "https://www.trtspor.com.tr/haber/futbol/transfer-gundemi",
         sourceType: "trusted_media",
-        xDiscussion: "X uzerinde kaleci aday listelerinde konusuluyor",
+        xDiscussion: "X üzerinde kaleci aday listelerinde konuşuluyor",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Maignan&src=typed_query&f=live"
       },
       {
         id: "t4",
         playerName: "Serhou Guirassy",
         position: "Forvet",
-        status: "Ileri hat icin anilan alternatiflerden",
-        source: "Kampanya donemi transfer iddialari",
+        status: "İleri hat için anılan alternatiflerden",
+        source: "Kampanya dönemi transfer iddiaları",
         sourceType: "x_discussion",
-        xDiscussion: "X uzerinde taraftar ve yorumcu hesaplarinda duzenli sekilde gundeme geliyor",
+        xDiscussion: "X üzerinde taraftar ve yorumcu hesaplarında düzenli şekilde gündeme geliyor",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Guirassy&src=typed_query&f=live"
       },
       {
         id: "t9",
         playerName: "Robert Lewandowski",
         position: "Forvet",
-        status: "Yeni donemde ortaya cikan yuksek profilli dedikodu",
-        source: "X gundemi ve yorumcu hesaplarindaki son tartismalar",
+        status: "Yeni dönemde ortaya çıkan yüksek profilli dedikodu",
+        source: "X gündemi ve yorumcu hesaplarındaki son tartışmalar",
         sourceType: "x_discussion",
-        xDiscussion: "X tarafinda son gunlerde hizlanan ancak resmi teyidi olmayan rumor",
+        xDiscussion: "X tarafında son günlerde hızlanan ancak resmi teyidi olmayan rumor",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Lewandowski&src=typed_query&f=live"
+      },
+      {
+        id: "t11",
+        playerName: "Hakan Çalhanoğlu",
+        position: "Merkezi Orta Saha / Ön Libero",
+        status: "Temsilcileri (Gordon Stipic) ile İstanbul’da kritik görüşmeler yapıldı; kişisel şartlarda prensip anlaşması iddiaları var (Merih Demiral ile birlikte '2 milli oyuncu' vaadi kapsamında). Seçim öncesi en güçlü bomba adaylardan",
+        source: "Spor medyası (Fotomaç, Fanatik, A Spor, Sporx) ve aday çevresi açıklamaları",
+        sourceUrl: "https://www.fotomac.com.tr/fenerbahce/2026/05/14/fenerbahcede-iki-baskan-adayindan-galatasarayi-kizdiracak-hamle",
+        sourceType: "trusted_media",
+        xDiscussion: "X gündeminde en çok konuşulan Fenerbahçe transfer rumoru",
+        xQueryUrl: "https://x.com/search?q=Çalhanoğlu%20Safi&src=typed_query&f=live"
       }
     ]
   },
@@ -229,8 +240,8 @@ export const candidates: Candidate[] = [
     name: "Aziz Yıldırım",
     slogan: "Tecrübe ve Zafer",
     photo: "/assets/azizyildirim.jpg",
-    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonlukla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı. Barış Göktürk’ün desteğini aldı, Özgür Peker’yi Safi listesinden kendi listesine kattı. Dernek buluşmaları (Bursa, İzmir, Mardin, Çorlu, Londra vb.) yoğun şekilde devam ediyor. Seçim ofisi açıldı. Birlik çağrıları yaptı.",
-    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. 2026-27 sezonu için 'şampiyonluk mecburiyeti' vurgusu. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. 'Yıldız + 10 asker' felsefesiyle tecrübeli futbol komitesi (Oğuz Çetin, Aykut Kocaman, Volkan Demirel, Dirk Kuijt vb.). En fazla 5-6 transferle kadroyu güçlendirme.",
+    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonlukla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı. Barış Göktürk’ün desteğini aldı, Özgür Peker’yi Safi listesinden kendi listesine kattı. Dernek buluşmaları (Bursa, İzmir, Mardin, Çorlu, Londra, Ankara vb.) yoğun şekilde devam ediyor. Seçim ofisi açıldı. Birlik çağrıları yaptı (Ali Koç ve Hakan Safi’ye). Hakan Çalhanoğlu ile genel görüşme iddiaları var. 6-7 Haziran seçimleri öncesi Ankara temasları ve kongre çalışmaları sürüyor.",
+    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. 2026-27 sezonu için 'şampiyonluk mecburiyeti' vurgusu. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. 'Yıldız + 10 asker' felsefesiyle tecrübeli futbol komitesi (Oğuz Çetin, Aykut Kocaman, Volkan Demirel, Dirk Kuijt vb.). En fazla 5-6 transferle kadroyu güçlendirme (2 santrfor + 2 stoper + milli yıldızlar öncelikli).",
     experience: [
       "Fenerbahçe Başkanı (1998-2018)",
       "Çok sayıda lig ve kupa şampiyonluğu",
@@ -240,7 +251,7 @@ export const candidates: Candidate[] = [
       {
         id: "p5",
         title: "Hemen Şampiyonluk",
-        description: "Kısa vadede zirve hedefi (2026-27 mecburiyeti). 2 santrfor (Sörloth/Lukaku/Muriqi/Guirassy bağlantıları; prensip anlaşmaları var); 1 Haziran civarı açıklamalar. En az 3-5 bomba isim (Sörloth, Muriqi, Kim Min-jae, Zhegrova, Malick Diouf, Rashford vb.). Toplam 5-6 transfer. Sezon başlangıcında tam kadro sözü.",
+        description: "Kısa vadede zirve hedefi (2026-27 mecburiyeti). 2 santrfor (Sörloth/Lukaku/Muriqi/Guirassy bağlantıları; prensip anlaşmaları var); Hakan Çalhanoğlu gibi milli yıldızlar da gündemde. En az 3-5 bomba isim. Toplam 5-6 transfer. Sezon başlangıcında tam kadro sözü. Stoper rotasyonu için özel liste hazırlandı.",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -248,7 +259,7 @@ export const candidates: Candidate[] = [
       {
         id: "p6",
         title: "Taraftar Birliği",
-        description: "Camia içi dayanışmayı artırma; dernek buluşmaları ve geniş birlik çağrıları",
+        description: "Camia içi dayanışmayı artırma; dernek buluşmaları ve geniş birlik çağrıları (Ankara temasları dahil)",
         category: "Topluluk",
         icon: "heart",
         priority: "acil"
@@ -281,9 +292,9 @@ export const candidates: Candidate[] = [
     pastInvolvement: [
       { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Aktif görev" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl liderlik" },
-      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk + Özgür Peker desteği; 22 Mayıs basın toplantısı ve birlik çağrıları; dernek buluşmaları; Oğuz Çetin, Aykut Kocaman vb. ile komite; 2 santrfor + bomba transfer hedefleri; stadyum kapasite artışı (64-65k); Londra/Europa temasları" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk + Özgür Peker desteği; 22 Mayıs basın toplantısı ve yönetim listesi açıklaması; dernek buluşmaları; Oğuz Çetin, Aykut Kocaman vb. ile komite; 2 santrfor + bomba transfer hedefleri; Hakan Çalhanoğlu genel görüşme iddiaları; stadyum kapasite artışı (64-65k); Ankara/Anıtkabir ziyaretleri; Londra/Europa temasları; birlik çağrıları devam ediyor (6-7 Haziran seçimleri öncesi)" }
     ],
-    popularity: 54, // Approximate; dynamic
+    popularity: 54,
     boardMembers: [
       { id: "b22", name: "Barış Göktürk", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Göktürk Holding Yönetim Kurulu Başkanı. Eski Fenerbahçe Futbol A.Ş. yönetim kurulu üyesi." },
       { id: "b23", name: "Mahmut Nedim Uslu", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aziz Yıldırım dönemlerinde görev yapmış eski Fenerbahçe yöneticisi." },
@@ -311,60 +322,71 @@ export const candidates: Candidate[] = [
       { id: "cc2", name: "Yusuf Mertol" }
     ],
     coachCandidates: [
-      { id: "c8", name: "Aykut Kocaman", status: "Öncelikli aday" }
+      { id: "c8", name: "Aykut Kocaman", status: "Öncelikli aday (futbol komitesi içinde)" }
     ],
     potentialTransfers: [
       {
         id: "t5",
         playerName: "Alexander Sorloth",
         position: "Forvet",
-        status: "Oncelikli golcu hedefi olarak sikca aniliyor",
-        source: "Kampanya aciklamalari ve spor medyasi",
+        status: "Öncelikli golcü hedefi olarak sıkça anılıyor (2 santrfor planı kapsamında)",
+        source: "Kampanya açıklamaları ve spor medyası",
         sourceUrl: "https://www.trtspor.com.tr/haber/futbol/aziz-yildirim-iki-oyuncuyla-anlastik-31470560",
         sourceType: "trusted_media",
-        xDiscussion: "X uzerinde en yuksek etkilesim alan forvet basliklarindan biri",
+        xDiscussion: "X üzerinde en yüksek etkileşim alan forvet başlıklarından biri",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Sorloth&src=typed_query&f=live"
       },
       {
         id: "t6",
         playerName: "Vedat Muriqi",
         position: "Forvet",
-        status: "Forvet rotasyonu icin one cikan isim",
-        source: "Aday cevresi iddialari ve medya degerlendirmeleri",
+        status: "Forvet rotasyonu için öne çıkan isim",
+        source: "Aday çevresi iddiaları ve medya değerlendirmeleri",
         sourceUrl: "https://www.trtspor.com.tr/haber/futbol/aziz-yildirim-iki-oyuncuyla-anlastik-31470560",
         sourceType: "trusted_media",
-        xDiscussion: "X tarafinda ikinci forvet profili olarak siklikla konusuluyor",
+        xDiscussion: "X tarafında ikinci forvet profili olarak sıklıkla konuşuluyor",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Muriqi&src=typed_query&f=live"
       },
       {
         id: "t7",
         playerName: "Kim Min-jae",
         position: "Stoper",
-        status: "Savunma lideri profili olarak gundeme geliyor",
-        source: "Spor medyasi transfer iddialari",
+        status: "Savunma lideri profili olarak gündeme geliyor",
+        source: "Spor medyası transfer iddiaları",
         sourceType: "x_discussion",
-        xDiscussion: "X uzerinde nostalji ve sportif uyum gerekcesiyle yogun tartisiliyor",
+        xDiscussion: "X üzerinde nostalji ve sportif uyum gerekçesiyle yoğun tartışılıyor",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Kim%20Min-jae&src=typed_query&f=live"
       },
       {
         id: "t8",
         playerName: "Marcus Rashford",
         position: "Sol Kanat / Forvet",
-        status: "Yuksek profilli yildiz adaylari arasinda geciyor",
-        source: "Transfer iddia haberleri ve yorum programlari",
+        status: "Yüksek profilli yıldız adayları arasında geçiyor",
+        source: "Transfer iddia haberleri ve yorum programları",
         sourceType: "x_discussion",
-        xDiscussion: "X'te etkilesimi yuksek ancak maliyet nedeniyle tartismali basliklardan",
+        xDiscussion: "X'te etkileşimi yüksek ancak maliyet nedeniyle tartışmalı başlıklardan",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Rashford&src=typed_query&f=live"
       },
       {
         id: "t10",
         playerName: "Nathan Ake",
         position: "Stoper / Sol Bek",
-        status: "Savunma rotasyonunu guclendirecek cok yonlu profil olarak aniliyor",
-        source: "Transfer iddia haberleri ve yorumcu degerlendirmeleri",
+        status: "Savunma rotasyonunu güçlendirecek çok yönlü profil olarak anılıyor",
+        source: "Transfer iddia haberleri ve yorumcu değerlendirmeleri",
         sourceType: "x_discussion",
-        xDiscussion: "X'te stoper ve sol bek esnekligi nedeniyle ozellikle savunma kurgusunda konusuluyor",
+        xDiscussion: "X'te stoper ve sol bek esnekliği nedeniyle özellikle savunma kurgusunda konuşuluyor",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Nathan%20Ake&src=typed_query&f=live"
+      },
+      {
+        id: "t11",
+        playerName: "Hakan Çalhanoğlu",
+        position: "Merkezi Orta Saha / Ön Libero",
+        status: "Her iki başkan adayı ile de görüşme iddiaları var ancak Hakan Safi tarafında daha ileriye gitmiş durumda; milli yıldız olarak ortak ilgi odağı",
+        source: "Spor medyası (Fotomaç, Takvim, GZT) ve aday çevresi",
+        sourceUrl: "https://www.fotomac.com.tr/fenerbahce/2026/05/14/fenerbahcede-iki-baskan-adayindan-galatasarayi-kizdiracak-hamle",
+        sourceType: "trusted_media",
+        xDiscussion: "X gündeminde yüksek etkileşimli milli transfer tartışması",
+        xQueryUrl: "https://x.com/search?q=Çalhanoğlu%20Yıldırım&src=typed_query&f=live"
       }
     ]
   }
