@@ -376,17 +376,6 @@ export const candidates: Candidate[] = [
         sourceType: "x_discussion",
         xDiscussion: "X'te stoper ve sol bek esnekliği nedeniyle özellikle savunma kurgusunda konuşuluyor",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Nathan%20Ake&src=typed_query&f=live"
-      },
-      {
-        id: "t11",
-        playerName: "Hakan Çalhanoğlu",
-        position: "Merkezi Orta Saha / Ön Libero",
-        status: "Her iki başkan adayı ile de görüşme iddiaları var ancak Hakan Safi tarafında daha ileriye gitmiş durumda; milli yıldız olarak ortak ilgi odağı",
-        source: "Spor medyası (Fotomaç, Takvim, GZT) ve aday çevresi",
-        sourceUrl: "https://www.fotomac.com.tr/fenerbahce/2026/05/14/fenerbahcede-iki-baskan-adayindan-galatasarayi-kizdiracak-hamle",
-        sourceType: "trusted_media",
-        xDiscussion: "X gündeminde yüksek etkileşimli milli transfer tartışması",
-        xQueryUrl: "https://x.com/search?q=Çalhanoğlu%20Yıldırım&src=typed_query&f=live"
       }
     ]
   }
