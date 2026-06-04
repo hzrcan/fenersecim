@@ -94,7 +94,7 @@ export const candidates: Candidate[] = [
     name: "Hakan Safi",
     slogan: "Deneyim ve Yenilik",
     photo: "/assets/hakansafi.jpg",
-    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya bağlantıları güçlü; AC Milan ile transfer stratejisi görüşmeleri gerçekleştirdi. Roberto Mancini ve diğer İtalyan bağlantıları aktif. Seçim öncesi hoca + transfer açıklamaları planlıyor. Dernek ziyaretleri (Muğla/Bodrum, İstanbul Fenerbahçeliler Derneği vb.) yoğun şekilde sürüyor. Aziz Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz' vurgusu yapıyor. Hakan Çalhanoğlu ve Merih Demiral ile temsilciler üzerinden görüşmelerde prensip anlaşması iddiaları var (2 milli oyuncu vaadi). Liverpool bağlantılarıyla kaleci ve diğer bombalar gündemde. 3 Haziran 2026'da Yağız Sabuncuoğlu'nun açıklamasıyla Sporting CP forması giyen Luis Suarez ile 3+1 yıllık kişisel anlaşmaya vardığı duyuruldu. 6-7 Haziran seçimleri öncesi 'çarşambadan itibaren her gün bayram havası' vaat ediyor.",
+    biography: "Safi Holding Yönetim Kurulu Başkanı. Liman işletmeciliği, gayrimenkul ve lojistik sektörlerinde faaliyet gösteren iş insanı. Ali Koç döneminde Fenerbahçe Yönetim Kurulu Üyesi olarak görev yaptı. 5 Mayıs 2026'da resmen adaylığını açıkladı ve tek başına devam ediyor. İtalya bağlantıları güçlü; AC Milan ile transfer stratejisi görüşmeleri gerçekleştirdi. Roberto Mancini ve diğer İtalyan bağlantıları aktif. Seçim öncesi hoca + transfer açıklamaları planlıyor. Dernek ziyaretleri (Muğla/Bodrum, İstanbul Fenerbahçeliler Derneği vb.) yoğun şekilde sürüyor. Aziz Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz' vurgusu yapıyor. Hakan Çalhanoğlu ve Merih Demiral ile temsilciler üzerinden görüşmelerde prensip anlaşması iddiaları var (2 milli oyuncu vaadi). Liverpool bağlantılarıyla kaleci ve diğer bombalar gündemde. 3 Haziran 2026'da Yağız Sabuncuoğlu'nun açıklamasıyla Sporting CP forması giyen Luis Suarez ile 3+1 yıllık kişisel anlaşmaya vardığı duyuruldu. 4 Haziran itibarıyla Merih Demiral ile kişisel anlaşma sağlandı (Al-Ahli'ye 18-20M€ teklif planı); Mason Greenwood ile İngiltere'de kritik zirve (yönetim üyeleri + menajer); Hakan Çalhanoğlu'nun temsilcisiyle görüşme yapıldı, oyuncu kulüp onayı halinde sıcak baktığını belirtti. 6-7 Haziran seçimleri öncesi 'çarşambadan itibaren her gün bayram havası' vaat ediyor.",
     vision: "Uzun vadeli (1+3 yıl) planlarla kulübü sportif ve mali açıdan güçlendirmek. Deneyimli kadrolarla hızlı başarı hedeflemek. Tek başına seçime giriyor. İlk sezonda güçlü transferler ve şampiyonluk hedefi. İtalya görüşmeleriyle kongreye somut isimler sunma hazırlığında. 'Tarihin en iddialı ve değerli kadrosunu kuracağız' vurgusu. 'Türkiye'yi bilen, işi ehli hoca getireceğiz' mesajı (Sportif direktör olmayacak). Seçim öncesi hoca + bomba transfer açıklamaları hedefi sürüyor (2 milli + 2-3 dünya yıldızı). Stadyum kapasite artışı (64k) ve altyapı/pilot takım projeleri öne çıkıyor. Kulüp gelirini 350M €'dan 500M €+ seviyeye çıkarma hedefi.",
     experience: [
       "Safi Holding Yönetim Kurulu Başkanı",
@@ -106,7 +106,7 @@ export const candidates: Candidate[] = [
       {
         id: "p1",
         title: "Transfer ve Teknik Ekip",
-        description: "Güçlü yabancı hoca ve kaliteli kadro (AC Milan ile transfer stratejisi görüşmeleri; Roberto Mancini temasları aktif. Yerli: İsmail Kartal öncelikli seçeneklerden. Son açıklamalarda 2 milli oyuncu (Hakan Çalhanoğlu ve Merih Demiral) ile prensip anlaşması iddiaları. Bombalar: Greenwood, Maignan, Nkunku, Guirassy, Pavlidis, Lewandowski, Luis Suarez (Sporting) vb. Liverpool bağlantılarıyla kaleci görüşmeleri. Seçim öncesi somut hoca + 2-4 bomba transfer duyurusu hedefi; '2 milli + 2-3 dünya yıldızı getireceğiz', 4 baba transfer vaadi. Çarşambadan itibaren günlük bayram havası açıklamaları planlanıyor)",
+        description: "Güçlü yabancı hoca ve kaliteli kadro (AC Milan ile transfer stratejisi görüşmeleri; Roberto Mancini temasları aktif. Yerli: İsmail Kartal öncelikli seçeneklerden. Son açıklamalarda 2 milli oyuncu (Hakan Çalhanoğlu ve Merih Demiral) ile prensip anlaşması iddiaları. Bombalar: Greenwood (İngiltere'de yönetim zirvesi), Maignan, Nkunku, Guirassy, Pavlidis, Lewandowski, Luis Suarez (Sporting, 3+1 kişisel anlaşma tamamlandı - menajer İstanbul'dan ayrıldı). Liverpool bağlantılarıyla kaleci görüşmeleri. Seçim öncesi somut hoca + 2-4 bomba transfer duyurusu hedefi; '2 milli + 2-3 dünya yıldızı getireceğiz', 4 baba transfer vaadi. Çarşambadan itibaren günlük bayram havası açıklamaları planlanıyor)",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -146,9 +146,9 @@ export const candidates: Candidate[] = [
     ],
     pastInvolvement: [
       { year: "Ali Koç Dönemi", title: "YK Üyesi", description: "Yönetimde aktif rol aldı" },
-      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; 22 Mayıs'ta yönetim listesini açıkladı; İtalya/AC Milan görüşmeleri, Mancini temasları ve Liverpool bağlantıları; Hakan Çalhanoğlu + Merih Demiral temsilcileriyle görüşmeler ve prensip anlaşması iddiaları; Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz'; stadyum kapasite artışı (64k), pilot takımlar ve tesis projeleri; Muğla/Bodrum/İstanbul dernek ziyaretleri; seçim öncesi (6-7 Haziran) somut hoca + transfer açıklamaları ve 'bayram havası' planı sürüyor; 3 Haziran'da Yağız Sabuncuoğlu açıklamasıyla Luis Suarez ile 3+1 yıllık kişisel anlaşma sağlandı" }
+      { year: "2026", title: "Başkan Adaylığı", description: "5 Mayıs'ta resmen açıkladı, tek başına devam ediyor; 22 Mayıs'ta yönetim listesini açıkladı; İtalya/AC Milan görüşmeleri, Mancini temasları ve Liverpool bağlantıları; Hakan Çalhanoğlu + Merih Demiral temsilcileriyle görüşmeler ve prensip anlaşması iddiaları; 4 Haziran Merih Demiral ile kişisel anlaşma (Al-Ahli'ye teklif planı); Mason Greenwood İngiltere zirvesi; Çalhanoğlu temsilcisi İstanbul görüşmesi; Yıldırım'ın birlik çağrısını reddetti; 'Dünya yıldızları getireceğiz'; stadyum kapasite artışı (64k), pilot takımlar ve tesis projeleri; Muğla/Bodrum/İstanbul dernek ziyaretleri; seçim öncesi (6-7 Haziran) somut hoca + transfer açıklamaları ve 'bayram havası' planı sürüyor; 3 Haziran'da Yağız Sabuncuoğlu açıklamasıyla Luis Suarez ile 3+1 yıllık kişisel anlaşma sağlandı (menajer 4 Haziran'da İstanbul'dan ayrıldı)" }
     ],
-    popularity: 46, // Polls approximate; dynamic
+    popularity: 46, // Polls approximate; dynamic (no new verified poll as of 4 June)
     boardMembers: [
       { id: "b1", name: "Ali Aytemiz", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Aytemiz Petrol'ün kurucusu. Sanayi ve enerji teknolojileri sektörlerinde tecrübeli; Fenerbahçeliler 2000 Derneği eski başkanı." },
       { id: "b2", name: "Metin Doğan", position: "Yönetim Kurulu Üyesi", type: "asil", shortBio: "Fenerbahçe camiasının tanınmış isimlerinden; dernek ve kulüp faaliyetlerinde uzun yıllar aktif." },
@@ -184,9 +184,9 @@ export const candidates: Candidate[] = [
         id: "t2",
         playerName: "Mason Greenwood",
         position: "Sag Kanat / Forvet",
-        status: "Son dönemde kişisel anlaşma iddiaları ve medya haberlerinde öne çıkan potansiyel alternatif",
-        source: "Spor medyası transfer iddiaları",
-        sourceUrl: "https://www.trtspor.com.tr/haber/futbol/transfer-gundemi",
+        status: "Son dönemde kişisel anlaşma iddiaları ve medya haberlerinde öne çıkan potansiyel alternatif; 4 Haziran'da Safi yönetiminden Ömer Topbaş, Özgür Özaktaç ve menajer Cenk Melih Yazıcı İngiltere'de kritik zirve gerçekleştirdi",
+        source: "Yağız Sabuncuoğlu + spor medyası",
+        sourceUrl: "",
         sourceType: "trusted_media",
         xDiscussion: "X gündeminde son dönemde hızı artan rumor başlıklarından biri",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Greenwood&src=typed_query&f=live"
@@ -206,7 +206,7 @@ export const candidates: Candidate[] = [
         id: "t9",
         playerName: "Robert Lewandowski",
         position: "Forvet",
-        status: "Yeni dönemde ortaya çıkan yüksek profilli dedikodu",
+        status: "Yeni dönemde ortaya çıkan yüksek profilli dedikodu (Yağız Sabuncuoğlu canlı yayınında son durum sorgulanıyor)",
         source: "X gündemi ve yorumcu hesaplarındaki son tartışmalar",
         sourceType: "x_discussion",
         xDiscussion: "X tarafında son günlerde hızlanan ancak resmi teyidi olmayan rumor",
@@ -216,8 +216,8 @@ export const candidates: Candidate[] = [
         id: "t11",
         playerName: "Hakan Çalhanoğlu",
         position: "Merkezi Orta Saha / Ön Libero",
-        status: "Temsilcileri (Gordon Stipic) ile İstanbul’da kritik görüşmeler yapıldı; kişisel şartlarda prensip anlaşması iddiaları var (Merih Demiral ile birlikte '2 milli oyuncu' vaadi kapsamında). Seçim öncesi en güçlü bomba adaylardan",
-        source: "Spor medyası (Fotomaç, Fanatik, A Spor, Sporx) ve aday çevresi açıklamaları",
+        status: "Temsilcileri (Gordon Stipic) ile İstanbul’da kritik görüşmeler yapıldı (2 Haziran'da temsilci İstanbul'a geldi, 4 Haziran Safi ile görüşme); kişisel şartlarda prensip anlaşması iddiaları var (Merih Demiral ile birlikte '2 milli oyuncu' vaadi kapsamında). Seçim öncesi en güçlü bomba adaylardan",
+        source: "Yağız Sabuncuoğlu + Spor medyası (Fotomaç, Fanatik, A Spor, Sporx)",
         sourceUrl: "https://www.fotomac.com.tr/fenerbahce/2026/05/14/fenerbahcede-iki-baskan-adayindan-galatasarayi-kizdiracak-hamle",
         sourceType: "trusted_media",
         xDiscussion: "X gündeminde en çok konuşulan Fenerbahçe transfer rumoru",
@@ -227,12 +227,23 @@ export const candidates: Candidate[] = [
         id: "t12",
         playerName: "Luis Suarez",
         position: "Forvet",
-        status: "Sporting CP forması giyen; 3+1 yıllık kişisel anlaşma sağlandı. Seçimi kazanırsa bonservisi için Sporting CP ile masaya oturulacak (Yağız Sabuncuoğlu)",
-        source: "Yağız Sabuncuoğlu açıklaması",
+        status: "Sporting CP forması giyen; 3+1 yıllık kişisel anlaşma sağlandı. Seçimi kazanırsa bonservisi için Sporting CP ile masaya oturulacak (Yağız Sabuncuoğlu). 3 Haziran anlaşma + 4 Haziran menajer Fali Ramadani İstanbul'dan ayrıldı. Safi bizzat açıkladı",
+        source: "Yağız Sabuncuoğlu + Safi açıklaması",
         sourceUrl: "",
         sourceType: "trusted_media",
         xDiscussion: "X gündeminde bomba transfer olarak en çok konuşulan gelişme",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Suarez%20Safi&src=typed_query&f=live"
+      },
+      {
+        id: "t13",
+        playerName: "Merih Demiral",
+        position: "Stoper",
+        status: "Fenerbahçe Başkan Adayı Hakan Safi, Merih Demiral ile anlaşmaya vardı. Seçilirse Al-Ahli'ye resmi 18-20M€ bonservis teklifi yapılacak (Al-Ahli'den 'DNA'sı damarlarında' açıklaması geldi)",
+        source: "Yağız Sabuncuoğlu (4 Haziran)",
+        sourceUrl: "",
+        sourceType: "trusted_media",
+        xDiscussion: "X'te bugün en çok konuşulan Fenerbahçe bombası",
+        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Demiral%20Safi&src=typed_query&f=live"
       }
     ]
   },
@@ -241,8 +252,8 @@ export const candidates: Candidate[] = [
     name: "Aziz Yıldırım",
     slogan: "Tecrübe ve Zafer",
     photo: "/assets/azizyildirim.jpg",
-    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonlukla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı. Barış Göktürk’ün desteğini aldı, Özgür Peker’yi Safi listesinden kendi listesine kattı. Dernek buluşmaları (Bursa, İzmir, Mardin, Çorlu, Londra, Ankara vb.) yoğun şekilde devam ediyor. Seçim ofisi açıldı. Birlik çağrıları yaptı (Ali Koç ve Hakan Safi’ye). Hakan Çalhanoğlu ile genel görüşme iddiaları var. Son gelişmede Yağız Sabuncuoğlu'na göre Serhou Guirassy ve Borussia Dortmund ile sözlü anlaşma sağlandı. 6-7 Haziran seçimleri öncesi Ankara temasları ve kongre çalışmaları sürüyor.",
-    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. 2026-27 sezonu için 'şampiyonluk mecburiyeti' vurgusu. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. 'Yıldız + 10 asker' felsefesiyle tecrübeli futbol komitesi (Oğuz Çetin, Aykut Kocaman, Volkan Demirel, Dirk Kuijt vb.). En fazla 5-6 transferle kadroyu güçlendirme (2 santrfor + 2 stoper + milli yıldızlar öncelikli).",
+    biography: "Fenerbahçe'nin en uzun süre görev yapan eski başkanı (1998-2018). Birçok şampiyonlukla anılan efsane isim. 6 Mayıs 2026'da resmen adaylığını açıkladı. Barış Göktürk’ün desteğini aldı, Özgür Peker’yi Safi listesinden kendi listesine kattı. Dernek buluşmaları (Bursa, İzmir, Mardin, Çorlu, Londra, Ankara vb.) yoğun şekilde devam ediyor. Seçim ofisi açıldı. Birlik çağrıları yaptı (Ali Koç ve Hakan Safi’ye). Hakan Çalhanoğlu ile genel görüşme iddiaları var. Son gelişmede Yağız Sabuncuoğlu'na göre Serhou Guirassy ve Borussia Dortmund ile sözlü anlaşma sağlandı. 4 Haziran'da yönetim kurulu üyesi Mahmut Uslu '2 santrforun transferini bitirdik' açıklaması yaptı. 6-7 Haziran seçimleri öncesi Ankara temasları ve kongre çalışmaları sürüyor.",
+    vision: "Kanıtlanmış tecrübeyle hızlı şampiyonluk ve Avrupa başarısı. 2026-27 sezonu için 'şampiyonluk mecburiyeti' vurgusu. Disiplinli yönetim, taraftar birliği ve camianın 120. yılında birlik mesajı. 'Yıldız + 10 asker' felsefesiyle tecrübeli futbol komitesi (Oğuz Çetin, Aykut Kocaman, Volkan Demirel, Dirk Kuijt vb. + yeni Avrupa'da aktif bir isim eklendi). En fazla 5-6 transferle kadroyu güçlendirme (2 santrfor + 2 stoper + milli yıldızlar öncelikli).",
     experience: [
       "Fenerbahçe Başkanı (1998-2018)",
       "Çok sayıda lig ve kupa şampiyonluğu",
@@ -252,7 +263,7 @@ export const candidates: Candidate[] = [
       {
         id: "p5",
         title: "Hemen Şampiyonluk",
-        description: "Kısa vadede zirve hedefi (2026-27 mecburiyeti). 2 santrfor (Sörloth/Lukaku/Muriqi/Guirassy bağlantıları; Guirassy ile Borussia Dortmund ve oyuncuyla sözlü anlaşma sağlandı); Hakan Çalhanoğlu gibi milli yıldızlar da gündemde. En az 3-5 bomba isim. Toplam 5-6 transfer. Sezon başlangıcında tam kadro sözü. Stoper rotasyonu için özel liste hazırlandı.",
+        description: "Kısa vadede zirve hedefi (2026-27 mecburiyeti). 2 santrfor (Sörloth/Lukaku/Muriqi/Guirassy bağlantıları; Guirassy ile Borussia Dortmund ve oyuncuyla sözlü anlaşma sağlandı); 4 Haziran Mahmut Uslu açıklaması: '2 santrforun transferini bitirdik'. Hakan Çalhanoğlu gibi milli yıldızlar da gündemde. En az 3-5 bomba isim. Toplam 5-6 transfer. Sezon başlangıcında tam kadro sözü. Stoper rotasyonu için özel liste hazırlandı.",
         category: "Spor",
         icon: "trophy",
         priority: "acil"
@@ -276,7 +287,7 @@ export const candidates: Candidate[] = [
       {
         id: "p8",
         title: "Futbol Aklı ve Yapısal Dönüşüm",
-        description: "Eski Fenerbahçe efsanelerinden (Oğuz Çetin - futbol aklı, Aykut Kocaman vb.) oluşan danışma/transfer/izleme komitesi",
+        description: "Eski Fenerbahçe efsanelerinden (Oğuz Çetin - futbol aklı, Aykut Kocaman vb.) oluşan danışma/transfer/izleme komitesi + yeni Avrupa'da aktif bir isim eklendi",
         category: "Yönetim",
         icon: "shield",
         priority: "acil"
@@ -293,7 +304,7 @@ export const candidates: Candidate[] = [
     pastInvolvement: [
       { year: "1990-1992", title: "Yönetim Kurulu Üyesi ve Futbol Şubesi Sorumlusu", description: "Aktif görev" },
       { year: "1998-2018", title: "Başkanlık Dönemi", description: "20 yıl liderlik" },
-      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk + Özgür Peker desteği; 22 Mayıs basın toplantısı ve yönetim listesi açıklaması; dernek buluşmaları; Oğuz Çetin, Aykut Kocaman vb. ile komite; 2 santrfor + bomba transfer hedefleri; Hakan Çalhanoğlu genel görüşme iddiaları; stadyum kapasite artışı (64-65k); Ankara/Anıtkabir ziyaretleri; Londra/Europa temasları; birlik çağrıları devam ediyor (6-7 Haziran seçimleri öncesi); Serhou Guirassy ile Borussia Dortmund ve oyuncuyla sözlü anlaşma sağlandı" }
+      { year: "2026", title: "Başkan Adaylığı", description: "6 Mayıs'ta açıkladı; Barış Göktürk + Özgür Peker desteği; 22 Mayıs basın toplantısı ve yönetim listesi açıklaması; dernek buluşmaları; Oğuz Çetin, Aykut Kocaman vb. ile komite + yeni Avrupa komite üyesi; 2 santrfor + bomba transfer hedefleri; Hakan Çalhanoğlu genel görüşme iddiaları; stadyum kapasite artışı (64-65k); Ankara/Anıtkabir ziyaretleri; Londra/Europa temasları; birlik çağrıları devam ediyor (6-7 Haziran seçimleri öncesi); Serhou Guirassy ile Borussia Dortmund ve oyuncuyla sözlü anlaşma sağlandı; 4 Haziran Mahmut Uslu: '2 santrforun transferini bitirdik'" }
     ],
     popularity: 54,
     boardMembers: [
@@ -382,11 +393,11 @@ export const candidates: Candidate[] = [
         id: "t12",
         playerName: "Serhou Guirassy",
         position: "Forvet",
-        status: "Borussia Dortmund forması giyen; oyuncu ve kulüple sözlü anlaşma sağlandı. Seçimi kazanırsa resmiyete dökülecek (Yağız Sabuncuoğlu)",
+        status: "Borussia Dortmund forması giyen; oyuncu ve kulüple sözlü anlaşma sağlandı. Seçimi kazanırsa resmiyete dökülecek (Yağız Sabuncuoğlu). 4 Haziran itibarıyla yeni gelişme yok",
         source: "Yağız Sabuncuoğlu açıklaması",
         sourceUrl: "",
         sourceType: "trusted_media",
-        xDiscussion: "X üzerinde forvet bombası olarak en çok konuşulan gelişme",
+        xDiscussion: "X üzerinde forvet bombası olarak konuşuluyor",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Guirassy%20Yıldırım&src=typed_query&f=live"
       }
     ]
