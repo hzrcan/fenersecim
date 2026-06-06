@@ -382,11 +382,11 @@ export const candidates: Candidate[] = [
         id: "t12",
         playerName: "Serhou Guirassy",
         position: "Forvet",
-        status: "Borussia Dortmund forması giyen; oyuncu ve kulüple sözlü anlaşma sağlandı. Seçimi kazanırsa resmiyete dökülecek (Yağız Sabuncuoğlu). 4 Haziran itibarıyla yeni gelişme yok; 6 Haziran kongrede yeni transfer açıklaması yapılmadı",
-        source: "Yağız Sabuncuoğlu açıklaması + Mahmut Uslu",
-        sourceUrl: "",
-        sourceType: "trusted_media",
-        xDiscussion: "X üzerinde forvet bombası olarak konuşuluyor",
+        status: "Borussia Dortmund forması giyen forvet için Yağız Sabuncuoğlu kaynaklı sözlü anlaşma iddiası bulunuyor; resmi kulüp teyidi henüz yok",
+        source: "X (Yağız Sabuncuoğlu) + spor medyası yansımaları",
+        sourceUrl: "https://x.com/search?q=from%3Ayagosabuncuoglu%20Guirassy%20Fenerbahce&src=typed_query&f=live",
+        sourceType: "x_discussion",
+        xDiscussion: "X üzerinde yüksek etkileşimli ancak resmi teyidi bulunmayan iddia",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Guirassy%20Yıldırım&src=typed_query&f=live"
       }
     ]
