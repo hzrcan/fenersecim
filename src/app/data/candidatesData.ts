@@ -176,7 +176,7 @@ export const candidates: Candidate[] = [
       { id: "cc1", name: "Yusuf Kenan Çalık" }
     ],
     coachCandidates: [
-      { id: "c2", name: "Roberto Mancini", status: "İtalya bağlantıları güçlü, görüşmeler aktif (en kuvvetli adaylardan)" },
+      { id: "c4", name: "Francesco Farioli", status: "Hakan Safi'nin ilk tercihi; Porto şampiyonluklu İtalyan hoca, 'Türkiye'yi bilen' kriterine uyuyor. Görüşmeler aktif, Türkiye'ye gelme iddiaları var" },
       { id: "c3", name: "İsmail Kartal", status: "Yerli öncelikli seçenek / Türkiye'yi bilen profil" }
     ],
     potentialTransfers: [
