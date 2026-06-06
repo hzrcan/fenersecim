@@ -316,7 +316,7 @@ export function ComparePage() {
                     <td key={candidate?.id} className="px-6 py-4">
                       {candidate?.potentialTransfers && candidate.potentialTransfers.length > 0 ? (
                         <ul className="text-sm text-gray-600 space-y-2">
-                          {candidate.potentialTransfers.slice(0, 5).map((transfer) => (
+                          {candidate.potentialTransfers.map((transfer) => (
                             <li key={transfer.id} className="flex flex-col rounded-md border border-gray-200 p-2 bg-white">
                               <span className="font-medium text-[#001C54]">
                                 {transfer.playerName} <span className="text-xs text-gray-500">({transfer.position})</span>
