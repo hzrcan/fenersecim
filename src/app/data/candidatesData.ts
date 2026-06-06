@@ -349,26 +349,6 @@ export const candidates: Candidate[] = [
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Muriqi&src=typed_query&f=live"
       },
       {
-        id: "t7",
-        playerName: "Kim Min-jae",
-        position: "Stoper",
-        status: "Savunma lideri profili olarak gündeme geliyor (temsilciden görüşme yok - Yağız Sabuncuoğlu)",
-        source: "Spor medyası transfer iddiaları",
-        sourceType: "x_discussion",
-        xDiscussion: "X üzerinde nostalji ve sportif uyum gerekçesiyle yoğun tartışılıyor",
-        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Kim%20Min-jae&src=typed_query&f=live"
-      },
-      {
-        id: "t8",
-        playerName: "Marcus Rashford",
-        position: "Sol Kanat / Forvet",
-        status: "Yüksek profilli yıldız adayları arasında geçiyor",
-        source: "Transfer iddia haberleri ve yorum programları",
-        sourceType: "x_discussion",
-        xDiscussion: "X'te etkileşimi yüksek ancak maliyet nedeniyle tartışmalı başlıklardan",
-        xQueryUrl: "https://x.com/search?q=Fenerbahce%20Rashford&src=typed_query&f=live"
-      },
-      {
         id: "t10",
         playerName: "Nathan Ake",
         position: "Stoper / Sol Bek",
