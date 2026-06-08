@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router";
 import { ArrowLeft, ChevronDown, TrendingUp, Users, Briefcase, Target, Clock, Trophy, ArrowRightLeft } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../ui/collapsible";
 import { getCandidateBySlug, generateSlug, getSlugFromIdOrSlug, type BoardMember, type PotentialTransfer } from "../../data/candidatesData";
+import { ElectedBadge } from "../ui/elected-badge";
 import { updatePageMeta, addStructuredData, createCandidateSchema, createBreadcrumbSchema, createBoardMemberListSchema } from "../../../utils/seo";
 
 function BoardMemberCard({ member, type }: { member: BoardMember; type: "asil" | "yedek" }) {
@@ -149,6 +150,11 @@ export function CandidateDetailPage() {
             </div>
             <h1 className="text-white mb-2">{candidate.name}</h1>
             <p className="text-[#FFED00] italic mb-4">"{candidate.slogan}"</p>
+            {candidate.electionStatus === "elected" && (
+              <div className="mb-4">
+                <ElectedBadge size="md" />
+              </div>
+            )}
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 w-full">
               <div className="flex items-center justify-center space-x-2 mb-2">

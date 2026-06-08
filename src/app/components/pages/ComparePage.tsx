@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Check, X, TrendingUp } from "lucide-react";
-import { candidates, generateSlug } from "../../data/candidatesData";
+import { candidates, generateSlug, ELECTION_WINNER_ID } from "../../data/candidatesData";
+import { ElectedBadge } from "../ui/elected-badge";
 import { updatePageMeta, addStructuredData, createBreadcrumbSchema, createQASchema } from "../../../utils/seo";
 
 const compareQaItems = [
@@ -67,17 +68,18 @@ const compareQaItems = [
 ];
 
 export function ComparePage() {
+  const otherCandidates = candidates.filter(c => c.id !== ELECTION_WINNER_ID);
   const [selectedCandidates, setSelectedCandidates] = useState<string[]>([
-    candidates[0]?.id || "",
-    candidates[1]?.id || "",
+    ELECTION_WINNER_ID,
+    otherCandidates[0]?.id || "",
   ]);
 
   useEffect(() => {
     // Sayfanın meta bilgilerini güncelle
     updatePageMeta({
       title: "Adayları Karşılaştır | Fenerbahçe Başkanlık Seçimleri 2026",
-      description: "Fenerbahçe başkanlık adaylarını yan yana karşılaştırın: proje odakları, deneyim, kampanya ekipleri ve yönetim yaklaşımlarını tek tabloda inceleyin.",
-      keywords: "aday karşılaştırma, Fenerbahçe başkanlık, 2026 seçimi, adaylar, karşılaştırma aracı",
+      description: "Fenerbahçe başkanlık seçiminde: Seçilen Başkan Aziz Yıldirim'i diğer adaylarla karşılaştırın. Proje odakları, deneyim, kampanya ekipleri ve yönetim yaklaşımlarını tek tabloda inceleyin.",
+      keywords: "aday karşılaştırma, Aziz Yıldirim, Fenerbahçe başkanlık, 2026 seçimi, adaylar, karşılaştırma aracı",
       image: "https://fenersecim.com/og-image.png",
       url: "https://fenersecim.com/karsilastir",
       type: "website",
@@ -152,6 +154,11 @@ export function ComparePage() {
                           className="w-16 h-16 rounded-full border-2 border-[#FFED00] mb-2 object-cover"
                         />
                         <span className="text-white">{candidate?.name}</span>
+                        {candidate?.electionStatus === "elected" && (
+                          <div className="mt-2">
+                            <ElectedBadge size="sm" />
+                          </div>
+                        )}
                       </div>
                     </th>
                   ))}

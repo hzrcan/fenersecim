@@ -13,6 +13,7 @@ export interface Candidate {
   coachCandidates?: CoachCandidate[];
   campaignContacts?: CampaignContact[];
   potentialTransfers?: PotentialTransfer[];
+  electionStatus?: "elected" | "runner-up";
 }
 
 export interface BoardMember {
@@ -87,6 +88,10 @@ export function generateSlug(name: string): string {
     .replace(/-+/g, '-')
     .trim();
 }
+
+// Global election state
+export const ELECTION_STATE = "completed" as const;
+export const ELECTION_WINNER_ID = "2"; // Aziz Yildirim's ID
 
 export const candidates: Candidate[] = [
   {
@@ -234,7 +239,8 @@ export const candidates: Candidate[] = [
         xDiscussion: "X'te kongre günü en çok konuşulan Fenerbahçe bombası",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Demiral%20Safi&src=typed_query&f=live"
       }
-    ]
+    ],
+    electionStatus: "runner-up"
   },
   {
     id: "2",
@@ -369,7 +375,8 @@ export const candidates: Candidate[] = [
         xDiscussion: "X üzerinde yüksek etkileşimli ancak resmi teyidi bulunmayan iddia",
         xQueryUrl: "https://x.com/search?q=Fenerbahce%20Guirassy%20Yıldırım&src=typed_query&f=live"
       }
-    ]
+    ],
+    electionStatus: "elected"
   }
 ];
 

@@ -1,12 +1,23 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
-import { Users, Calendar, TrendingUp, Award, Vote } from "lucide-react";
-import { candidates } from "../../data/candidatesData";
+import { Users, Calendar, TrendingUp, Award, Vote, CheckCircle2 } from "lucide-react";
+import { candidates, ELECTION_WINNER_ID } from "../../data/candidatesData";
+import { ElectedBadge } from "../ui/elected-badge";
 import { updatePageMeta, addStructuredData, createOrganizationSchema, createEventSchema, createFAQSchema } from "../../../utils/seo";
 
 const ELECTION_DATE = new Date(2026, 5, 7, 20, 0, 0);
 const ELIGIBLE_VOTERS = 44500;
-const homepageFaqItems = [
+const ELECTION_COMPLETED = true;
+const homepageFaqItems = ELECTION_COMPLETED ? [
+  {
+    question: "Fenerbahçe başkanlık seçimi nasıl sonuçlandı?",
+    answer: "6-7 Haziran 2026 tarihlerinde gerçekleştirilen seçimde Aziz Yıldırım Fenerbahçe Başkanı seçilmiştir.",
+  },
+  {
+    question: "Bu platformda adaylar hakkında ne tür bilgiler bulabilirim?",
+    answer: "Seçilen Başkan ve diğer adayların vizyonları, proje programları, deneyim özgeçmişleri ve biyografileri yer almaktadır. Adayları karşılaştırma aracı ile de karşılaştırmaya devam edebilirsiniz.",
+  }
+] : [
   {
     question: "Fenerbahçe başkanlık seçimi ne zaman?",
     answer: "Olağanüstü seçimli genel kurul 6-7 Haziran 2026 tarihlerinde gerçekleşecektir.",
@@ -41,7 +52,8 @@ export function HomePage() {
   const totalCandidates = candidates.length;
   const totalProjects = candidates.reduce((sum, c) => sum + c.projects.length, 0);
   const eligibleVotersLabel = ELIGIBLE_VOTERS.toLocaleString("tr-TR");
-  const [featuredCandidate] = useState(() => candidates[Math.floor(Math.random() * candidates.length)]);
+  const electedCandidate = candidates.find(c => c.id === ELECTION_WINNER_ID);
+  const [featuredCandidate] = useState(() => electedCandidate || candidates[Math.floor(Math.random() * candidates.length)]);
   const [countdown, setCountdown] = useState(() => getCountdownParts(ELECTION_DATE));
   const countdownItems = useMemo(
     () => [
@@ -56,9 +68,9 @@ export function HomePage() {
   useEffect(() => {
     // Sayfanın meta bilgilerini güncelle
     updatePageMeta({
-      title: "Fenerbahçe Başkanlık Seçimleri 2026 | Anasayfa",
-      description: "Fenerbahçe 2026 başkanlık seçimini tek yerde takip edin: aday profilleri, proje farkları, karşılaştırma aracı ve kongre üyeleri için kayıt adımları.",
-      keywords: "Fenerbahçe, başkanlık seçimleri, 2026, seçim, spor kulübü, başkan adayları",
+      title: ELECTION_COMPLETED ? "Fenerbahçe Seçim Sonuçları - Aziz Yıldırım Başkan Seçildi" : "Fenerbahçe Başkanlık Seçimleri 2026 | Anasayfa",
+      description: ELECTION_COMPLETED ? "Fenerbahçe 2026 başkanlık seçimi sonuçlandı: Aziz Yıldırım Fenerbahçe Başkanı seçilmiştir. Aday profilleri, proje programları ve karşılaştırma aracını keşfedin." : "Fenerbahçe 2026 başkanlık seçimini tek yerde takip edin: aday profilleri, proje farkları, karşılaştırma aracı ve kongre üyeleri için kayıt adımları.",
+      keywords: "Fenerbahçe, başkanlık seçimleri, 2026, seçim, spor kulübü, Aziz Yıldırım, başkan",
       image: "https://fenersecim.com/og-image.png",
       url: "https://fenersecim.com/",
       type: "website",
@@ -91,34 +103,54 @@ export function HomePage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-8 bg-gradient-to-r from-[#001C54] via-[#0052A3] to-[#001C54] rounded-2xl p-4 sm:p-6 shadow-xl text-white">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-xs sm:text-sm tracking-wide text-[#FFED00]">CANLI GERİ SAYIM</p>
-            <p className="text-lg sm:text-xl font-semibold">
-              {countdown.isFinished ? "Seçim tamamlandı" : "Fenerbahçe 2026 seçimine kalan süre"}
-            </p>
-          </div>
-          <div className="grid grid-cols-4 gap-2 sm:gap-3 w-full sm:w-auto">
-            {countdownItems.map(item => (
-              <div key={item.label} className="bg-white/10 backdrop-blur-sm rounded-xl px-3 py-2 text-center min-w-[72px]">
-                <p className="text-2xl sm:text-3xl font-bold leading-none">{String(item.value).padStart(2, "0")}</p>
-                <p className="text-[11px] sm:text-xs uppercase tracking-wide text-[#FFED00] mt-1">{item.label}</p>
+      {ELECTION_COMPLETED ? (
+        <div className="mb-8 bg-gradient-to-r from-[#FFED00] via-[#FFC600] to-[#FFED00] rounded-2xl p-4 sm:p-6 shadow-xl text-[#001C54]">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 mt-1" />
+              <div>
+                <p className="text-xs sm:text-sm tracking-wide font-bold">SEÇİM SONUÇLANDI</p>
+                <p className="text-lg sm:text-xl font-bold mt-1">
+                  {electedCandidate ? `${electedCandidate.name} Fenerbahçe Başkanı Seçildi` : "Seçim tamamlandı"}
+                </p>
+                <p className="text-xs sm:text-sm opacity-80 mt-1">7 Haziran 2026</p>
               </div>
-            ))}
+            </div>
+            <div className="flex items-center justify-center">
+              <ElectedBadge size="lg" />
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="mb-8 bg-gradient-to-r from-[#001C54] via-[#0052A3] to-[#001C54] rounded-2xl p-4 sm:p-6 shadow-xl text-white">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-xs sm:text-sm tracking-wide text-[#FFED00]">CANLI GERİ SAYIM</p>
+              <p className="text-lg sm:text-xl font-semibold">
+                {countdown.isFinished ? "Seçim tamamlandı" : "Fenerbahçe 2026 seçimine kalan süre"}
+              </p>
+            </div>
+            <div className="grid grid-cols-4 gap-2 sm:gap-3 w-full sm:w-auto">
+              {countdownItems.map(item => (
+                <div key={item.label} className="bg-white/10 backdrop-blur-sm rounded-xl px-3 py-2 text-center min-w-[72px]">
+                  <p className="text-2xl sm:text-3xl font-bold leading-none">{String(item.value).padStart(2, "0")}</p>
+                  <p className="text-[11px] sm:text-xs uppercase tracking-wide text-[#FFED00] mt-1">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="text-center mb-16">
         <h1 className="mb-4 bg-gradient-to-r from-[#001C54] via-[#0052A3] to-[#001C54] bg-clip-text text-transparent">
-          Fenerbahçe Başkanlık Seçimleri 2026
+          {ELECTION_COMPLETED ? "Fenerbahçe Başkanlık Seçimi 2026" : "Fenerbahçe Başkanlık Seçimleri 2026"}
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Adayları takip edin, vizyonları karşılaştırın ve kulübümüzün gelecek liderliği hakkında bilgi sahibi olun.
+          {ELECTION_COMPLETED ? "Seçim sonuçları ve aday profilleri: Adayları karşılaştırın, vizyonlarını ve proje programlarını keşfedin." : "Adayları takip edin, vizyonları karşılaştırın ve kulübümüzün gelecek liderliği hakkında bilgi sahibi olun."}
         </p>
         <p className="text-gray-500 max-w-2xl mx-auto text-sm mt-2">
-          Bu platform, Fenerbahçe seçimlerinde şeffaflığı ve demokratik katılımı desteklemek amacıyla oluşturulmuştur ve sürekli olarak güncellenecektir.
+          Bu platform, Fenerbahçe seçimlerinde şeffaflığı ve demokratik katılımı desteklemek amacıyla oluşturulmuştur.
         </p>
       </div>
 
@@ -222,41 +254,68 @@ export function HomePage() {
 
       <div className="grid md:grid-cols-2 gap-8 mb-16">
         <div id="secim-takvimi" className="bg-white rounded-xl p-8 shadow-lg scroll-mt-24">
-          <h3 className="mb-6 text-[#001C54]">Seçim Takvimi</h3>
+          <h3 className="mb-6 text-[#001C54]">{ELECTION_COMPLETED ? "Seçim Sonuçları" : "Seçim Takvimi"}</h3>
           
-          <div className="mb-6 p-4 bg-gradient-to-br from-[#001C54] to-[#0052A3] rounded-lg text-white">
-            <p className="text-sm opacity-90 mb-1">Seçime Kalan Gün</p>
-            <p className="text-4xl font-bold">{countdown.days}</p>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              { date: "28 Nisan", event: "Seçim Kararı Alındı - Başkanımız Sadettin Saran tarafından", status: "completed" },
-              { date: "22 Mayıs", event: "Başkan ve Üyeleri için adaylık başvuruları 22 Mayıs 2026, saat 18.00'e dek yapılabilecektir.", status: "completed" },
-              { date: "6 Haziran", event: "Konuşmalar - Olağanüstü Seçimli Genel Kurul", status: "upcoming" },
-              { date: "7 Haziran", event: "Seçim Günü - Oy Atılıyor ve Sonuç Belli Oluyor", status: "upcoming" },
-            ].map((item, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className={`w-3 h-3 rounded-full mt-1 ${
-                  item.status === "completed" ? "bg-[#FFED00]" : "bg-gray-300"
-                }`}></div>
-                <div className="flex-1">
-                  <p className="text-sm text-gray-500">{item.date}</p>
-                  <p className="text-[#001C54]">{item.event}</p>
-                </div>
+          {ELECTION_COMPLETED ? (
+            <div className="space-y-4">
+              <div className="p-6 bg-gradient-to-br from-[#FFED00] to-[#FFC600] rounded-lg">
+                <p className="text-sm text-[#001C54] font-semibold mb-2">🎉 Seçim Tamamlandı</p>
+                <p className="text-2xl font-bold text-[#001C54]">Aziz Yıldırım Başkan Seçildi</p>
+                <p className="text-sm text-[#001C54] opacity-80 mt-2">7 Haziran 2026</p>
               </div>
-            ))}
-          </div>
+              {[
+                { date: "28 Nisan", event: "Seçim Kararı Alındı - Başkanımız Sadettin Saran tarafından", status: "completed" },
+                { date: "22 Mayıs", event: "Başkan ve Üyeleri için adaylık başvuruları 22 Mayıs 2026, saat 18.00'e dek yapıldı.", status: "completed" },
+                { date: "6 Haziran", event: "Konuşmalar - Olağanüstü Seçimli Genel Kurul", status: "completed" },
+                { date: "7 Haziran", event: "Seçim Günü - Oy Atılarak Sonuç Belli Oldu", status: "completed" },
+              ].map((item, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className={`w-3 h-3 rounded-full mt-1 ${
+                    item.status === "completed" ? "bg-[#FFED00]" : "bg-gray-300"
+                  }`}></div>
+                  <div className="flex-1">
+                    <p className="text-sm text-gray-500">{item.date}</p>
+                    <p className="text-[#001C54]">{item.event}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <>
+              <div className="mb-6 p-4 bg-gradient-to-br from-[#001C54] to-[#0052A3] rounded-lg text-white">
+                <p className="text-sm opacity-90 mb-1">Seçime Kalan Gün</p>
+                <p className="text-4xl font-bold">{countdown.days}</p>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { date: "28 Nisan", event: "Seçim Kararı Alındı - Başkanımız Sadettin Saran tarafından", status: "completed" },
+                  { date: "22 Mayıs", event: "Başkan ve Üyeleri için adaylık başvuruları 22 Mayıs 2026, saat 18.00'e dek yapılabilecektir.", status: "completed" },
+                  { date: "6 Haziran", event: "Konuşmalar - Olağanüstü Seçimli Genel Kurul", status: "upcoming" },
+                  { date: "7 Haziran", event: "Seçim Günü - Oy Atılıyor ve Sonuç Belli Oluyor", status: "upcoming" },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className={`w-3 h-3 rounded-full mt-1 ${
+                      item.status === "completed" ? "bg-[#FFED00]" : "bg-gray-300"
+                    }`}></div>
+                    <div className="flex-1">
+                      <p className="text-sm text-gray-500">{item.date}</p>
+                      <p className="text-[#001C54]">{item.event}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
 
         <div id="hizli-islemler" className="bg-gradient-to-br from-[#FFED00] to-[#FFC600] rounded-xl p-8 shadow-lg scroll-mt-24">
-          <h3 className="mb-6 text-[#001C54]">Hızlı İşlemler</h3>
+          <h3 className="mb-6 text-[#001C54]">{ELECTION_COMPLETED ? "Seçim Sonuçlarını Keşfet" : "Hızlı İşlemler"}</h3>
           <div className="space-y-3">
             <Link
-              to="/adaylar"
-              className="block bg-white text-[#001C54] px-6 py-3 rounded-lg hover:shadow-lg transition-shadow"
+              to={electedCandidate ? `/adaylar/${electedCandidate.id}` : "/adaylar"}
+              className="block bg-white text-[#001C54] px-6 py-3 rounded-lg hover:shadow-lg transition-shadow font-semibold"
             >
-              Tüm Adayları Görüntüle
+              {ELECTION_COMPLETED ? "Seçilen Başkanı Görüntüle" : "Tüm Adayları Görüntüle"}
             </Link>
             <Link
               to="/karsilastir"
@@ -268,7 +327,7 @@ export function HomePage() {
               to="/projeler"
               className="block bg-white text-[#001C54] px-6 py-3 rounded-lg hover:shadow-lg transition-shadow"
             >
-              Projeleri Keşfet
+              Proje Programlarını Keşfet
             </Link>
           </div>
         </div>

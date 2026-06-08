@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { Outlet, Link, useLocation } from "react-router";
-import { Home, Users, FolderKanban, GitCompare, Tv } from "lucide-react";
+import { Home, Users, FolderKanban, GitCompare, Tv, CheckCircle2 } from "lucide-react";
 import { Analytics } from "@vercel/analytics/react";
 import { ShareActions } from "./ShareActions";
+import { ElectedBadge } from "./ui/elected-badge";
+import { candidates } from "../data/candidatesData";
 
 function formatCandidateNameFromSlug(slug: string) {
   return decodeURIComponent(slug)
@@ -125,6 +127,27 @@ export function Layout() {
           </div>
         </div>
       </nav>
+
+      {/* Election Results Banner */}
+      <div className="bg-gradient-to-r from-[#FFED00] to-yellow-300 border-b-4 border-[#001C54] shadow-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4">
+            <div className="flex items-center space-x-3">
+              <CheckCircle2 className="w-6 h-6 text-[#001C54] flex-shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-[#001C54]">Seçim Sonuçları</p>
+                <p className="text-xs text-[#001C54]/80">Aziz Yıldirim Fenerbahçe Başkanı seçilmiştir</p>
+              </div>
+            </div>
+            <Link 
+              to="/adaylar/aziz-yildirim" 
+              className="px-4 py-2 bg-[#001C54] text-[#FFED00] rounded-lg hover:bg-[#003078] transition-colors text-sm font-medium"
+            >
+              Başkan Profilini Görüntüle
+            </Link>
+          </div>
+        </div>
+      </div>
 
       <main>
         <Outlet />

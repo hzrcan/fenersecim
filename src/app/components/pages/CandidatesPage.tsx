@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { Filter, TrendingUp, Users as UsersIcon } from "lucide-react";
 import { candidates, generateSlug } from "../../data/candidatesData";
+import { ElectedBadge } from "../ui/elected-badge";
 import { updatePageMeta, addStructuredData, createBreadcrumbSchema, createFAQSchema } from "../../../utils/seo";
 
 const candidateFaqItems = [
@@ -62,8 +63,13 @@ export function CandidatesPage() {
       return candidate.projects.some(p => p.category === filterCategory);
     })
     .sort((a, b) => {
+      // Elected candidate first
+      if (a.electionStatus === "elected" && b.electionStatus !== "elected") return -1;
+      if (a.electionStatus !== "elected" && b.electionStatus === "elected") return 1;
+      
+      // Then sort by the selected criteria
       if (sortBy === "popularity") return b.popularity - a.popularity;
-      return a.name.localeCompare(b.name);
+      return a.name.localeCompare(b.name, "tr");
     });
 
   return (
@@ -118,13 +124,18 @@ export function CandidatesPage() {
             to={`/adaylar/${generateSlug(candidate.name)}`}
             className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow group"
           >
-            <div className="relative h-64 overflow-hidden">
+          <div className="relative h-64 overflow-hidden">
               <img
                 src={candidate.photo}
                 alt={candidate.name}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001C54] to-transparent opacity-60"></div>
+              {candidate.electionStatus === "elected" && (
+                <div className="absolute top-4 left-4">
+                  <ElectedBadge size="sm" />
+                </div>
+              )}
               <div className="absolute bottom-4 left-4 right-4">
                 <h3 className="text-white mb-1">{candidate.name}</h3>
                 <p className="text-[#FFED00] text-sm italic">"{candidate.slogan}"</p>
